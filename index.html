@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIH26189 — AI-Powered Criminal Network Analysis System</title>
+<style>
+:root {
+  --bg: #0a0e17;
+  --bg2: #111827;
+  --border: #1e2d44;
+  --cyan: #06b6d4;
+  --text: #e2e8f0;
+  --muted: #64748b;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.container {
+  max-width: 640px;
+  width: 100%;
+}
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  padding: 4px 10px;
+  border: 1px solid rgba(6,182,212,0.3);
+  border-radius: 4px;
+  background: rgba(6,182,212,0.08);
+}
+h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card {
+  display: block;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-1px);
+}
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.card-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.card-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.tag-primary { background: rgba(6,182,212,0.15); color: var(--cyan); }
+.tag-secondary { background: rgba(148,163,184,0.15); color: #94a3b8; }
+.footer {
+  margin-top: 48px;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="badge">SIH26189</div>
+  <h1>AI-Powered Criminal Network Analysis System</h1>
+  <p class="subtitle">
+    Graph neural network anomaly detection with explainable risk scoring
+    for criminal network investigation and analysis.
+  </p>
+  <div class="cards">
+    <a class="card" href="investigator.html">
+      <div class="card-title">⬡ Investigator Dashboard</div>
+      <div class="card-desc">
+        Interactive force-directed graph with 220 entities, anomaly scoring,
+        community detection, explainability panel, and relationship filtering.
+      </div>
+      <span class="card-tag tag-primary">Primary Demo</span>
+    </a>
+    <a class="card" href="caviar_viz.html">
+      <div class="card-title">◈ CAVIAR Network Explorer</div>
+      <div class="card-desc">
+        Real-world CAVIAR criminal dataset visualization with 109 individuals,
+        centrality metrics, and community structure analysis.
+      </div>
+      <span class="card-tag tag-secondary">CAVIAR Dataset</span>
+    </a>
+  </div>
+  <div class="footer">
+    Synthetic/Anonymized Demonstration Dataset<br>
+    Scores indicate network anomaly / investigation priority only. Not guilt predictions.
+  </div>
+</div>
+</body>
+</html>

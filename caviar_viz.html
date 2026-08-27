@@ -51,7 +51,7 @@ const tooltip = d3.select("#tooltip");
 node.on("mouseover", (e, d) => {
       tooltip.style("display", "block")
              .style("left", (e.pageX+12)+"px").style("top", (e.pageY+12)+"px")
-             .html(`<b>Person d.id</b><br>Degree:{d.id}</b><br>Degree:d.id</b><br>Degree:{d.degree}<br>Betweenness: d.betweenness<br>Community:{d.betweenness}<br>Community:d.betweenness<br>Community:{d.community}`);
+             .html(`<b>Person ${d.id}</b><br>Degree: ${d.degree}<br>Betweenness: ${d.betweenness}<br>Community: ${d.community}`);
     })
     .on("mouseout", () => tooltip.style("display","none"))
     .call(d3.drag()
@@ -61,10 +61,10 @@ node.on("mouseover", (e, d) => {
 
 node.on("click", (e, d) => {
     document.getElementById("info").innerHTML =
-      `<h2 style='color:color(d.community)′>Person{color(d.community)}'>Personcolor(d.community)′>Person{d.id}</h2>` +
+      `<h2 style="color:${color(d.community)}">Person ${d.id}</h2>` +
       `<p><b>Degree centrality:</b> ${d.degree}</p>` +
       `<p><b>Betweenness:</b> ${d.betweenness}</p>` +
-      `<p><b>Community:</b> d.community({d.community} (d.community({color(d.community)})</p>` +
+      `<p><b>Community:</b> ${d.community} (color: ${color(d.community)})</p>` +
       `<p><i>High betweenness + moderate degree = potential intermediary profile.</i></p>`;
 });
 
