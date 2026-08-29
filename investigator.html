@@ -145,6 +145,137 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', syst
 
 /* Method badge */
 .method-badge { font-size: 9px; color: var(--text-muted); background: var(--bg-tertiary); padding: 6px 8px; border-radius: 4px; border: 1px solid var(--border); line-height: 1.5; }
+
+/* ── PHASE 2: Temporal & Investigation Tools ── */
+
+/* Control buttons */
+.ctrl-btn {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.ctrl-btn:hover { background: var(--border); color: var(--text-primary); }
+.ctrl-btn.active { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+.ctrl-sep { color: var(--text-muted); font-size: 11px; padding: 0 2px; }
+
+/* Entity Timeline Chart */
+.timeline-chart { width: 100%; height: 80px; margin: 8px 0; position: relative; }
+.timeline-chart canvas { width: 100%; height: 100%; }
+.timeline-bar { display: inline-block; vertical-align: bottom; margin-right: 1px; border-radius: 2px 2px 0 0; min-width: 3px; transition: height 0.3s; }
+.timeline-bar:hover { opacity: 0.8; }
+.timeline-label { font-size: 9px; color: var(--text-muted); margin-top: 4px; display: flex; justify-content: space-between; }
+
+/* Burst badge */
+.burst-badge {
+  display: inline-block;
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 4px;
+}
+.burst-high { background: rgba(239,68,68,0.15); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
+.burst-moderate { background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+.burst-low { background: rgba(34,197,94,0.1); color: #22c55e; border: 1px solid rgba(34,197,94,0.2); }
+
+/* Path overlay */
+#path-overlay {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  z-index: 20;
+  font-size: 11px;
+  min-width: 340px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+#path-overlay.show { display: block; }
+#path-overlay .path-title { font-size: 12px; font-weight: 700; color: var(--accent-cyan); margin-bottom: 8px; }
+#path-overlay input {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  width: 100px;
+  outline: none;
+}
+#path-overlay input:focus { border-color: var(--accent-blue); }
+#path-result { margin-top: 8px; font-size: 11px; color: var(--text-secondary); line-height: 1.6; }
+#path-result .path-node { display: inline-block; padding: 1px 5px; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 3px; margin: 0 2px; font-weight: 600; color: var(--text-primary); }
+#path-result .path-arrow { color: var(--text-muted); margin: 0 1px; }
+
+/* 2-hop highlight */
+.hop-highlight { stroke: var(--accent-cyan) !important; stroke-width: 2 !important; }
+
+/* Subgraph panel */
+.subgraph-info { font-size: 10px; color: var(--text-muted); padding: 6px 8px; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 4px; margin-top: 6px; }
+
+/* Global timeline in sidebar */
+#global-timeline { width: 100%; height: 60px; margin: 6px 0; display: flex; align-items: flex-end; gap: 1px; }
+#global-timeline .gt-bar {
+  flex: 1;
+  border-radius: 1px 1px 0 0;
+  transition: height 0.3s;
+  cursor: pointer;
+  min-width: 2px;
+}
+#global-timeline .gt-bar:hover { opacity: 0.7; }
+#global-timeline-labels { display: flex; justify-content: space-between; font-size: 8px; color: var(--text-muted); margin-top: 2px; }
+
+/* Rel breakdown mini bars */
+.rel-breakdown { display: flex; gap: 2px; align-items: flex-end; height: 16px; margin: 4px 0; }
+.rel-breakdown-bar { border-radius: 1px 1px 0 0; min-width: 4px; transition: height 0.3s; }
+
+/* Entity timeline container in panel */
+.entity-timeline-container {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px;
+  margin: 6px 0;
+}
+.entity-timeline-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 1px;
+  height: 50px;
+}
+.entity-timeline-bars .et-bar {
+  flex: 1;
+  border-radius: 1px 1px 0 0;
+  min-width: 2px;
+  transition: height 0.3s;
+}
+.et-label-row { display: flex; justify-content: space-between; font-size: 8px; color: var(--text-muted); margin-top: 3px; }
+
+/* Path history */
+.path-history { max-height: 120px; overflow-y: auto; }
+.path-history-item { padding: 4px 6px; border-bottom: 1px solid var(--border); font-size: 10px; cursor: pointer; }
+.path-history-item:hover { background: var(--bg-tertiary); }
+
+/* Loading indicator */
+.loading-temporal {
+  font-size: 10px;
+  color: var(--text-muted);
+  padding: 8px;
+  text-align: center;
+}
+
 </style>
 </head>
 <body>
@@ -172,6 +303,21 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', syst
     <div class="section">
       <div class="section-title">Top Risk Entities</div>
       <div id="top-list"></div>
+    </div>
+
+
+    <!-- Global Timeline -->
+    <div class="section">
+      <div class="section-title">Activity Timeline</div>
+      <div id="global-timeline"></div>
+      <div id="global-timeline-labels"><span></span><span></span></div>
+      <div style="display:flex;gap:6px;margin-top:4px;flex-wrap:wrap">
+        <span style="font-size:8px;color:var(--text-muted)"><span style="display:inline-block;width:6px;height:6px;background:var(--accent-blue);border-radius:1px;vertical-align:middle"></span> Calls</span>
+        <span style="font-size:8px;color:var(--text-muted)"><span style="display:inline-block;width:6px;height:6px;background:var(--accent-green);border-radius:1px;vertical-align:middle"></span> Messages</span>
+        <span style="font-size:8px;color:var(--text-muted)"><span style="display:inline-block;width:6px;height:6px;background:var(--accent-amber);border-radius:1px;vertical-align:middle"></span> Meetings</span>
+        <span style="font-size:8px;color:var(--text-muted)"><span style="display:inline-block;width:6px;height:6px;background:var(--accent-red);border-radius:1px;vertical-align:middle"></span> Transactions</span>
+        <span style="font-size:8px;color:var(--text-muted)"><span style="display:inline-block;width:6px;height:6px;background:var(--accent-cyan);border-radius:1px;vertical-align:middle"></span> Shared Loc.</span>
+      </div>
     </div>
 
     <!-- Method Info -->
@@ -205,7 +351,28 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', syst
       <option value="VERY HIGH">Very High</option>
     </select>
     <button id="resetBtn">Reset</button>
+
+    <span class="ctrl-sep">|</span>
+    <button class="ctrl-btn" id="hop2Btn" onclick="toggle2Hop()" title="Show 2-hop neighbors of selected entity">2-Hop</button>
+    <button class="ctrl-btn" id="pathBtn" onclick="togglePathMode()" title="Find shortest path between two entities">Path Finder</button>
+    <select id="commFilter" onchange="isolateCommunity(this.value)" title="Isolate a community">
+      <option value="">All communities</option>
+    </select>
+
   </div>
+
+<div id="path-overlay">
+  <div class="path-title">⚡ Shortest Path Finder</div>
+  <div style="display:flex;gap:8px;align-items:center">
+    <input id="pathFrom" placeholder="From (e.g. P001)" />
+    <span style="color:var(--text-muted)">→</span>
+    <input id="pathTo" placeholder="To (e.g. P205)" />
+    <button class="ctrl-btn" onclick="findPath()">Find</button>
+    <button class="ctrl-btn" onclick="closePath()" style="color:var(--accent-red)">✕</button>
+  </div>
+  <div id="path-result"></div>
+</div>
+
   <svg id="net"></svg>
   <div id="tooltip">
     <div class="tt-id" id="tt-id"></div>
@@ -397,6 +564,11 @@ function selectEntity(id) {
 
   // Build panel content
   renderPanel(d);
+
+  // 2-hop expansion if active
+  if (hop2Mode) {
+    setTimeout(() => show2Hop(id), 30);
+  }
 }
 
 function clearSelection() {
@@ -566,11 +738,360 @@ function renderPanel(d) {
       </div>
     </div>
 
+    ${renderEntityTimeline(d)}
+
+
     <div style="margin-top:12px;padding:8px;background:var(--bg-tertiary);border:1px solid var(--border);border-radius:4px;font-size:9px;color:var(--text-muted);line-height:1.5">
       Synthetic/Anonymized Demonstration Dataset. Scores indicate <strong>network anomaly / investigation priority</strong> only. This system does not determine guilt. Human investigators make all determinations.
     </div>
   `;
 }
+
+// ══════════════════════════════════════════
+// PHASE 2: Temporal Analysis & Investigation Tools
+// ══════════════════════════════════════════
+
+let TEMPORAL = null;
+let pathMode = false;
+let hop2Mode = false;
+let pathFrom = null;
+
+// ── Load temporal data ──
+async function loadTemporal() {
+  try {
+    const resp = await fetch('data/temporal.json');
+    TEMPORAL = await resp.json();
+    renderGlobalTimeline();
+    populateCommunityIsolate();
+    console.log('[Phase 2] Temporal data loaded:', TEMPORAL._meta.total_events, 'events,', TEMPORAL._meta.total_dates, 'days');
+  } catch (err) {
+    console.warn('[Phase 2] Could not load temporal.json:', err);
+  }
+}
+
+// ── Global Timeline (sidebar) ──
+function renderGlobalTimeline() {
+  if (!TEMPORAL) return;
+  const container = document.getElementById('global-timeline');
+  const labels = document.getElementById('global-timeline-labels');
+  const tl = TEMPORAL.global_timeline;
+  const maxTotal = Math.max(...tl.map(d => d.total));
+  
+  const relColors = {
+    call: '#3b82f6', message: '#22c55e', meeting: '#f59e0b',
+    transaction: '#ef4444', shared_location: '#06b6d4'
+  };
+  
+  container.innerHTML = tl.map(d => {
+    const h = Math.max(2, (d.total / maxTotal) * 56);
+    // Stack bars by type
+    let stacked = '';
+    for (const [type, color] of Object.entries(relColors)) {
+      const val = d[type] || 0;
+      if (val > 0) {
+        const sh = (val / d.total) * h;
+        stacked += `<div style="position:absolute;bottom:0;left:0;right:0;height:${sh}px;background:${color};opacity:0.7;border-radius:1px"></div>`;
+      }
+    }
+    return `<div class="gt-bar" style="height:${h}px;position:relative" title="${d.date}: ${d.total} events">${stacked}</div>`;
+  }).join('');
+  
+  labels.innerHTML = `<span>${tl[0].date.slice(5)}</span><span>${tl[Math.floor(tl.length/2)].date.slice(5)}</span><span>${tl[tl.length-1].date.slice(5)}</span>`;
+}
+
+// ── Community Isolate ──
+function populateCommunityIsolate() {
+  const sel = document.getElementById('commFilter');
+  const comms = TEMPORAL ? TEMPORAL.communities : {};
+  // Also add from DATA.nodes
+  const allComms = new Set();
+  DATA.nodes.forEach(n => allComms.add(n.community));
+  Array.from(allComms).sort((a,b) => a-b).forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = 'Community ' + c;
+    sel.appendChild(opt);
+  });
+  // Sync with existing commFilter
+  const commFilter = document.getElementById('commFilter');
+  Array.from(sel.options).slice(1).forEach(opt => {
+    if (!commFilter.querySelector(`option[value="${opt.value}"]`)) {
+      const newOpt = document.createElement('option');
+      newOpt.value = opt.value;
+      newOpt.textContent = opt.textContent;
+      commFilter.appendChild(newOpt);
+    }
+  });
+}
+
+function isolateCommunity(val) {
+  document.getElementById('commFilter').value = val;
+  applyFilters();
+  if (val) {
+    // Zoom to fit community
+    const commNodes = DATA.nodes.filter(n => n.community == val);
+    if (commNodes.length > 0) {
+      const xs = commNodes.map(n => n.x || 0);
+      const ys = commNodes.map(n => n.y || 0);
+      const cx = (Math.min(...xs) + Math.max(...xs)) / 2;
+      const cy = (Math.min(...ys) + Math.max(...ys)) / 2;
+      svg.transition().duration(500).call(
+        d3.zoom().transform.bind(null, svg),
+        d3.zoomIdentity.translate(W/2, H/2).scale(0.8).translate(-cx, -cy)
+      );
+    }
+  }
+}
+
+// ── 2-Hop Expansion ──
+function toggle2Hop() {
+  hop2Mode = !hop2Mode;
+  const btn = document.getElementById('hop2Btn');
+  btn.classList.toggle('active', hop2Mode);
+  
+  if (hop2Mode && selectedId) {
+    show2Hop(selectedId);
+  } else if (!hop2Mode) {
+    if (selectedId) selectEntity(selectedId);
+    else clearSelection();
+  }
+}
+
+function show2Hop(id) {
+  const ns = neighbors(id, 2);
+  const ns1 = neighbors(id, 1);
+  
+  node.attr('opacity', n => ns.has(n.id) ? 1 : 0.06)
+      .attr('stroke', n => {
+        if (n.id === id) return '#fff';
+        if (ns1.has(n.id)) return '#06b6d4';
+        return '#1e2d44';
+      })
+      .attr('stroke-width', n => {
+        if (n.id === id) return 2.5;
+        if (ns1.has(n.id)) return 1.5;
+        return 0.5;
+      });
+  
+  link.attr('stroke-opacity', l => {
+    const s = l.source.id || l.source, t = l.target.id || l.target;
+    if (ns.has(s) && ns.has(t)) return 0.6;
+    return 0.02;
+  }).attr('stroke', l => {
+    const s = l.source.id || l.source, t = l.target.id || l.target;
+    if ((s === id || t === id) && ns.has(s) && ns.has(t)) return '#06b6d4';
+    return '#1e2d44';
+  });
+  
+  // Update panel with subgraph info
+  const hop1 = ns1.size - 1;
+  const hop2 = ns.size - ns1.size;
+  const pc = document.getElementById('panel-content');
+  if (pc.style.display !== 'none') {
+    const infoDiv = document.createElement('div');
+    infoDiv.className = 'subgraph-info';
+    infoDiv.innerHTML = `<strong>2-Hop Subgraph:</strong> ${ns.size} entities (${hop1} direct + ${hop2} second-degree)`;
+    pc.appendChild(infoDiv);
+  }
+}
+
+// ── Path Finder ──
+function togglePathMode() {
+  pathMode = !pathMode;
+  const btn = document.getElementById('pathBtn');
+  const overlay = document.getElementById('path-overlay');
+  btn.classList.toggle('active', pathMode);
+  
+  if (pathMode) {
+    overlay.classList.add('show');
+    pathFrom = null;
+    document.getElementById('pathFrom').value = selectedId || '';
+    document.getElementById('pathTo').value = '';
+    document.getElementById('path-result').innerHTML = '';
+    if (selectedId) pathFrom = selectedId;
+  } else {
+    overlay.classList.remove('show');
+  }
+}
+
+function closePath() {
+  pathMode = false;
+  pathFrom = null;
+  document.getElementById('pathBtn').classList.remove('active');
+  document.getElementById('path-overlay').classList.remove('show');
+}
+
+function findPath() {
+  const from = document.getElementById('pathFrom').value.trim().toUpperCase();
+  const to = document.getElementById('pathTo').value.trim().toUpperCase();
+  const result = document.getElementById('path-result');
+  
+  if (!from || !to) {
+    result.innerHTML = '<span style="color:var(--accent-red)">Enter both entity IDs</span>';
+    return;
+  }
+  if (!nodeMap[from] || !nodeMap[to]) {
+    result.innerHTML = '<span style="color:var(--accent-red)">Entity not found in network</span>';
+    return;
+  }
+  if (from === to) {
+    result.innerHTML = '<span style="color:var(--accent-amber)">Source and target are the same entity</span>';
+    return;
+  }
+  
+  // BFS shortest path
+  const adj = TEMPORAL ? TEMPORAL.adjacency : {};
+  if (!adj[from]) {
+    result.innerHTML = '<span style="color:var(--accent-red)">No connections found for source entity</span>';
+    return;
+  }
+  
+  const visited = new Set([from]);
+  const parent = {};
+  const queue = [from];
+  let found = false;
+  
+  while (queue.length > 0 && !found) {
+    const curr = queue.shift();
+    for (const next of (adj[curr] || [])) {
+      if (!visited.has(next)) {
+        visited.add(next);
+        parent[next] = curr;
+        if (next === to) { found = true; break; }
+        queue.push(next);
+      }
+    }
+  }
+  
+  if (!found) {
+    result.innerHTML = '<span style="color:var(--accent-red)">No path found between these entities</span>';
+    return;
+  }
+  
+  // Reconstruct path
+  const path = [];
+  let cur = to;
+  while (cur) {
+    path.unshift(cur);
+    cur = parent[cur];
+  }
+  
+  // Highlight path on graph
+  const pathSet = new Set(path);
+  const pathEdges = new Set();
+  for (let i = 0; i < path.length - 1; i++) {
+    const a = path[i], b = path[i + 1];
+    pathEdges.add(a + '|' + b);
+    pathEdges.add(b + '|' + a);
+  }
+  
+  node.attr('opacity', n => pathSet.has(n.id) ? 1 : 0.08)
+      .attr('stroke', n => pathSet.has(n.id) ? '#f59e0b' : '#0a0e17')
+      .attr('stroke-width', n => pathSet.has(n.id) ? 2 : 0.5);
+  
+  link.attr('stroke-opacity', l => {
+    const s = l.source.id || l.source, t = l.target.id || l.target;
+    return pathEdges.has(s + '|' + t) ? 0.9 : 0.03;
+  }).attr('stroke', l => {
+    const s = l.source.id || l.source, t = l.target.id || l.target;
+    return pathEdges.has(s + '|' + t) ? '#f59e0b' : '#1e2d44';
+  });
+  
+  // Render result
+  const pathHtml = path.map((p, i) => {
+    const node = nodeMap[p];
+    const bandCls = node ? node.band.replace(/ /g, '') : '';
+    return `<span class="path-node" onclick="selectEntity('${p}')" style="cursor:pointer;border-color:${node ? bandColor(node.band) : 'var(--border)'}">${p}</span>` + 
+           (i < path.length - 1 ? '<span class="path-arrow"> → </span>' : '');
+  }).join('');
+  
+  result.innerHTML = `
+    <div style="margin-bottom:4px"><strong>Hops:</strong> ${path.length - 1}</div>
+    <div>${pathHtml}</div>
+    <div style="margin-top:6px;font-size:9px;color:var(--text-muted)">Click entities to inspect. Close path mode to restore normal view.</div>
+  `;
+}
+
+// ── Entity Timeline (in panel) ──
+function renderEntityTimeline(d) {
+  if (!TEMPORAL || !TEMPORAL.entity_timeline_summary[d.id]) return '';
+  
+  const summary = TEMPORAL.entity_timeline_summary[d.id];
+  const bursts = TEMPORAL.entity_bursts[d.id] || { bursts: [], burst_days: 0, max_burst: 0 };
+  
+  if (summary.dates.length === 0) return '';
+  
+  const maxVal = Math.max(...summary.totals, 1);
+  const relColors = {
+    call: '#3b82f6', message: '#22c55e', meeting: '#f59e0b',
+    transaction: '#ef4444', shared_location: '#06b6d4'
+  };
+  
+  // Build per-day activity from events
+  const entityEvents = {};
+  if (TEMPORAL.entity_bursts[d.id]) {
+    // Use burst data to reconstruct daily totals
+    // Actually we need per-day per-type data. Let's use the daily data from entity if available.
+  }
+  
+  // Create sparkline bars
+  const bars = summary.totals.map((val, i) => {
+    const h = Math.max(1, (val / maxVal) * 46);
+    const isBurst = bursts.bursts.some(b => b.date === summary.dates[i]);
+    const borderColor = isBurst ? 'border: 1px solid #ef4444;' : '';
+    return `<div class="et-bar" style="height:${h}px;background:${isBurst ? '#ef4444' : 'var(--accent-blue)'};${borderColor}" title="${summary.dates[i]}: ${val} events${isBurst ? ' (BURST)' : ''}"></div>`;
+  }).join('');
+  
+  const burstInfo = bursts.burst_days > 0 
+    ? `<span class="burst-badge burst-high">${bursts.burst_days} burst day${bursts.burst_days > 1 ? 's' : ''}</span>`
+    : `<span class="burst-badge burst-low">No bursts</span>`;
+  
+  // Relationship breakdown for entity
+  const d2 = d;
+  const relHtml = ['n_calls', 'n_messages', 'n_meetings', 'n_transactions', 'n_locations'].map((key, i) => {
+    const colors = ['#3b82f6', '#22c55e', '#f59e0b', '#ef4444', '#06b6d4'];
+    const labels = ['Calls', 'Messages', 'Meetings', 'Transactions', 'Locations'];
+    const val = d2[key] || 0;
+    const maxRel = Math.max(d2.n_calls || 0, d2.n_messages || 0, d2.n_meetings || 0, d2.n_transactions || 0, d2.n_locations || 0, 1);
+    const h = Math.max(2, (val / maxRel) * 14);
+    return `<div title="${labels[i]}: ${val}" style="width:4px;height:${h}px;background:${colors[i]};border-radius:1px"></div>`;
+  }).join('');
+  
+  return `
+    <div class="detail-section">
+      <div class="detail-section-title">Activity Timeline ${burstInfo}</div>
+      <div class="entity-timeline-container">
+        <div class="entity-timeline-bars">${bars}</div>
+        <div class="et-label-row"><span>${summary.dates[0].slice(5)}</span><span>Active: ${summary.active_days} days</span><span>${summary.dates[summary.dates.length-1].slice(5)}</span></div>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:6px;font-size:10px;color:var(--text-muted)">
+        <span>Max daily: <strong style="color:var(--text-primary)">${summary.max_daily}</strong></span>
+        <span>Mean daily: <strong style="color:var(--text-primary)">${bursts.mean_daily}</strong></span>
+      </div>
+    </div>
+    
+    <div class="detail-section">
+      <div class="detail-section-title">Relationship Breakdown</div>
+      <div style="display:flex;gap:12px;align-items:flex-end">
+        <div class="rel-breakdown">${relHtml}</div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:4px;flex-wrap:wrap;font-size:8px;color:var(--text-muted)">
+        <span>📞 ${d2.n_calls||0}</span>
+        <span>💬 ${d2.n_messages||0}</span>
+        <span>🤝 ${d2.n_meetings||0}</span>
+        <span>💰 ${d2.n_transactions||0}</span>
+        <span>📍 ${d2.n_locations||0}</span>
+      </div>
+    </div>
+  `;
+}
+
+// ── Enhance renderPanel to include temporal data ──
+const _origRenderPanel = typeof renderPanel === 'function' ? renderPanel : null;
+
+// Start loading temporal data
+loadTemporal();
+
 </script>
 </body>
 </html>
