@@ -1,0 +1,4454 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "disclaimer": "Synthetic demonstration data for SIH26189 prototype. All cases, evidence, and notes are fictional and do not represent real criminal investigations.",
+    "generated_from": [
+      "gnn_results.json",
+      "events.json",
+      "temporal.json",
+      "nlp_results.json",
+      "synthetic_firs.json"
+    ]
+  },
+  "cases": [
+    {
+      "id": "CASE-001",
+      "title": "Koramangala Network Anomaly Investigation",
+      "status": "active",
+      "priority": "high",
+      "created_date": "2026-08-15",
+      "lead_investigator": "Investigator A (Demo)",
+      "description": "Investigation into anomalous activity detected in Community 4, centred on 10 entities (P201–P210) with elevated anomaly scores. All 10 entities exhibit MODERATE risk band and high communication burst patterns.",
+      "linked_entities": [
+        "P201",
+        "P202",
+        "P203",
+        "P204",
+        "P205",
+        "P206",
+        "P207",
+        "P208",
+        "P209",
+        "P210"
+      ],
+      "linked_documents": [
+        "SYN-FIR-001",
+        "SYN-FIR-012"
+      ],
+      "linked_communities": [
+        4
+      ]
+    },
+    {
+      "id": "CASE-002",
+      "title": "Bridge Entity Network Analysis",
+      "status": "active",
+      "priority": "medium",
+      "created_date": "2026-08-20",
+      "lead_investigator": "Investigator B (Demo)",
+      "description": "Analysis of high-betweenness entities in Community 2 that act as bridges to other communities. P138 (betweenness 0.109) and P158 (betweenness 0.107) connect otherwise separate clusters.",
+      "linked_entities": [
+        "P138",
+        "P158",
+        "P047",
+        "P089",
+        "P103"
+      ],
+      "linked_documents": [
+        "SYN-FIR-005",
+        "SYN-FIR-010"
+      ],
+      "linked_communities": [
+        2
+      ]
+    },
+    {
+      "id": "CASE-003",
+      "title": "Cross-Community Communication Patterns",
+      "status": "review",
+      "priority": "low",
+      "created_date": "2026-09-01",
+      "lead_investigator": "Investigator A (Demo)",
+      "description": "Monitoring communication patterns between Community 3 entities and external communities. P217 (betweenness 0.109) shows significant cross-community connectivity.",
+      "linked_entities": [
+        "P217",
+        "P156",
+        "P112",
+        "P078",
+        "P199"
+      ],
+      "linked_documents": [
+        "SYN-FIR-003",
+        "SYN-FIR-007"
+      ],
+      "linked_communities": [
+        3
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-001",
+      "case_id": "CASE-001",
+      "title": "Highest anomaly score in network",
+      "type": "network_finding",
+      "category": "structural",
+      "severity": "critical",
+      "date": "2026-08-15",
+      "linked_entity": "P202",
+      "description": "Entity P202 exhibits the highest anomaly score (50) in the entire network, with betweenness centrality of 0.110.",
+      "source": "graph_analysis",
+      "metrics": {
+        "anomaly": 50,
+        "betweenness": 0.11012,
+        "degree": 49,
+        "community": 4
+      }
+    },
+    {
+      "id": "EV-002",
+      "case_id": "CASE-001",
+      "title": "Communication burst pattern detected",
+      "type": "temporal_finding",
+      "category": "behavioral",
+      "severity": "high",
+      "date": "2026-09-01",
+      "linked_entity": "P202",
+      "description": "P202 recorded a maximum daily burst of 24 events in a single day, the highest in the network, across 16 active days.",
+      "source": "temporal_analysis",
+      "metrics": {
+        "max_daily_burst": 24,
+        "active_days": 16
+      }
+    },
+    {
+      "id": "EV-003",
+      "case_id": "CASE-001",
+      "title": "All 10 entities in single community",
+      "type": "network_finding",
+      "category": "structural",
+      "severity": "high",
+      "date": "2026-08-15",
+      "linked_entity": null,
+      "description": "All 10 highest-anomaly entities (P201–P210) belong to Community 4, which contains exactly 10 entities — suggesting a tightly connected anomalous cluster.",
+      "source": "graph_analysis",
+      "metrics": {
+        "community": 4,
+        "size": 10,
+        "entity_ids": [
+          "P201",
+          "P202",
+          "P203",
+          "P204",
+          "P205",
+          "P206",
+          "P207",
+          "P208",
+          "P209",
+          "P210"
+        ]
+      }
+    },
+    {
+      "id": "EV-004",
+      "case_id": "CASE-001",
+      "title": "FIR naming entity from linked network",
+      "type": "document_finding",
+      "category": "legal",
+      "severity": "high",
+      "date": "2026-08-05",
+      "linked_entity": null,
+      "linked_document": "SYN-FIR-001",
+      "description": "SYN-FIR-001 describes a robbery at Koramangala, Bengaluru. Vikram Patel identified as accused under Section 303 BNS. Koramangala is a shared location with SYN-FIR-012.",
+      "source": "nlp_extraction"
+    },
+    {
+      "id": "EV-005",
+      "case_id": "CASE-001",
+      "title": "Repeated entity appearance across FIRs",
+      "type": "document_finding",
+      "category": "legal",
+      "severity": "medium",
+      "date": "2026-09-20",
+      "linked_entity": null,
+      "linked_document": "SYN-FIR-012",
+      "description": "Vikram Patel appears as accused in both SYN-FIR-001 and SYN-FIR-012, across different incident types. Rajesh Sharma appears in both as complainant/witness.",
+      "source": "nlp_extraction",
+      "metrics": {
+        "co_occurring_entities": [
+          "Vikram Patel",
+          "Rajesh Sharma"
+        ],
+        "documents": [
+          "SYN-FIR-001",
+          "SYN-FIR-012"
+        ]
+      }
+    },
+    {
+      "id": "EV-006",
+      "case_id": "CASE-001",
+      "title": "Elevated transaction activity",
+      "type": "temporal_finding",
+      "category": "financial",
+      "severity": "medium",
+      "date": "2026-09-10",
+      "linked_entity": "P201",
+      "description": "P201 recorded 30 transactions with 39 unique contacts — disproportionate for a single entity.",
+      "source": "graph_analysis",
+      "metrics": {
+        "n_transactions": 30,
+        "unique_contacts": 39
+      }
+    },
+    {
+      "id": "EV-007",
+      "case_id": "CASE-002",
+      "title": "Highest betweenness in Community 2",
+      "type": "network_finding",
+      "category": "structural",
+      "severity": "high",
+      "date": "2026-08-20",
+      "linked_entity": "P138",
+      "description": "P138 has betweenness centrality of 0.109, the highest in Community 2, with only 24 connections — suggesting a strategic bridging role.",
+      "source": "graph_analysis",
+      "metrics": {
+        "betweenness": 0.10931,
+        "degree": 24,
+        "community": 2
+      }
+    },
+    {
+      "id": "EV-008",
+      "case_id": "CASE-002",
+      "title": "Second bridge entity in Community 2",
+      "type": "network_finding",
+      "category": "structural",
+      "severity": "high",
+      "date": "2026-08-20",
+      "linked_entity": "P158",
+      "description": "P158 shows betweenness centrality of 0.107 with 21 connections, forming a dual-bridge pattern with P138.",
+      "source": "graph_analysis",
+      "metrics": {
+        "betweenness": 0.10727,
+        "degree": 21
+      }
+    },
+    {
+      "id": "EV-009",
+      "case_id": "CASE-002",
+      "title": "P047 cross-community connectivity",
+      "type": "network_finding",
+      "category": "structural",
+      "severity": "medium",
+      "date": "2026-08-22",
+      "linked_entity": "P047",
+      "description": "P047 has 7 connections with betweenness 0.011, linking Community 0 entities to Community 2.",
+      "source": "graph_analysis",
+      "metrics": {
+        "degree": 7,
+        "betweenness": 0.01111
+      }
+    },
+    {
+      "id": "EV-010",
+      "case_id": "CASE-002",
+      "title": "FIR referencing bridge-area entities",
+      "type": "document_finding",
+      "category": "legal",
+      "severity": "medium",
+      "date": "2026-07-30",
+      "linked_entity": null,
+      "linked_document": "SYN-FIR-010",
+      "description": "SYN-FIR-010 describes misappropriation at MG Road, Jaipur. Ravi Kumar identified as accused.",
+      "source": "nlp_extraction"
+    },
+    {
+      "id": "EV-011",
+      "case_id": "CASE-003",
+      "title": "P217 highest betweenness in Community 3",
+      "type": "network_finding",
+      "category": "structural",
+      "severity": "high",
+      "date": "2026-09-01",
+      "linked_entity": "P217",
+      "description": "P217 has betweenness centrality of 0.109 with 30 connections, serving as the primary bridge from Community 3.",
+      "source": "graph_analysis",
+      "metrics": {
+        "betweenness": 0.1088,
+        "degree": 30
+      }
+    },
+    {
+      "id": "EV-012",
+      "case_id": "CASE-003",
+      "title": "High call volume to external communities",
+      "type": "temporal_finding",
+      "category": "behavioral",
+      "severity": "medium",
+      "date": "2026-09-15",
+      "linked_entity": "P217",
+      "description": "P217 recorded 12 calls, 14 messages, and 3 meetings — unusually high for Community 3.",
+      "source": "temporal_analysis",
+      "metrics": {
+        "n_calls": 12,
+        "n_messages": 14,
+        "n_meetings": 3
+      }
+    },
+    {
+      "id": "EV-013",
+      "case_id": "CASE-003",
+      "title": "FIR documenting location overlap",
+      "type": "document_finding",
+      "category": "legal",
+      "severity": "low",
+      "date": "2026-06-25",
+      "linked_entity": null,
+      "linked_document": "SYN-FIR-003",
+      "description": "SYN-FIR-003 filed at Koramangala PS. Deepa Nair identified as accused under Section 351 BNS.",
+      "source": "nlp_extraction"
+    }
+  ],
+  "notes": [
+    {
+      "id": "NOTE-001",
+      "case_id": "CASE-001",
+      "date": "2026-08-16",
+      "time": "10:30",
+      "author": "Investigator A",
+      "linked_entity": "P202",
+      "content": "P202 shows the highest anomaly score in the entire network. Recommend priority surveillance of this entity and its immediate contacts in Community 4.",
+      "tags": [
+        "priority",
+        "surveillance"
+      ]
+    },
+    {
+      "id": "NOTE-002",
+      "case_id": "CASE-001",
+      "date": "2026-08-20",
+      "time": "14:15",
+      "author": "Investigator A",
+      "linked_entity": null,
+      "content": "Community 4 is unusually small (only 10 entities) but all have MODERATE risk. This suggests either a specialised cell or a tightly controlled network structure.",
+      "tags": [
+        "analysis",
+        "community"
+      ]
+    },
+    {
+      "id": "NOTE-003",
+      "case_id": "CASE-001",
+      "date": "2026-09-05",
+      "time": "09:00",
+      "author": "Investigator A",
+      "linked_entity": "P201",
+      "content": "Cross-referencing P201's transaction count with temporal data shows clustering around Sep 1–5. Burst detection flagged this period.",
+      "tags": [
+        "temporal",
+        "transactions"
+      ]
+    },
+    {
+      "id": "NOTE-004",
+      "case_id": "CASE-002",
+      "date": "2026-08-22",
+      "time": "11:45",
+      "author": "Investigator B",
+      "linked_entity": "P138",
+      "content": "P138's high betweenness with relatively low degree (24) indicates it serves as a critical information broker between Community 2 and the rest of the network.",
+      "tags": [
+        "bridge",
+        "centrality"
+      ]
+    },
+    {
+      "id": "NOTE-005",
+      "case_id": "CASE-002",
+      "date": "2026-08-25",
+      "time": "16:30",
+      "author": "Investigator B",
+      "linked_entity": "P158",
+      "content": "P158 and P138 together account for most of Community 2's external connectivity. Removing either would significantly fragment the community.",
+      "tags": [
+        "bridge",
+        "network-resilience"
+      ]
+    },
+    {
+      "id": "NOTE-006",
+      "case_id": "CASE-003",
+      "date": "2026-09-02",
+      "time": "13:00",
+      "author": "Investigator A",
+      "linked_entity": "P217",
+      "content": "P217's cross-community links warrant closer monitoring. Communication volume is 3x the Community 3 average.",
+      "tags": [
+        "cross-community",
+        "volume"
+      ]
+    }
+  ],
+  "timeline_events": {
+    "CASE-001": [
+      {
+        "date": "2026-08-02",
+        "type": "communication",
+        "title": "call: P202 ↔ P092",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P202",
+          "P092"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-06",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P155",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P201",
+          "P155"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-08",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P150",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P201",
+          "P150"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-08",
+        "type": "communication",
+        "title": "call: P203 ↔ P198",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P203",
+          "P198"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-09",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P218",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P201",
+          "P218"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-09",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P091",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P201",
+          "P091"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-09",
+        "type": "communication",
+        "title": "call: P203 ↔ P146",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P203",
+          "P146"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-10",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P168",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P201",
+          "P168"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-11",
+        "type": "communication",
+        "title": "call: P203 ↔ P106",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P203",
+          "P106"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-13",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P182",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P201",
+          "P182"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-13",
+        "type": "communication",
+        "title": "call: P202 ↔ P178",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P202",
+          "P178"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-13",
+        "type": "communication",
+        "title": "call: P203 ↔ P134",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P203",
+          "P134"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-14",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P143",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P201",
+          "P143"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-14",
+        "type": "communication",
+        "title": "call: P202 ↔ P031",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P202",
+          "P031"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-14",
+        "type": "communication",
+        "title": "call: P203 ↔ P111",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P203",
+          "P111"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-14",
+        "type": "communication",
+        "title": "call: P203 ↔ P216",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P203",
+          "P216"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-15",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P186",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P201",
+          "P186"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-15",
+        "type": "document",
+        "title": "FIR Filed: SYN-FIR-001",
+        "description": "Police Station: Koramangala, Bengaluru Urban",
+        "linked_documents": [
+          "SYN-FIR-001"
+        ],
+        "source": "synthetic_firs.json"
+      },
+      {
+        "date": "2026-08-17",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P162",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P201",
+          "P162"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-17",
+        "type": "communication",
+        "title": "call: P203 ↔ P199",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P203",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-18",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P077",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P201",
+          "P077"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-18",
+        "type": "communication",
+        "title": "call: P203 ↔ P218",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P203",
+          "P218"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-19",
+        "type": "communication",
+        "title": "call: P202 ↔ P195",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P202",
+          "P195"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-20",
+        "type": "communication",
+        "title": "call: P202 ↔ P032",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P202",
+          "P032"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-20",
+        "type": "communication",
+        "title": "call: P203 ↔ P087",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P203",
+          "P087"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-20",
+        "type": "communication",
+        "title": "call: P203 ↔ P140",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P203",
+          "P140"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-22",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P135",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P201",
+          "P135"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-22",
+        "type": "communication",
+        "title": "call: P202 ↔ P147",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P202",
+          "P147"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-25",
+        "type": "communication",
+        "title": "call: P202 ↔ P052",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P202",
+          "P052"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-26",
+        "type": "communication",
+        "title": "call: P203 ↔ P052",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P203",
+          "P052"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-26",
+        "type": "communication",
+        "title": "call: P203 ↔ P144",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P203",
+          "P144"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-27",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P187",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P201",
+          "P187"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-27",
+        "type": "communication",
+        "title": "call: P203 ↔ P103",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P203",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-28",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P177",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P201",
+          "P177"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-28",
+        "type": "communication",
+        "title": "call: P202 ↔ P144",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P202",
+          "P144"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-29",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P004",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P201",
+          "P004"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-30",
+        "type": "communication",
+        "title": "call: P202 ↔ P218",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P202",
+          "P218"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-31",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P065",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P201",
+          "P065"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-31",
+        "type": "communication",
+        "title": "call: P203 ↔ P026",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P203",
+          "P026"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-31",
+        "type": "communication",
+        "title": "call: P203 ↔ P069",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P203",
+          "P069"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-02",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P001",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P201",
+          "P001"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-02",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P070",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P201",
+          "P070"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-05",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P175",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P201",
+          "P175"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-05",
+        "type": "communication",
+        "title": "call: P203 ↔ P008",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P203",
+          "P008"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-06",
+        "type": "communication",
+        "title": "call: P203 ↔ P047",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P203",
+          "P047"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P201 ↔ P207",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P201",
+          "P207"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P201 ↔ P202",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P201",
+          "P202"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P207 ↔ P201",
+        "description": "Weight: 10",
+        "linked_entities": [
+          "P207",
+          "P201"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P201 ↔ P206",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P201",
+          "P206"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P208 ↔ P201",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P208",
+          "P201"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P205 ↔ P201",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P205",
+          "P201"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "call: P202 ↔ P170",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P202",
+          "P170"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P205 ↔ P202",
+        "description": "Weight: 10",
+        "linked_entities": [
+          "P205",
+          "P202"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P203 ↔ P202",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P203",
+          "P202"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P202 ↔ P206",
+        "description": "Weight: 10",
+        "linked_entities": [
+          "P202",
+          "P206"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P210 ↔ P202",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P210",
+          "P202"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P202 ↔ P204",
+        "description": "Weight: 10",
+        "linked_entities": [
+          "P202",
+          "P204"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P207 ↔ P202",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P207",
+          "P202"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P202 ↔ P207",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P202",
+          "P207"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P203 ↔ P204",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P203",
+          "P204"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P206 ↔ P203",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P206",
+          "P203"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P203 ↔ P210",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P203",
+          "P210"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P203 ↔ P207",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P203",
+          "P207"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P207 ↔ P204",
+        "description": "Weight: 10",
+        "linked_entities": [
+          "P207",
+          "P204"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P204 ↔ P210",
+        "description": "Weight: 10",
+        "linked_entities": [
+          "P204",
+          "P210"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P205 ↔ P206",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P205",
+          "P206"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P209 ↔ P205",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P209",
+          "P205"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P208 ↔ P205",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P208",
+          "P205"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P205 ↔ P210",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P205",
+          "P210"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P207 ↔ P205",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P207",
+          "P205"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P205 ↔ P208",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P205",
+          "P208"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P206 ↔ P205",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P206",
+          "P205"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P206 ↔ P210",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P206",
+          "P210"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P207 ↔ P206",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P207",
+          "P206"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P206 ↔ P209",
+        "description": "Weight: 10",
+        "linked_entities": [
+          "P206",
+          "P209"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P208 ↔ P207",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P208",
+          "P207"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P207 ↔ P210",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P207",
+          "P210"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P210 ↔ P208",
+        "description": "Weight: 10",
+        "linked_entities": [
+          "P210",
+          "P208"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P208 ↔ P209",
+        "description": "Weight: 10",
+        "linked_entities": [
+          "P208",
+          "P209"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P210 ↔ P209",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P210",
+          "P209"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "meeting: P209 ↔ P210",
+        "description": "Weight: 10",
+        "linked_entities": [
+          "P209",
+          "P210"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-10",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P219",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P201",
+          "P219"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-10",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P125",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P201",
+          "P125"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-10",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P015",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P201",
+          "P015"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-10",
+        "type": "communication",
+        "title": "call: P202 ↔ P166",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P202",
+          "P166"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-10",
+        "type": "communication",
+        "title": "call: P203 ↔ P219",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P203",
+          "P219"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-13",
+        "type": "communication",
+        "title": "call: P202 ↔ P095",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P202",
+          "P095"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-13",
+        "type": "communication",
+        "title": "call: P202 ↔ P177",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P202",
+          "P177"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-13",
+        "type": "communication",
+        "title": "call: P203 ↔ P106",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P203",
+          "P106"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-14",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P017",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P201",
+          "P017"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-14",
+        "type": "communication",
+        "title": "call: P202 ↔ P044",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P202",
+          "P044"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-15",
+        "type": "communication",
+        "title": "call: P202 ↔ P218",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P202",
+          "P218"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-15",
+        "type": "communication",
+        "title": "call: P203 ↔ P117",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P203",
+          "P117"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-15",
+        "type": "communication",
+        "title": "call: P203 ↔ P125",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P203",
+          "P125"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-16",
+        "type": "communication",
+        "title": "call: P202 ↔ P215",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P202",
+          "P215"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-16",
+        "type": "communication",
+        "title": "call: P203 ↔ P016",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P203",
+          "P016"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-17",
+        "type": "communication",
+        "title": "call: P203 ↔ P033",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P203",
+          "P033"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-18",
+        "type": "communication",
+        "title": "call: P202 ↔ P196",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P202",
+          "P196"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-18",
+        "type": "communication",
+        "title": "call: P202 ↔ P136",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P202",
+          "P136"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-20",
+        "type": "document",
+        "title": "FIR Filed: SYN-FIR-012",
+        "description": "Police Station: Koramangala, Bengaluru Urban",
+        "linked_documents": [
+          "SYN-FIR-012"
+        ],
+        "source": "synthetic_firs.json"
+      },
+      {
+        "date": "2026-09-21",
+        "type": "communication",
+        "title": "call: P202 ↔ P135",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P202",
+          "P135"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-22",
+        "type": "communication",
+        "title": "call: P203 ↔ P127",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P203",
+          "P127"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-23",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P152",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P201",
+          "P152"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-23",
+        "type": "communication",
+        "title": "call: P202 ↔ P050",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P202",
+          "P050"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-26",
+        "type": "communication",
+        "title": "call: P202 ↔ P101",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P202",
+          "P101"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-26",
+        "type": "communication",
+        "title": "call: P202 ↔ P095",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P202",
+          "P095"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-26",
+        "type": "communication",
+        "title": "call: P202 ↔ P127",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P202",
+          "P127"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-27",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P128",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P201",
+          "P128"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-27",
+        "type": "communication",
+        "title": "call: P202 ↔ P175",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P202",
+          "P175"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-27",
+        "type": "communication",
+        "title": "call: P202 ↔ P165",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P202",
+          "P165"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-28",
+        "type": "communication",
+        "title": "call: P203 ↔ P134",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P203",
+          "P134"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-29",
+        "type": "communication",
+        "title": "transaction: P201 ↔ P150",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P201",
+          "P150"
+        ],
+        "source": "events.json"
+      }
+    ],
+    "CASE-002": [
+      {
+        "date": "2026-07-30",
+        "type": "document",
+        "title": "FIR Filed: SYN-FIR-010",
+        "description": "Police Station: MG Road, Jaipur",
+        "linked_documents": [
+          "SYN-FIR-010"
+        ],
+        "source": "synthetic_firs.json"
+      },
+      {
+        "date": "2026-08-01",
+        "type": "communication",
+        "title": "message: P138 ↔ P163",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P138",
+          "P163"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-01",
+        "type": "communication",
+        "title": "transaction: P156 ↔ P158",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P156",
+          "P158"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-01",
+        "type": "communication",
+        "title": "call: P031 ↔ P047",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P031",
+          "P047"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-01",
+        "type": "communication",
+        "title": "call: P106 ↔ P103",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P106",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-02",
+        "type": "communication",
+        "title": "meeting: P103 ↔ P113",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P103",
+          "P113"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-03",
+        "type": "communication",
+        "title": "meeting: P158 ↔ P173",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P158",
+          "P173"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-03",
+        "type": "communication",
+        "title": "call: P123 ↔ P103",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P123",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-04",
+        "type": "communication",
+        "title": "transaction: P040 ↔ P047",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P040",
+          "P047"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-06",
+        "type": "communication",
+        "title": "meeting: P138 ↔ P172",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P138",
+          "P172"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-06",
+        "type": "communication",
+        "title": "call: P137 ↔ P158",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P137",
+          "P158"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-06",
+        "type": "communication",
+        "title": "call: P115 ↔ P103",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P115",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-07",
+        "type": "communication",
+        "title": "transaction: P169 ↔ P138",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P169",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-07",
+        "type": "communication",
+        "title": "call: P142 ↔ P138",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P142",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-08",
+        "type": "communication",
+        "title": "call: P171 ↔ P138",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P171",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-08",
+        "type": "communication",
+        "title": "message: P047 ↔ P033",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P047",
+          "P033"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-08",
+        "type": "communication",
+        "title": "call: P094 ↔ P089",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P094",
+          "P089"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-08",
+        "type": "communication",
+        "title": "message: P135 ↔ P089",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P135",
+          "P089"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-09",
+        "type": "communication",
+        "title": "message: P165 ↔ P138",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P165",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-09",
+        "type": "communication",
+        "title": "transaction: P103 ↔ P123",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P103",
+          "P123"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-10",
+        "type": "communication",
+        "title": "call: P105 ↔ P089",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P105",
+          "P089"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-12",
+        "type": "communication",
+        "title": "call: P174 ↔ P138",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P174",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-12",
+        "type": "communication",
+        "title": "message: P047 ↔ P041",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P047",
+          "P041"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-13",
+        "type": "communication",
+        "title": "message: P158 ↔ P164",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P158",
+          "P164"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-13",
+        "type": "communication",
+        "title": "message: P123 ↔ P089",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P123",
+          "P089"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-14",
+        "type": "communication",
+        "title": "call: P138 ↔ P169",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P138",
+          "P169"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-14",
+        "type": "communication",
+        "title": "message: P103 ↔ P100",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P103",
+          "P100"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-15",
+        "type": "communication",
+        "title": "message: P172 ↔ P138",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P172",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-16",
+        "type": "communication",
+        "title": "transaction: P158 ↔ P136",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P158",
+          "P136"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-18",
+        "type": "communication",
+        "title": "meeting: P104 ↔ P103",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P104",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-19",
+        "type": "communication",
+        "title": "message: P138 ↔ P140",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P138",
+          "P140"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-20",
+        "type": "communication",
+        "title": "message: P138 ↔ P153",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P138",
+          "P153"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-20",
+        "type": "communication",
+        "title": "transaction: P141 ↔ P138",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P141",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-21",
+        "type": "communication",
+        "title": "message: P089 ↔ P102",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P089",
+          "P102"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-21",
+        "type": "communication",
+        "title": "message: P081 ↔ P103",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P081",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-23",
+        "type": "communication",
+        "title": "call: P138 ↔ P164",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P138",
+          "P164"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-23",
+        "type": "communication",
+        "title": "meeting: P104 ↔ P089",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P104",
+          "P089"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-24",
+        "type": "communication",
+        "title": "message: P138 ↔ P177",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P138",
+          "P177"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-24",
+        "type": "communication",
+        "title": "transaction: P158 ↔ P142",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P158",
+          "P142"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-25",
+        "type": "communication",
+        "title": "call: P142 ↔ P158",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P142",
+          "P158"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-25",
+        "type": "communication",
+        "title": "transaction: P103 ↔ P114",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P103",
+          "P114"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-25",
+        "type": "communication",
+        "title": "meeting: P103 ↔ P100",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P103",
+          "P100"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-25",
+        "type": "communication",
+        "title": "call: P103 ↔ P122",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P103",
+          "P122"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-27",
+        "type": "communication",
+        "title": "message: P176 ↔ P138",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P176",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-27",
+        "type": "communication",
+        "title": "call: P125 ↔ P103",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P125",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-27",
+        "type": "communication",
+        "title": "call: P203 ↔ P103",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P203",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-28",
+        "type": "communication",
+        "title": "meeting: P047 ↔ P006",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P047",
+          "P006"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-28",
+        "type": "document",
+        "title": "FIR Filed: SYN-FIR-005",
+        "description": "Police Station: Sector 18, Gurugram",
+        "linked_documents": [
+          "SYN-FIR-005"
+        ],
+        "source": "synthetic_firs.json"
+      },
+      {
+        "date": "2026-08-29",
+        "type": "communication",
+        "title": "call: P047 ↔ P026",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P047",
+          "P026"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-29",
+        "type": "communication",
+        "title": "transaction: P020 ↔ P047",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P020",
+          "P047"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-31",
+        "type": "communication",
+        "title": "message: P144 ↔ P138",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P144",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-31",
+        "type": "communication",
+        "title": "message: P164 ↔ P138",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P164",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-02",
+        "type": "communication",
+        "title": "transaction: P177 ↔ P138",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P177",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-02",
+        "type": "communication",
+        "title": "call: P138 ↔ P172",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P138",
+          "P172"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-03",
+        "type": "communication",
+        "title": "call: P158 ↔ P153",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P158",
+          "P153"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-03",
+        "type": "communication",
+        "title": "meeting: P172 ↔ P158",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P172",
+          "P158"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-04",
+        "type": "communication",
+        "title": "message: P138 ↔ P167",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P138",
+          "P167"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-04",
+        "type": "communication",
+        "title": "message: P047 ↔ P037",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P047",
+          "P037"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-04",
+        "type": "communication",
+        "title": "call: P088 ↔ P089",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P088",
+          "P089"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-05",
+        "type": "communication",
+        "title": "message: P140 ↔ P138",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P140",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-05",
+        "type": "communication",
+        "title": "shared location: P158 ↔ P163",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P158",
+          "P163"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-05",
+        "type": "communication",
+        "title": "meeting: P022 ↔ P047",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P022",
+          "P047"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-05",
+        "type": "communication",
+        "title": "message: P093 ↔ P103",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P093",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-06",
+        "type": "communication",
+        "title": "call: P203 ↔ P047",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P203",
+          "P047"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-06",
+        "type": "communication",
+        "title": "message: P130 ↔ P089",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P130",
+          "P089"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-06",
+        "type": "communication",
+        "title": "message: P122 ↔ P103",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P122",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "message: P138 ↔ P167",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P138",
+          "P167"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "message: P103 ↔ P120",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P103",
+          "P120"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-09",
+        "type": "communication",
+        "title": "message: P109 ↔ P103",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P109",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-10",
+        "type": "communication",
+        "title": "call: P047 ↔ P056",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P047",
+          "P056"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-10",
+        "type": "communication",
+        "title": "message: P103 ↔ P099",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P103",
+          "P099"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-11",
+        "type": "communication",
+        "title": "call: P103 ↔ P082",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P103",
+          "P082"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-11",
+        "type": "communication",
+        "title": "message: P121 ↔ P103",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P121",
+          "P103"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-12",
+        "type": "communication",
+        "title": "transaction: P138 ↔ P144",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P138",
+          "P144"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-12",
+        "type": "communication",
+        "title": "meeting: P158 ↔ P146",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P158",
+          "P146"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-13",
+        "type": "communication",
+        "title": "message: P047 ↔ P052",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P047",
+          "P052"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-14",
+        "type": "communication",
+        "title": "meeting: P138 ↔ P143",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P138",
+          "P143"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-15",
+        "type": "communication",
+        "title": "call: P138 ↔ P165",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P138",
+          "P165"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-15",
+        "type": "communication",
+        "title": "call: P141 ↔ P138",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P141",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-16",
+        "type": "communication",
+        "title": "transaction: P089 ↔ P131",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P089",
+          "P131"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-17",
+        "type": "communication",
+        "title": "message: P143 ↔ P158",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P143",
+          "P158"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-17",
+        "type": "communication",
+        "title": "transaction: P141 ↔ P158",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P141",
+          "P158"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-17",
+        "type": "communication",
+        "title": "transaction: P158 ↔ P175",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P158",
+          "P175"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-17",
+        "type": "communication",
+        "title": "call: P089 ↔ P119",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P089",
+          "P119"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-18",
+        "type": "communication",
+        "title": "message: P047 ↔ P071",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P047",
+          "P071"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-18",
+        "type": "communication",
+        "title": "transaction: P089 ↔ P111",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P089",
+          "P111"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-21",
+        "type": "communication",
+        "title": "message: P148 ↔ P138",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P148",
+          "P138"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-21",
+        "type": "communication",
+        "title": "message: P169 ↔ P158",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P169",
+          "P158"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-21",
+        "type": "communication",
+        "title": "meeting: P047 ↔ P029",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P047",
+          "P029"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-21",
+        "type": "communication",
+        "title": "call: P047 ↔ P062",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P047",
+          "P062"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-22",
+        "type": "communication",
+        "title": "call: P080 ↔ P047",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P080",
+          "P047"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-23",
+        "type": "communication",
+        "title": "call: P158 ↔ P164",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P158",
+          "P164"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-25",
+        "type": "communication",
+        "title": "call: P158 ↔ P174",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P158",
+          "P174"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-25",
+        "type": "communication",
+        "title": "call: P125 ↔ P089",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P125",
+          "P089"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-26",
+        "type": "communication",
+        "title": "transaction: P138 ↔ P165",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P138",
+          "P165"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-27",
+        "type": "communication",
+        "title": "meeting: P158 ↔ P144",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P158",
+          "P144"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-27",
+        "type": "communication",
+        "title": "shared location: P103 ↔ P132",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P103",
+          "P132"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-28",
+        "type": "communication",
+        "title": "meeting: P089 ↔ P100",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P089",
+          "P100"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-29",
+        "type": "communication",
+        "title": "call: P034 ↔ P047",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P034",
+          "P047"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-29",
+        "type": "communication",
+        "title": "call: P089 ↔ P135",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P089",
+          "P135"
+        ],
+        "source": "events.json"
+      }
+    ],
+    "CASE-003": [
+      {
+        "date": "2026-07-05",
+        "type": "document",
+        "title": "FIR Filed: SYN-FIR-007",
+        "description": "Police Station: Salt Lake, Kolkata",
+        "linked_documents": [
+          "SYN-FIR-007"
+        ],
+        "source": "synthetic_firs.json"
+      },
+      {
+        "date": "2026-08-01",
+        "type": "communication",
+        "title": "transaction: P156 ↔ P158",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P156",
+          "P158"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-01",
+        "type": "communication",
+        "title": "transaction: P078 ↔ P061",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P078",
+          "P061"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-02",
+        "type": "communication",
+        "title": "call: P178 ↔ P156",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P178",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-02",
+        "type": "communication",
+        "title": "message: P112 ↔ P122",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P112",
+          "P122"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-03",
+        "type": "communication",
+        "title": "message: P156 ↔ P139",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P156",
+          "P139"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-03",
+        "type": "communication",
+        "title": "call: P078 ↔ P035",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P078",
+          "P035"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-03",
+        "type": "communication",
+        "title": "message: P219 ↔ P199",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P219",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-04",
+        "type": "communication",
+        "title": "call: P112 ↔ P104",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P112",
+          "P104"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-04",
+        "type": "communication",
+        "title": "call: P112 ↔ P093",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P112",
+          "P093"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-04",
+        "type": "communication",
+        "title": "meeting: P195 ↔ P199",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P195",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-04",
+        "type": "communication",
+        "title": "call: P199 ↔ P218",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P199",
+          "P218"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-04",
+        "type": "communication",
+        "title": "message: P199 ↔ P191",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P199",
+          "P191"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-05",
+        "type": "communication",
+        "title": "message: P190 ↔ P199",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P190",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-06",
+        "type": "communication",
+        "title": "call: P217 ↔ P198",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P217",
+          "P198"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-06",
+        "type": "communication",
+        "title": "shared location: P107 ↔ P112",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P107",
+          "P112"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-07",
+        "type": "communication",
+        "title": "call: P217 ↔ P194",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P217",
+          "P194"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-07",
+        "type": "communication",
+        "title": "call: P156 ↔ P142",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P156",
+          "P142"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-07",
+        "type": "communication",
+        "title": "message: P122 ↔ P112",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P122",
+          "P112"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-07",
+        "type": "communication",
+        "title": "transaction: P112 ↔ P121",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P112",
+          "P121"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-07",
+        "type": "communication",
+        "title": "message: P213 ↔ P199",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P213",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-07",
+        "type": "communication",
+        "title": "call: P199 ↔ P220",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P199",
+          "P220"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-07",
+        "type": "communication",
+        "title": "call: P199 ↔ P198",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P199",
+          "P198"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-07",
+        "type": "communication",
+        "title": "call: P182 ↔ P199",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P182",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-08",
+        "type": "communication",
+        "title": "call: P183 ↔ P217",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P183",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-08",
+        "type": "communication",
+        "title": "call: P217 ↔ P182",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P217",
+          "P182"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-08",
+        "type": "communication",
+        "title": "call: P156 ↔ P172",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P156",
+          "P172"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-08",
+        "type": "communication",
+        "title": "message: P162 ↔ P156",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P162",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-08",
+        "type": "communication",
+        "title": "call: P112 ↔ P131",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P112",
+          "P131"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-09",
+        "type": "communication",
+        "title": "message: P217 ↔ P211",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P217",
+          "P211"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-09",
+        "type": "communication",
+        "title": "transaction: P156 ↔ P145",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P156",
+          "P145"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-09",
+        "type": "communication",
+        "title": "call: P211 ↔ P199",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P211",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-10",
+        "type": "communication",
+        "title": "transaction: P111 ↔ P112",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P111",
+          "P112"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-10",
+        "type": "communication",
+        "title": "meeting: P112 ↔ P101",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P112",
+          "P101"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-11",
+        "type": "communication",
+        "title": "shared location: P217 ↔ P181",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P217",
+          "P181"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-11",
+        "type": "communication",
+        "title": "message: P197 ↔ P217",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P197",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-11",
+        "type": "communication",
+        "title": "call: P199 ↔ P217",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P199",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-11",
+        "type": "communication",
+        "title": "call: P157 ↔ P156",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P157",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-11",
+        "type": "communication",
+        "title": "call: P190 ↔ P199",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P190",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-11",
+        "type": "communication",
+        "title": "call: P196 ↔ P199",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P196",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-12",
+        "type": "communication",
+        "title": "message: P215 ↔ P217",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P215",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-12",
+        "type": "communication",
+        "title": "call: P112 ↔ P108",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P112",
+          "P108"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-13",
+        "type": "communication",
+        "title": "call: P217 ↔ P192",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P217",
+          "P192"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-13",
+        "type": "communication",
+        "title": "message: P217 ↔ P186",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P217",
+          "P186"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-13",
+        "type": "communication",
+        "title": "message: P176 ↔ P156",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P176",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-13",
+        "type": "communication",
+        "title": "call: P220 ↔ P199",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P220",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-14",
+        "type": "communication",
+        "title": "call: P217 ↔ P200",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P217",
+          "P200"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-14",
+        "type": "communication",
+        "title": "call: P078 ↔ P043",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P078",
+          "P043"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-14",
+        "type": "communication",
+        "title": "transaction: P199 ↔ P214",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P199",
+          "P214"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-14",
+        "type": "communication",
+        "title": "message: P188 ↔ P199",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P188",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-15",
+        "type": "communication",
+        "title": "call: P156 ↔ P163",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P156",
+          "P163"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-15",
+        "type": "communication",
+        "title": "meeting: P078 ↔ P058",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P078",
+          "P058"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-16",
+        "type": "communication",
+        "title": "message: P078 ↔ P020",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P078",
+          "P020"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-16",
+        "type": "communication",
+        "title": "message: P187 ↔ P199",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P187",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-17",
+        "type": "communication",
+        "title": "call: P203 ↔ P199",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P203",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-18",
+        "type": "communication",
+        "title": "message: P217 ↔ P184",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P217",
+          "P184"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-18",
+        "type": "communication",
+        "title": "message: P187 ↔ P217",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P187",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-19",
+        "type": "communication",
+        "title": "call: P030 ↔ P078",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P030",
+          "P078"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-19",
+        "type": "communication",
+        "title": "transaction: P014 ↔ P078",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P014",
+          "P078"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-20",
+        "type": "communication",
+        "title": "message: P215 ↔ P199",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P215",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-21",
+        "type": "communication",
+        "title": "call: P196 ↔ P217",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P196",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-21",
+        "type": "communication",
+        "title": "call: P199 ↔ P216",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P199",
+          "P216"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-22",
+        "type": "communication",
+        "title": "call: P145 ↔ P156",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P145",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-22",
+        "type": "communication",
+        "title": "call: P112 ↔ P118",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P112",
+          "P118"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-22",
+        "type": "communication",
+        "title": "message: P052 ↔ P078",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P052",
+          "P078"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-23",
+        "type": "communication",
+        "title": "call: P199 ↔ P181",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P199",
+          "P181"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-24",
+        "type": "communication",
+        "title": "call: P217 ↔ P195",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P217",
+          "P195"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-24",
+        "type": "communication",
+        "title": "call: P176 ↔ P156",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P176",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-25",
+        "type": "communication",
+        "title": "meeting: P217 ↔ P219",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P217",
+          "P219"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-25",
+        "type": "communication",
+        "title": "meeting: P217 ↔ P200",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P217",
+          "P200"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-25",
+        "type": "communication",
+        "title": "meeting: P211 ↔ P217",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P211",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-25",
+        "type": "communication",
+        "title": "call: P100 ↔ P112",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P100",
+          "P112"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-25",
+        "type": "communication",
+        "title": "message: P062 ↔ P078",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P062",
+          "P078"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-26",
+        "type": "communication",
+        "title": "call: P156 ↔ P179",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P156",
+          "P179"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-26",
+        "type": "communication",
+        "title": "message: P213 ↔ P199",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P213",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-28",
+        "type": "communication",
+        "title": "call: P213 ↔ P217",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P213",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-28",
+        "type": "communication",
+        "title": "message: P217 ↔ P214",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P217",
+          "P214"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-28",
+        "type": "communication",
+        "title": "transaction: P156 ↔ P171",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P156",
+          "P171"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-28",
+        "type": "communication",
+        "title": "shared location: P024 ↔ P078",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P024",
+          "P078"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-28",
+        "type": "communication",
+        "title": "message: P069 ↔ P078",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P069",
+          "P078"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-29",
+        "type": "communication",
+        "title": "transaction: P113 ↔ P112",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P113",
+          "P112"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-30",
+        "type": "communication",
+        "title": "message: P153 ↔ P156",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P153",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-30",
+        "type": "communication",
+        "title": "call: P112 ↔ P087",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P112",
+          "P087"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-30",
+        "type": "communication",
+        "title": "call: P199 ↔ P198",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P199",
+          "P198"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-30",
+        "type": "communication",
+        "title": "message: P199 ↔ P216",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P199",
+          "P216"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-31",
+        "type": "communication",
+        "title": "call: P217 ↔ P213",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P217",
+          "P213"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-08-31",
+        "type": "communication",
+        "title": "meeting: P102 ↔ P112",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P102",
+          "P112"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-01",
+        "type": "communication",
+        "title": "call: P217 ↔ P211",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P217",
+          "P211"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-01",
+        "type": "communication",
+        "title": "call: P192 ↔ P199",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P192",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-02",
+        "type": "communication",
+        "title": "call: P112 ↔ P099",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P112",
+          "P099"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-02",
+        "type": "communication",
+        "title": "call: P071 ↔ P078",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P071",
+          "P078"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-03",
+        "type": "communication",
+        "title": "message: P112 ↔ P109",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P112",
+          "P109"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-03",
+        "type": "communication",
+        "title": "call: P184 ↔ P199",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P184",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-03",
+        "type": "document",
+        "title": "FIR Filed: SYN-FIR-003",
+        "description": "Police Station: Andheri, Mumbai",
+        "linked_documents": [
+          "SYN-FIR-003"
+        ],
+        "source": "synthetic_firs.json"
+      },
+      {
+        "date": "2026-09-05",
+        "type": "communication",
+        "title": "message: P179 ↔ P156",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P179",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-05",
+        "type": "communication",
+        "title": "call: P193 ↔ P199",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P193",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-05",
+        "type": "communication",
+        "title": "meeting: P199 ↔ P190",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P199",
+          "P190"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-05",
+        "type": "communication",
+        "title": "message: P183 ↔ P199",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P183",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-05",
+        "type": "communication",
+        "title": "shared location: P199 ↔ P211",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P199",
+          "P211"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-06",
+        "type": "communication",
+        "title": "call: P186 ↔ P217",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P186",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-06",
+        "type": "communication",
+        "title": "call: P194 ↔ P217",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P194",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-06",
+        "type": "communication",
+        "title": "message: P156 ↔ P167",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P156",
+          "P167"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "call: P214 ↔ P217",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P214",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-07",
+        "type": "communication",
+        "title": "call: P121 ↔ P112",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P121",
+          "P112"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-08",
+        "type": "communication",
+        "title": "message: P191 ↔ P217",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P191",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-09",
+        "type": "communication",
+        "title": "message: P139 ↔ P156",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P139",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-10",
+        "type": "communication",
+        "title": "call: P217 ↔ P196",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P217",
+          "P196"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-10",
+        "type": "communication",
+        "title": "call: P156 ↔ P169",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P156",
+          "P169"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-11",
+        "type": "communication",
+        "title": "message: P177 ↔ P156",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P177",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-11",
+        "type": "communication",
+        "title": "call: P107 ↔ P112",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P107",
+          "P112"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-11",
+        "type": "communication",
+        "title": "call: P199 ↔ P198",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P199",
+          "P198"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-12",
+        "type": "communication",
+        "title": "shared location: P112 ↔ P092",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P112",
+          "P092"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-12",
+        "type": "communication",
+        "title": "message: P199 ↔ P214",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P199",
+          "P214"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-13",
+        "type": "communication",
+        "title": "meeting: P111 ↔ P112",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P111",
+          "P112"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-14",
+        "type": "communication",
+        "title": "call: P140 ↔ P156",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P140",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-14",
+        "type": "communication",
+        "title": "call: P199 ↔ P187",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P199",
+          "P187"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-14",
+        "type": "communication",
+        "title": "meeting: P199 ↔ P198",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P199",
+          "P198"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-15",
+        "type": "communication",
+        "title": "meeting: P217 ↔ P183",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P217",
+          "P183"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-15",
+        "type": "communication",
+        "title": "call: P169 ↔ P156",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P169",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-15",
+        "type": "communication",
+        "title": "call: P078 ↔ P016",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P078",
+          "P016"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-17",
+        "type": "communication",
+        "title": "call: P112 ↔ P107",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P112",
+          "P107"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-17",
+        "type": "communication",
+        "title": "shared location: P195 ↔ P199",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P195",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-18",
+        "type": "communication",
+        "title": "call: P217 ↔ P219",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P217",
+          "P219"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-18",
+        "type": "communication",
+        "title": "transaction: P112 ↔ P085",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P112",
+          "P085"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-18",
+        "type": "communication",
+        "title": "meeting: P194 ↔ P199",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P194",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-20",
+        "type": "communication",
+        "title": "call: P184 ↔ P199",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P184",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-20",
+        "type": "communication",
+        "title": "message: P191 ↔ P199",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P191",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-21",
+        "type": "communication",
+        "title": "call: P217 ↔ P185",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P217",
+          "P185"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-21",
+        "type": "communication",
+        "title": "transaction: P187 ↔ P217",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P187",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-21",
+        "type": "communication",
+        "title": "meeting: P216 ↔ P199",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P216",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-22",
+        "type": "communication",
+        "title": "message: P012 ↔ P078",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P012",
+          "P078"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-23",
+        "type": "communication",
+        "title": "call: P187 ↔ P217",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P187",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-23",
+        "type": "communication",
+        "title": "call: P156 ↔ P171",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P156",
+          "P171"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-23",
+        "type": "communication",
+        "title": "transaction: P156 ↔ P139",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P156",
+          "P139"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-23",
+        "type": "communication",
+        "title": "call: P156 ↔ P159",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P156",
+          "P159"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-23",
+        "type": "communication",
+        "title": "message: P112 ↔ P114",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P112",
+          "P114"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-23",
+        "type": "communication",
+        "title": "transaction: P117 ↔ P112",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P117",
+          "P112"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-23",
+        "type": "communication",
+        "title": "call: P185 ↔ P199",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P185",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-23",
+        "type": "communication",
+        "title": "call: P220 ↔ P199",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P220",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-24",
+        "type": "communication",
+        "title": "transaction: P156 ↔ P146",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P156",
+          "P146"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-24",
+        "type": "communication",
+        "title": "message: P199 ↔ P194",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P199",
+          "P194"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-24",
+        "type": "communication",
+        "title": "transaction: P195 ↔ P199",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P195",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-25",
+        "type": "communication",
+        "title": "meeting: P217 ↔ P212",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P217",
+          "P212"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-25",
+        "type": "communication",
+        "title": "call: P217 ↔ P199",
+        "description": "Weight: 9",
+        "linked_entities": [
+          "P217",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-25",
+        "type": "communication",
+        "title": "message: P218 ↔ P217",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P218",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-25",
+        "type": "communication",
+        "title": "meeting: P220 ↔ P217",
+        "description": "Weight: 7",
+        "linked_entities": [
+          "P220",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-25",
+        "type": "communication",
+        "title": "call: P161 ↔ P156",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P161",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-25",
+        "type": "communication",
+        "title": "call: P112 ↔ P125",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P112",
+          "P125"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-26",
+        "type": "communication",
+        "title": "call: P163 ↔ P156",
+        "description": "Weight: 3",
+        "linked_entities": [
+          "P163",
+          "P156"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-26",
+        "type": "communication",
+        "title": "message: P078 ↔ P061",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P078",
+          "P061"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-26",
+        "type": "communication",
+        "title": "call: P212 ↔ P199",
+        "description": "Weight: 5",
+        "linked_entities": [
+          "P212",
+          "P199"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-27",
+        "type": "communication",
+        "title": "call: P217 ↔ P212",
+        "description": "Weight: 4",
+        "linked_entities": [
+          "P217",
+          "P212"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-27",
+        "type": "communication",
+        "title": "call: P130 ↔ P112",
+        "description": "Weight: 6",
+        "linked_entities": [
+          "P130",
+          "P112"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-27",
+        "type": "communication",
+        "title": "message: P199 ↔ P200",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P199",
+          "P200"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-28",
+        "type": "communication",
+        "title": "transaction: P217 ↔ P211",
+        "description": "Weight: 1",
+        "linked_entities": [
+          "P217",
+          "P211"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-29",
+        "type": "communication",
+        "title": "call: P199 ↔ P217",
+        "description": "Weight: 8",
+        "linked_entities": [
+          "P199",
+          "P217"
+        ],
+        "source": "events.json"
+      },
+      {
+        "date": "2026-09-29",
+        "type": "communication",
+        "title": "call: P199 ↔ P188",
+        "description": "Weight: 2",
+        "linked_entities": [
+          "P199",
+          "P188"
+        ],
+        "source": "events.json"
+      }
+    ]
+  }
+}
