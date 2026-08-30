@@ -1,1 +1,7 @@
-src/nlp/__pycache__/
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.*
+*.tmp
+.DS_Store

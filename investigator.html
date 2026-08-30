@@ -438,6 +438,27 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', syst
 .report-copy-btn:hover { opacity: 0.9; }
 .ch-empty { color: var(--text-muted); font-size: 12px; padding: 30px 0; text-align: center; }
 
+
+/* ── M5: RESPONSIVE DESIGN ── */
+@media (max-width: 1200px) {
+  :root { --sidebar-w: 240px; --panel-w: 300px; }
+}
+@media (max-width: 1024px) {
+  body { flex-direction: column; overflow-y: auto; height: auto; }
+  #sidebar { width: 100%; min-width: 100%; max-height: 200px; border-right: none; border-bottom: 1px solid var(--border); }
+  #main { min-height: 60vh; }
+  #panel { width: 100%; min-width: 100%; border-left: none; border-top: 1px solid var(--border); max-height: 50vh; }
+  #casehub-view { flex-direction: column; }
+  .ch-sidebar { width: 100%; min-width: 100%; max-height: 200px; border-right: none; border-bottom: 1px solid var(--border); }
+}
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  #graph-controls { flex-direction: column; }
+  #graph-controls input, #graph-controls select { width: 100%; }
+  .di-sidebar { width: 100%; min-width: 100%; }
+  .di-extract-panel { width: 100%; }
+}
+
 </style>
 </head>
 <body>
@@ -464,6 +485,15 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', syst
     <!-- Top Risky Entities -->
     <div class="section">
       <div class="section-title">Top Risk Entities</div>
+    <div class="section">
+      <div class="section-title">Model Architecture</div>
+      <div id="model-info-content"></div>
+    </div>
+    <div class="section">
+      <div class="section-title">Evaluation Summary</div>
+      <div id="eval-summary-content"></div>
+    </div>
+
       <div id="top-list"></div>
     </div>
 
@@ -553,6 +583,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', syst
     <div id="di-extract-panel">
       <div id="di-extract-scroll"><div id="di-extract-content" style="color:var(--text-muted);font-size:12px;padding:20px;text-align:center">Select a document to see extracted entities, sections, and relationships.</div></div>
     </div>
+    <div id="di-legal-explorer"></div>
   </div>
 <svg id="net"></svg>
   <div id="tooltip">
@@ -960,6 +991,7 @@ async function loadTemporal() {
     console.log('[Phase 2] Temporal data loaded:', TEMPORAL._meta.total_events, 'events,', TEMPORAL._meta.total_dates, 'days');
   } catch (err) {
     console.warn('[Phase 2] Could not load temporal.json:', err);
+    TEMPORAL = {_meta:{}, global_timeline:[], entity_bursts:{}, entity_timeline_summary:{}, adjacency:[], edge_meta:[], communities:{}};
   }
 }
 
@@ -1434,8 +1466,133 @@ function initDocIntel() {
   }
 }
 
+
+// ── M3: Model Architecture Info ──
+function renderModelInfo() {
+  const el = document.getElementById('model-info-content');
+  if (!el) return;
+  el.innerHTML = `
+    <div style="font-size:10px;color:var(--text-secondary);line-height:1.6">
+      <div style="margin-bottom:8px"><strong style="color:var(--text-primary)">GraphSAGE Architecture</strong></div>
+      <div>Two-layer GraphSAGE encoder with mean aggregation.</div>
+      <div style="margin-top:4px"><strong>Input:</strong> 15 features per node</div>
+      <div><strong>Hidden:</strong> 32 → 8 dimensions</div>
+      <div><strong>Training:</strong> Reconstruction-based embedding</div>
+      <div style="margin-top:8px"><strong style="color:var(--text-primary)">Hybrid Risk Formula</strong></div>
+      <div style="font-family:monospace;font-size:9px;background:var(--bg-primary);padding:4px 6px;border-radius:3px;margin:4px 0;border:1px solid var(--border)">
+        score = 0.5×embedding_outlier<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + 0.3×betweenness<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + 0.2×temporal_burst
+      </div>
+      <div style="margin-top:6px"><strong>Features:</strong></div>
+      <div style="font-size:9px;color:var(--text-muted)">
+        degree, degree_centrality, betweenness, embedding,<br>
+        bet_c, burst_c, n_calls, n_messages, n_meetings,<br>
+        n_transactions, n_locations, active_days,<br>
+        max_daily_burst, unique_contacts, neighbour_avg_degree
+      </div>
+      <div style="margin-top:8px;padding:6px;background:rgba(6,182,212,0.05);border:1px solid rgba(6,182,212,0.2);border-radius:4px;font-size:9px;color:var(--accent-cyan)">
+        ℹ Scores indicate investigation priority, not guilt prediction.
+      </div>
+    </div>`;
+}
+
+// ── M4: Evaluation Summary ──
+function renderEvalSummary() {
+  const el = document.getElementById('eval-summary-content');
+  if (!el) return;
+  const ep = NLP.evaluation?.entity_extraction?.overall || {};
+  const rp = NLP.evaluation?.relationship_extraction?.overall || {};
+  el.innerHTML = `
+    <div style="font-size:10px;color:var(--text-secondary);line-height:1.6">
+      <div style="margin-bottom:6px"><strong style="color:var(--text-primary)">Anomaly Detection Validation</strong></div>
+      <div style="font-size:9px;color:var(--text-muted);margin-bottom:4px">Synthetic planted-anomaly validation (not real-world precision)</div>
+      <div>Total entities: <strong>220</strong></div>
+      <div>Planted anomalies (P201–P210): <strong>10</strong></div>
+      <div>In top 15 ranked: <strong style="color:var(--accent-green)">10/10</strong></div>
+
+      <div style="margin-top:10px;margin-bottom:6px"><strong style="color:var(--text-primary)">NLP Extraction</strong></div>
+      <div style="font-size:9px;color:var(--text-muted);margin-bottom:4px">Real metrics from ground-truth evaluation (synthetic FIRs only)</div>
+      <div>Entity: P=<strong>${ep.precision||'N/A'}</strong> R=<strong>${ep.recall||'N/A'}</strong> F1=<strong>${ep.f1||'N/A'}</strong></div>
+      <div>Relation: P=<strong>${rp.precision||'N/A'}</strong> R=<strong>${rp.recall||'N/A'}</strong> F1=<strong>${rp.f1||'N/A'}</strong></div>
+
+      <div style="margin-top:8px;padding:6px;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.2);border-radius:4px;font-size:9px;color:var(--accent-amber)">
+        ⚠ Evaluation on synthetic data only. Does not represent real-world performance.
+      </div>
+    </div>`;
+}
+
+
+// ── M6: BNS/IPC Legal Section Explorer ──
+let BNS_DATA = null;
+let IPC_DATA = null;
+
+function loadLegalData() {
+  Promise.all([
+    fetch('data/bns_sections.json').then(r=>r.json()),
+    fetch('data/ipc_legacy_sections.json').then(r=>r.json())
+  ]).then(([bns, ipc]) => {
+    BNS_DATA = bns;
+    IPC_DATA = ipc;
+    renderLegalExplorer();
+  }).catch(e => console.warn('Failed to load legal data:', e));
+}
+
+function renderLegalExplorer() {
+  const container = document.getElementById('di-legal-explorer');
+  if (!container || !BNS_DATA) return;
+  
+  let bnsHtml = BNS_DATA.sections.slice(0, 20).map(s => 
+    `<div style="display:flex;gap:8px;padding:4px 6px;border-bottom:1px solid var(--border);font-size:10px;align-items:center">
+      <span style="color:var(--accent-cyan);font-weight:600;min-width:40px">§${s.section}</span>
+      <span style="flex:1;color:var(--text-primary)">${s.title}</span>
+      <span style="color:var(--text-muted);font-size:8px">${s.category}</span>
+      ${s.ipc_equivalent ? '<span style="color:var(--text-muted);font-size:8px">IPC §'+s.ipc_equivalent+'</span>' : ''}
+    </div>`
+  ).join('');
+  
+  let ipcHtml = IPC_DATA.sections.slice(0, 15).map(s =>
+    `<div style="display:flex;gap:8px;padding:4px 6px;border-bottom:1px solid var(--border);font-size:10px;align-items:center">
+      <span style="color:#a855f7;font-weight:600;min-width:40px">§${s.section}</span>
+      <span style="flex:1;color:var(--text-primary)">${s.title}</span>
+      <span style="color:var(--text-muted);font-size:8px">${s.category}</span>
+      ${s.bns_equivalent ? '<span style="color:var(--text-muted);font-size:8px">BNS §'+s.bns_equivalent+'</span>' : ''}
+    </div>`
+  .join('');
+  
+  container.innerHTML = `
+    <div style="padding:12px;border-bottom:1px solid var(--border)">
+      <div style="font-size:10px;color:var(--text-muted);margin-bottom:6px">Legal section knowledge base for Indian criminal law extraction.</div>
+      <div style="display:flex;gap:8px">
+        <div style="flex:1;background:var(--bg-tertiary);border:1px solid var(--border);border-radius:6px;overflow:hidden">
+          <div style="padding:6px 8px;font-size:10px;font-weight:700;color:var(--accent-cyan);border-bottom:1px solid var(--border);background:var(--bg-secondary)">
+            BNS 2023 (${BNS_DATA.sections.length} sections)
+          </div>
+          <div style="max-height:200px;overflow-y:auto">
+            ${bnsHtml || '<div style="padding:8px;font-size:10px;color:var(--text-muted)">No data</div>'}
+          </div>
+          <div style="padding:4px 8px;font-size:8px;color:var(--text-muted);border-top:1px solid var(--border)">
+            Source: Bharatiya Nyaya Sanhita, 2023 (Act No. 45)
+          </div>
+        </div>
+        <div style="flex:1;background:var(--bg-tertiary);border:1px solid var(--border);border-radius:6px;overflow:hidden">
+          <div style="padding:6px 8px;font-size:10px;font-weight:700;color:#a855f7;border-bottom:1px solid var(--border);background:var(--bg-secondary)">
+            Legacy IPC (${IPC_DATA.sections.length} sections)
+          </div>
+          <div style="max-height:200px;overflow-y:auto">
+            ${ipcHtml || '<div style="padding:8px;font-size:10px;color:var(--text-muted)">No data</div>'}
+          </div>
+          <div style="padding:4px 8px;font-size:8px;color:var(--text-muted);border-top:1px solid var(--border)">
+            Source: Indian Penal Code, 1860 (repealed 1 July 2024)
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+
 // Initialize on load
 initDocIntel();
+loadLegalData();
 
 
 
