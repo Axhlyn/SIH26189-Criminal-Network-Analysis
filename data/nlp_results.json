@@ -1,0 +1,4119 @@
+{
+  "_meta": {
+    "pipeline": "Rule-based NER + Relationship Extraction (regex/pattern)",
+    "disclaimer": "Extracted from synthetic demonstration documents only.",
+    "total_documents": 12,
+    "total_entities": 125,
+    "total_relationships": 76,
+    "no_ml_models_used": true,
+    "evaluation_completed": true
+  },
+  "documents": [
+    {
+      "doc_id": "SYN-FIR-001",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "303",
+          "text": "Section 303 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Theft",
+          "category": "Offences against property",
+          "punishment": "Imprisonment up to 3 years, or fine, or both",
+          "ipc_equivalent": "378"
+        },
+        {
+          "code": "BNS",
+          "section": "309",
+          "text": "Section 309 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Robbery",
+          "category": "Offences against property",
+          "punishment": "Rigorous imprisonment up to 10 years plus fine",
+          "ipc_equivalent": "392"
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 303 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-001",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Section 309 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-001",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Rajesh Sharma",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-001",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "Vikram Patel",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-001",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "Sunita Devi",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "source_document": "SYN-FIR-001",
+          "method": "pattern-witness-neighbor",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "7th Cross, Koramangala, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-001",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "MG Road, Indiranagar, Bengaluru, came to my house along with one other unidentified person",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-001",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "15/08/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-001",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "14/08/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-001",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0010",
+          "text": "345/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-001",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Vikram Patel",
+          "target": "Rajesh Sharma",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-001",
+          "evidence": "FIR No. 345/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 15/08/2026\n\nI, Rajesh Sharma, son of Shri Mohan Sharma, aged 42 years, residing at 45, 7th Cro",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Sunita Devi",
+          "target": "Vikram Patel",
+          "type": "witness-to",
+          "source_document": "SYN-FIR-001",
+          "evidence": "The complainant's neighbor, Sunita Devi, aged 35 years, who resides at 47, 7th Cross, Koramangala, Bengaluru, witnessed the incident from her balcony and can confirm the events described above.",
+          "method": "role-based-witnessed-incident",
+          "confidence": "moderate"
+        },
+        {
+          "source": "Rajesh Sharma",
+          "target": "7th Cross, Koramangala, Bengaluru",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-001",
+          "evidence": "FIR No. 345/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 15/08/2026\n\nI, Rajesh Sharma, son of Shri Mohan Sharma, aged 42 years, residing at 45, 7th Cro",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Rajesh Sharma",
+          "target": "MG Road, Indiranagar, Bengaluru, came to my house along with one other unidentified person",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-001",
+          "evidence": "FIR No. 345/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 15/08/2026\n\nI, Rajesh Sharma, son of Shri Mohan Sharma, aged 42 years, residing at 45, 7th Cro",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Vikram Patel",
+          "target": "7th Cross, Koramangala, Bengaluru",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-001",
+          "evidence": "FIR No. 345/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 15/08/2026\n\nI, Rajesh Sharma, son of Shri Mohan Sharma, aged 42 years, residing at 45, 7th Cro",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Vikram Patel",
+          "target": "MG Road, Indiranagar, Bengaluru, came to my house along with one other unidentified person",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-001",
+          "evidence": "FIR No. 345/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 15/08/2026\n\nI, Rajesh Sharma, son of Shri Mohan Sharma, aged 42 years, residing at 45, 7th Cro",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Sunita Devi",
+          "target": "7th Cross, Koramangala, Bengaluru",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-001",
+          "evidence": "The complainant's neighbor, Sunita Devi, aged 35 years, who resides at 47, 7th Cross, Koramangala, Bengaluru, witnessed the incident from her balcony and can confirm the events described above.",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-002",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "318",
+          "text": "Section 318 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Cheating",
+          "category": "Offences against property",
+          "punishment": "Imprisonment up to 3 years plus fine",
+          "ipc_equivalent": "420"
+        },
+        {
+          "code": "BNS",
+          "section": "319",
+          "text": "Section 319 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Cheating by personation",
+          "category": "Offences against property",
+          "punishment": "Imprisonment up to 5 years plus fine",
+          "ipc_equivalent": "416"
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 318 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Section 319 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Anita Kulkarni",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "Deepak Jadhav",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "Mohan Deshmukh",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-witness-introduced",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "FC Road, Shivajinagar, Pune",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "Sinhagad Road, Pune, contacted me through a messaging application claiming to be a representative of a registered investment company",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "22/07/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "01/06/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0010",
+          "text": "15/07/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0011",
+          "text": "10/06/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0012",
+          "text": "789/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-002",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Deepak Jadhav",
+          "target": "Anita Kulkarni",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-002",
+          "evidence": "FIR No. 789/2026\nPolice Station: Shivajinagar, District: Pune, State: Maharashtra\nDate of Report: 22/07/2026\n\nI, Anita Kulkarni, aged 31 years, residing at 23, FC Road, Shivajinagar, Pune, do hereby r",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Mohan Deshmukh",
+          "target": "Deepak Jadhav",
+          "type": "witness-to",
+          "source_document": "SYN-FIR-002",
+          "evidence": "My colleague Mohan Deshmukh, aged 45 years, who works at my office in Shivajinagar, Pune, can confirm that the accused Deepak Jadhav had been communicating with me regarding this investment scheme.",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Anita Kulkarni",
+          "target": "FC Road, Shivajinagar, Pune",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-002",
+          "evidence": "FIR No. 789/2026\nPolice Station: Shivajinagar, District: Pune, State: Maharashtra\nDate of Report: 22/07/2026\n\nI, Anita Kulkarni, aged 31 years, residing at 23, FC Road, Shivajinagar, Pune, do hereby r",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Anita Kulkarni",
+          "target": "Sinhagad Road, Pune, contacted me through a messaging application claiming to be a representative of a registered investment company",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-002",
+          "evidence": "FIR No. 789/2026\nPolice Station: Shivajinagar, District: Pune, State: Maharashtra\nDate of Report: 22/07/2026\n\nI, Anita Kulkarni, aged 31 years, residing at 23, FC Road, Shivajinagar, Pune, do hereby r",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Deepak Jadhav",
+          "target": "FC Road, Shivajinagar, Pune",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-002",
+          "evidence": "FIR No. 789/2026\nPolice Station: Shivajinagar, District: Pune, State: Maharashtra\nDate of Report: 22/07/2026\n\nI, Anita Kulkarni, aged 31 years, residing at 23, FC Road, Shivajinagar, Pune, do hereby r",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Deepak Jadhav",
+          "target": "Sinhagad Road, Pune, contacted me through a messaging application claiming to be a representative of a registered investment company",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-002",
+          "evidence": "FIR No. 789/2026\nPolice Station: Shivajinagar, District: Pune, State: Maharashtra\nDate of Report: 22/07/2026\n\nI, Anita Kulkarni, aged 31 years, residing at 23, FC Road, Shivajinagar, Pune, do hereby r",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-003",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "75",
+          "text": "Section 75 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Sexual harassment",
+          "category": "Sexual offences against women",
+          "punishment": "Rigorous imprisonment up to 3 years plus fine",
+          "ipc_equivalent": "354A"
+        },
+        {
+          "code": "BNS",
+          "section": "85",
+          "text": "Section 85 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Cruelty by husband or relatives of husband",
+          "category": "Offences against women",
+          "punishment": "Imprisonment up to 3 years plus fine",
+          "ipc_equivalent": "498A"
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 75 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-003",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Section 85 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-003",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Priya Mehta",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-003",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "Sanjay Gupta",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-003",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "Kavita Nair",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "source_document": "SYN-FIR-003",
+          "method": "pattern-witness-introduced",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "Link Road, Andheri West, Mumbai",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-003",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "03/09/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-003",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "01/09/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-003",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "234/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-003",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Sanjay Gupta",
+          "target": "Priya Mehta",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-003",
+          "evidence": "FIR No. 234/2026\nPolice Station: Andheri, District: Mumbai, State: Maharashtra\nDate of Report: 03/09/2026\n\nI, Priya Mehta, aged 26 years, residing at 56, Link Road, Andheri West, Mumbai, do hereby rep",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Kavita Nair",
+          "target": "Sanjay Gupta",
+          "type": "witness-to",
+          "source_document": "SYN-FIR-003",
+          "evidence": "Kavita Nair has witnessed some of the accused's inappropriate behaviour towards me in the office.",
+          "method": "role-based-generic",
+          "confidence": "moderate"
+        },
+        {
+          "source": "Priya Mehta",
+          "target": "Link Road, Andheri West, Mumbai",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-003",
+          "evidence": "FIR No. 234/2026\nPolice Station: Andheri, District: Mumbai, State: Maharashtra\nDate of Report: 03/09/2026\n\nI, Priya Mehta, aged 26 years, residing at 56, Link Road, Andheri West, Mumbai, do hereby rep",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Sanjay Gupta",
+          "target": "Link Road, Andheri West, Mumbai",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-003",
+          "evidence": "FIR No. 234/2026\nPolice Station: Andheri, District: Mumbai, State: Maharashtra\nDate of Report: 03/09/2026\n\nI, Priya Mehta, aged 26 years, residing at 56, Link Road, Andheri West, Mumbai, do hereby rep",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-004",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "314",
+          "text": "Section 314 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Criminal breach of trust",
+          "category": "Offences against property",
+          "punishment": "Imprisonment up to 3 years plus fine",
+          "ipc_equivalent": "406"
+        },
+        {
+          "code": "BNS",
+          "section": "336",
+          "text": "Section 336 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Forgery",
+          "category": "Offences relating to documents",
+          "punishment": "Imprisonment up to 2 years plus fine",
+          "ipc_equivalent": "463"
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 314 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Section 336 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Lakshmi Iyer",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "Ramesh Babu",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "Gopal Krishnan",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-witness-can-confirm",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "North Mada Street, T",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "South Usman Road, T",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "Bazaar Road, T",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-located-at",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "18/06/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0010",
+          "text": "01/01/2025",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0011",
+          "text": "15/05/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0012",
+          "text": "567/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-004",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Ramesh Babu",
+          "target": "Lakshmi Iyer",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-004",
+          "evidence": "Accused Ramesh Babu identified in document involving complainant Lakshmi Iyer",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Gopal Krishnan",
+          "target": "Ramesh Babu",
+          "type": "witness-to",
+          "source_document": "SYN-FIR-004",
+          "evidence": "The accused Ramesh Babu showed this forged document to a tenant named Gopal Krishnan, aged 50 years, who resides at 56, Bazaar Road, T.",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Lakshmi Iyer",
+          "target": "North Mada Street, T",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-004",
+          "evidence": "Nagar, District: Chennai, State: Tamil Nadu\nDate of Report: 18/06/2026\n\nI, Lakshmi Iyer, aged 55 years, residing at 78, North Mada Street, T.",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Ramesh Babu",
+          "target": "South Usman Road, T",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-004",
+          "evidence": "Nagar, Chennai, do hereby report that:\n\nThe accused Ramesh Babu, aged about 40 years, residing at 23, South Usman Road, T.",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Ramesh Babu",
+          "target": "Bazaar Road, T",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-004",
+          "evidence": "The accused Ramesh Babu showed this forged document to a tenant named Gopal Krishnan, aged 50 years, who resides at 56, Bazaar Road, T.",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Gopal Krishnan",
+          "target": "Bazaar Road, T",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-004",
+          "evidence": "The accused Ramesh Babu showed this forged document to a tenant named Gopal Krishnan, aged 50 years, who resides at 56, Bazaar Road, T.",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-005",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "105",
+          "text": "Section 105 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Voluntarily causing hurt",
+          "category": "Offences against human body",
+          "punishment": "Imprisonment up to 1 year plus fine up to ₹1,000",
+          "ipc_equivalent": "323"
+        },
+        {
+          "code": "BNS",
+          "section": "106",
+          "text": "Section 106 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Voluntarily causing grievous hurt",
+          "category": "Offences against human body",
+          "punishment": "Imprisonment up to 7 years plus fine",
+          "ipc_equivalent": "325"
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 105 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-005",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Section 106 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-005",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Vikas Sinha",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-005",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "Amit Chauhan",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-005",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "Plot 22, Sector 18, Gurugram",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-005",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "House 8, Sector 22, Gurugram, came to my property in connection with a pending property dispute between us",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-005",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "28/08/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-005",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "27/08/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-005",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "901/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-005",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Amit Chauhan",
+          "target": "Vikas Sinha",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-005",
+          "evidence": "FIR No. 901/2026\nPolice Station: Sector 18, District: Gurugram, State: Haryana\nDate of Report: 28/08/2026\n\nI, Vikas Sinha, aged 37 years, residing at Plot 22, Sector 18, Gurugram, do hereby report tha",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Vikas Sinha",
+          "target": "Plot 22, Sector 18, Gurugram",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-005",
+          "evidence": "FIR No. 901/2026\nPolice Station: Sector 18, District: Gurugram, State: Haryana\nDate of Report: 28/08/2026\n\nI, Vikas Sinha, aged 37 years, residing at Plot 22, Sector 18, Gurugram, do hereby report tha",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Vikas Sinha",
+          "target": "House 8, Sector 22, Gurugram, came to my property in connection with a pending property dispute between us",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-005",
+          "evidence": "FIR No. 901/2026\nPolice Station: Sector 18, District: Gurugram, State: Haryana\nDate of Report: 28/08/2026\n\nI, Vikas Sinha, aged 37 years, residing at Plot 22, Sector 18, Gurugram, do hereby report tha",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Amit Chauhan",
+          "target": "Plot 22, Sector 18, Gurugram",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-005",
+          "evidence": "FIR No. 901/2026\nPolice Station: Sector 18, District: Gurugram, State: Haryana\nDate of Report: 28/08/2026\n\nI, Vikas Sinha, aged 37 years, residing at Plot 22, Sector 18, Gurugram, do hereby report tha",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Amit Chauhan",
+          "target": "House 8, Sector 22, Gurugram, came to my property in connection with a pending property dispute between us",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-005",
+          "evidence": "FIR No. 901/2026\nPolice Station: Sector 18, District: Gurugram, State: Haryana\nDate of Report: 28/08/2026\n\nI, Vikas Sinha, aged 37 years, residing at Plot 22, Sector 18, Gurugram, do hereby report tha",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-006",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "303",
+          "text": "Section 303 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Theft",
+          "category": "Offences against property",
+          "punishment": "Imprisonment up to 3 years, or fine, or both",
+          "ipc_equivalent": "378"
+        },
+        {
+          "code": "IPC",
+          "section": "379",
+          "text": "Section 379 IPC",
+          "title": "Punishment for theft",
+          "category": "Offences against property",
+          "punishment": "Imprisonment up to 3 years, or fine, or both",
+          "bns_equivalent": "303"
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 303 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Section 379 IPC",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-ipc",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Neeraj Kumar",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "Mohit Verma",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "Rahul Tyagi",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-accused-continuation",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "Deepak Singh",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-witness-introduced",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "A-45, Lajpat Nagar II, New Delhi",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "Lajpat Nagar, New Delhi",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-contextual",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0010",
+          "text": "10/09/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0011",
+          "text": "09/09/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0012",
+          "text": "112/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-006",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Mohit Verma",
+          "target": "Neeraj Kumar",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-006",
+          "evidence": "Accused Mohit Verma identified in document involving complainant Neeraj Kumar",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Rahul Tyagi",
+          "target": "Neeraj Kumar",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-006",
+          "evidence": "Accused Rahul Tyagi identified in document involving complainant Neeraj Kumar",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Mohit Verma",
+          "target": "Rahul Tyagi",
+          "type": "mentioned-together",
+          "source_document": "SYN-FIR-006",
+          "evidence": "The persons have been identified as Mohit Verma, aged about 25 years, residing at B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi.",
+          "method": "co-occurrence-explicit",
+          "confidence": "moderate"
+        },
+        {
+          "source": "Neeraj Kumar",
+          "target": "A-45, Lajpat Nagar II, New Delhi",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-006",
+          "evidence": "FIR No. 112/2026\nPolice Station: Lajpat Nagar, District: New Delhi, State: Delhi\nDate of Report: 10/09/2026\n\nI, Neeraj Kumar, aged 29 years, residing at A-45, Lajpat Nagar II, New Delhi, do hereby rep",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Neeraj Kumar",
+          "target": "Lajpat Nagar, New Delhi",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-006",
+          "evidence": "FIR No. 112/2026\nPolice Station: Lajpat Nagar, District: New Delhi, State: Delhi\nDate of Report: 10/09/2026\n\nI, Neeraj Kumar, aged 29 years, residing at A-45, Lajpat Nagar II, New Delhi, do hereby rep",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Mohit Verma",
+          "target": "B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-006",
+          "evidence": "The persons have been identified as Mohit Verma, aged about 25 years, residing at B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi.",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Rahul Tyagi",
+          "target": "B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-006",
+          "evidence": "The persons have been identified as Mohit Verma, aged about 25 years, residing at B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi.",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Deepak Singh",
+          "target": "Lajpat Nagar, New Delhi",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-006",
+          "evidence": "CCTV footage from a nearby shop, reviewed with the help of my friend Deepak Singh, aged 33 years, who works at a shop in Lajpat Nagar, New Delhi, shows two persons removing my motorcycle.",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-007",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "85",
+          "text": "Section 85 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Cruelty by husband or relatives of husband",
+          "category": "Offences against women",
+          "punishment": "Imprisonment up to 3 years plus fine",
+          "ipc_equivalent": "498A"
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 85 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-007",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Sushmita Banerjee",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-007",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Prakash Mondal",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-007",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "Rina Ghosh",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "source_document": "SYN-FIR-007",
+          "method": "pattern-witness-introduced",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "AE Block, Salt Lake, Kolkata",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-007",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "BE Block, Salt Lake, Kolkata, who is my husband, has been subjecting me to cruelty and mental harassment since our marriage in 2018",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-007",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "05/07/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-007",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "01/07/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-007",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "445/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-007",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Prakash Mondal",
+          "target": "Sushmita Banerjee",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-007",
+          "evidence": "FIR No. 445/2026\nPolice Station: Salt Lake, District: Kolkata, State: West Bengal\nDate of Report: 05/07/2026\n\nI, Sushmita Banerjee, aged 33 years, residing at 15, AE Block, Salt Lake, Kolkata, do here",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Rina Ghosh",
+          "target": "Prakash Mondal",
+          "type": "witness-to",
+          "source_document": "SYN-FIR-007",
+          "evidence": "My sister-in-law Rina Ghosh, aged 30 years, who resides at 12, BE Block, Salt Lake, Kolkata, has witnessed the accused Prakash Mondal verbally abusing me on several occasions and can confirm the patte",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Sushmita Banerjee",
+          "target": "AE Block, Salt Lake, Kolkata",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-007",
+          "evidence": "FIR No. 445/2026\nPolice Station: Salt Lake, District: Kolkata, State: West Bengal\nDate of Report: 05/07/2026\n\nI, Sushmita Banerjee, aged 33 years, residing at 15, AE Block, Salt Lake, Kolkata, do here",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Sushmita Banerjee",
+          "target": "BE Block, Salt Lake, Kolkata, who is my husband, has been subjecting me to cruelty and mental harassment since our marriage in 2018",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-007",
+          "evidence": "FIR No. 445/2026\nPolice Station: Salt Lake, District: Kolkata, State: West Bengal\nDate of Report: 05/07/2026\n\nI, Sushmita Banerjee, aged 33 years, residing at 15, AE Block, Salt Lake, Kolkata, do here",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Prakash Mondal",
+          "target": "AE Block, Salt Lake, Kolkata",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-007",
+          "evidence": "FIR No. 445/2026\nPolice Station: Salt Lake, District: Kolkata, State: West Bengal\nDate of Report: 05/07/2026\n\nI, Sushmita Banerjee, aged 33 years, residing at 15, AE Block, Salt Lake, Kolkata, do here",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Prakash Mondal",
+          "target": "BE Block, Salt Lake, Kolkata, who is my husband, has been subjecting me to cruelty and mental harassment since our marriage in 2018",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-007",
+          "evidence": "FIR No. 445/2026\nPolice Station: Salt Lake, District: Kolkata, State: West Bengal\nDate of Report: 05/07/2026\n\nI, Sushmita Banerjee, aged 33 years, residing at 15, AE Block, Salt Lake, Kolkata, do here",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-008",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "318",
+          "text": "Section 318 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Cheating",
+          "category": "Offences against property",
+          "punishment": "Imprisonment up to 3 years plus fine",
+          "ipc_equivalent": "420"
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 318 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-008",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Karthik Rajan",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-008",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Divya Shetty",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-008",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "14th Main, HSR Layout, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-008",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "19th Main, HSR Layout, Bengaluru, created a fraudulent online account impersonating me on a payment platform",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-008",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "01/08/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-008",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "15/06/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-008",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "25/07/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-008",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "678/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-008",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Divya Shetty",
+          "target": "Karthik Rajan",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-008",
+          "evidence": "FIR No. 678/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 01/08/2026\n\nI, Karthik Rajan, aged 24 years, residing at 89, 14th Main, HSR Layout, Bengaluru, ",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Karthik Rajan",
+          "target": "14th Main, HSR Layout, Bengaluru",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-008",
+          "evidence": "FIR No. 678/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 01/08/2026\n\nI, Karthik Rajan, aged 24 years, residing at 89, 14th Main, HSR Layout, Bengaluru, ",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Karthik Rajan",
+          "target": "19th Main, HSR Layout, Bengaluru, created a fraudulent online account impersonating me on a payment platform",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-008",
+          "evidence": "FIR No. 678/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 01/08/2026\n\nI, Karthik Rajan, aged 24 years, residing at 89, 14th Main, HSR Layout, Bengaluru, ",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Divya Shetty",
+          "target": "14th Main, HSR Layout, Bengaluru",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-008",
+          "evidence": "FIR No. 678/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 01/08/2026\n\nI, Karthik Rajan, aged 24 years, residing at 89, 14th Main, HSR Layout, Bengaluru, ",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Divya Shetty",
+          "target": "19th Main, HSR Layout, Bengaluru, created a fraudulent online account impersonating me on a payment platform",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-008",
+          "evidence": "FIR No. 678/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 01/08/2026\n\nI, Karthik Rajan, aged 24 years, residing at 89, 14th Main, HSR Layout, Bengaluru, ",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-009",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "111",
+          "text": "Section 111 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Organised crime",
+          "category": "Organised crime (new in BNS)",
+          "punishment": "Death, or imprisonment for life, or rigorous imprisonment up to 10 years, and fine",
+          "ipc_equivalent": null
+        },
+        {
+          "code": "BNS",
+          "section": "112",
+          "text": "Section 112 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Petty organised crime",
+          "category": "Organised crime (new in BNS)",
+          "punishment": "Imprisonment for minimum 1 year up to 7 years, and fine",
+          "ipc_equivalent": null
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 111 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-009",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Section 112 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-009",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Fatima Begum",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-009",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "Suresh Reddy",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-009",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "Venkat Rao",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-009",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "Ahmed Khan",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "source_document": "SYN-FIR-009",
+          "method": "pattern-witness-introduced",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "Road No",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-009",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "15/09/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-009",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "14/09/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-009",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0010",
+          "text": "321/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-009",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Suresh Reddy",
+          "target": "Fatima Begum",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-009",
+          "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Venkat Rao",
+          "target": "Fatima Begum",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-009",
+          "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Ahmed Khan",
+          "target": "Suresh Reddy",
+          "type": "witness-to",
+          "source_document": "SYN-FIR-009",
+          "evidence": "My neighbor Ahmed Khan, aged 48 years, who resides at 122, Road No. 10, Banjara Hills, Hyderabad, observed the accused Venkat Rao entering my house through the back entrance while the accused Suresh R",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Ahmed Khan",
+          "target": "Venkat Rao",
+          "type": "witness-to",
+          "source_document": "SYN-FIR-009",
+          "evidence": "My neighbor Ahmed Khan, aged 48 years, who resides at 122, Road No. 10, Banjara Hills, Hyderabad, observed the accused Venkat Rao entering my house through the back entrance while the accused Suresh R",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Suresh Reddy",
+          "target": "Venkat Rao",
+          "type": "mentioned-together",
+          "source_document": "SYN-FIR-009",
+          "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+          "method": "co-occurrence-explicit",
+          "confidence": "moderate"
+        },
+        {
+          "source": "Fatima Begum",
+          "target": "Road No",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-009",
+          "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Suresh Reddy",
+          "target": "Road No",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-009",
+          "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Venkat Rao",
+          "target": "Road No",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-009",
+          "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Ahmed Khan",
+          "target": "Road No",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-009",
+          "evidence": "My neighbor Ahmed Khan, aged 48 years, who resides at 122, Road No. 10, Banjara Hills, Hyderabad, observed the accused Venkat Rao entering my house through the back entrance while the accused Suresh R",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-010",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "105",
+          "text": "Section 105 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Voluntarily causing hurt",
+          "category": "Offences against human body",
+          "punishment": "Imprisonment up to 1 year plus fine up to ₹1,000",
+          "ipc_equivalent": "323"
+        },
+        {
+          "code": "IPC",
+          "section": "323",
+          "text": "Section 323 IPC",
+          "title": "Voluntarily causing hurt",
+          "category": "Offences affecting body",
+          "punishment": "Imprisonment up to 1 year plus fine up to ₹1,000",
+          "bns_equivalent": "105"
+        },
+        {
+          "code": "IPC",
+          "section": "506",
+          "text": "Section 506 IPC",
+          "title": "Punishment for criminal intimidation",
+          "category": "Criminal intimidation",
+          "punishment": "Imprisonment up to 2 years, or fine, or both",
+          "bns_equivalent": "189"
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 105 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Section 323 IPC",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-ipc",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Section 506 IPC",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-ipc",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "Manoj Sharma",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "Ravi Kumar",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "Suresh Jain",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-witness-introduced",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "MI Road, Jaipur",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "Tonk Road, Jaipur, came to my shop",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "MI Road, Jaipur, when the accused Ravi Kumar, aged about 29 years, residing at 17, Tonk Road, Jaipur, came to my shop",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-located-at",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0010",
+          "text": "30/07/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0011",
+          "text": "29/07/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0012",
+          "text": "890/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-010",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Ravi Kumar",
+          "target": "Manoj Sharma",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-010",
+          "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Suresh Jain",
+          "target": "Ravi Kumar",
+          "type": "witness-to",
+          "source_document": "SYN-FIR-010",
+          "evidence": "My business associate Suresh Jain, aged 55 years, who was present at the shop at the time of the incident, witnessed the accused Ravi Kumar assaulting me.",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Manoj Sharma",
+          "target": "MI Road, Jaipur",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-010",
+          "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Manoj Sharma",
+          "target": "Tonk Road, Jaipur, came to my shop",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-010",
+          "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Manoj Sharma",
+          "target": "MI Road, Jaipur, when the accused Ravi Kumar, aged about 29 years, residing at 17, Tonk Road, Jaipur, came to my shop",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-010",
+          "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Ravi Kumar",
+          "target": "MI Road, Jaipur",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-010",
+          "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Ravi Kumar",
+          "target": "Tonk Road, Jaipur, came to my shop",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-010",
+          "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Ravi Kumar",
+          "target": "MI Road, Jaipur, when the accused Ravi Kumar, aged about 29 years, residing at 17, Tonk Road, Jaipur, came to my shop",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-010",
+          "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-011",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "314",
+          "text": "Section 314 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Criminal breach of trust",
+          "category": "Offences against property",
+          "punishment": "Imprisonment up to 3 years plus fine",
+          "ipc_equivalent": "406"
+        },
+        {
+          "code": "BNS",
+          "section": "329",
+          "text": "Section 329 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Criminal misappropriation of property",
+          "category": "Offences against property",
+          "punishment": "Imprisonment up to 2 years, or fine, or both",
+          "ipc_equivalent": "403"
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 314 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-011",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Section 329 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-011",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Arun Nair",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-011",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "Deepa Menon",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-011",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "Joseph Thomas",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "source_document": "SYN-FIR-011",
+          "method": "pattern-witness-introduced",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "5th Sector, HSR Layout, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-011",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "7th Sector, HSR Layout, Bengaluru, was my business partner in a small trading firm operating from 200, 5th Sector, HSR Layout, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-011",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "25/06/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-011",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "01/04/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-011",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0010",
+          "text": "20/06/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-011",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0011",
+          "text": "223/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-011",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Deepa Menon",
+          "target": "Arun Nair",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-011",
+          "evidence": "FIR No. 223/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 25/06/2026\n\nI, Arun Nair, aged 38 years, residing at 200, 5th Sector, HSR Layout, Bengaluru, do",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Joseph Thomas",
+          "target": "Deepa Menon",
+          "type": "witness-to",
+          "source_document": "SYN-FIR-011",
+          "evidence": "My business associate Joseph Thomas, aged 42 years, who was present at our office at 200, 5th Sector, HSR Layout, Bengaluru, when I handed over the funds to the accused, can confirm that the money was",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Arun Nair",
+          "target": "5th Sector, HSR Layout, Bengaluru",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-011",
+          "evidence": "FIR No. 223/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 25/06/2026\n\nI, Arun Nair, aged 38 years, residing at 200, 5th Sector, HSR Layout, Bengaluru, do",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Arun Nair",
+          "target": "7th Sector, HSR Layout, Bengaluru, was my business partner in a small trading firm operating from 200, 5th Sector, HSR Layout, Bengaluru",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-011",
+          "evidence": "FIR No. 223/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 25/06/2026\n\nI, Arun Nair, aged 38 years, residing at 200, 5th Sector, HSR Layout, Bengaluru, do",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Deepa Menon",
+          "target": "5th Sector, HSR Layout, Bengaluru",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-011",
+          "evidence": "FIR No. 223/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 25/06/2026\n\nI, Arun Nair, aged 38 years, residing at 200, 5th Sector, HSR Layout, Bengaluru, do",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Deepa Menon",
+          "target": "7th Sector, HSR Layout, Bengaluru, was my business partner in a small trading firm operating from 200, 5th Sector, HSR Layout, Bengaluru",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-011",
+          "evidence": "FIR No. 223/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 25/06/2026\n\nI, Arun Nair, aged 38 years, residing at 200, 5th Sector, HSR Layout, Bengaluru, do",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-012",
+      "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+      "extracted_sections": [
+        {
+          "code": "BNS",
+          "section": "103",
+          "text": "Section 103 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Murder",
+          "category": "Offences against human body",
+          "punishment": "Death, or imprisonment for life, and fine",
+          "ipc_equivalent": "302"
+        },
+        {
+          "code": "BNS",
+          "section": "109",
+          "text": "Section 109 of the Bharatiya Nyaya Sanhita, 2023",
+          "title": "Voluntarily causing hurt by dangerous weapons or means",
+          "category": "Offences against human body",
+          "punishment": "Imprisonment up to 3 years plus fine",
+          "ipc_equivalent": "324"
+        }
+      ],
+      "extracted_entities": [
+        {
+          "id": "DOC-0001",
+          "text": "Section 103 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-012",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0002",
+          "text": "Section 109 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "source_document": "SYN-FIR-012",
+          "method": "pattern-bns",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0003",
+          "text": "Meena Kumari",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "source_document": "SYN-FIR-012",
+          "method": "pattern-complainant",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0004",
+          "text": "Vikram Patel",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "source_document": "SYN-FIR-012",
+          "method": "pattern-accused",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0005",
+          "text": "Rajesh Sharma",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "source_document": "SYN-FIR-012",
+          "method": "pattern-witness-introduced",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0006",
+          "text": "4th Block, Koramangala, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-012",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0007",
+          "text": "MG Road, Indiranagar, Bengaluru, approached me from behind and attempted to snatch my handbag containing ₹15,000 in cash and my mobile phone",
+          "type": "LOCATION",
+          "role": null,
+          "source_document": "SYN-FIR-012",
+          "method": "pattern-address",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0008",
+          "text": "20/09/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-012",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0009",
+          "text": "19/09/2026",
+          "type": "DATE",
+          "role": null,
+          "source_document": "SYN-FIR-012",
+          "method": "pattern-date",
+          "confidence": "explicit"
+        },
+        {
+          "id": "DOC-0010",
+          "text": "556/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "source_document": "SYN-FIR-012",
+          "method": "pattern-fir",
+          "confidence": "explicit"
+        }
+      ],
+      "extracted_relationships": [
+        {
+          "source": "Vikram Patel",
+          "target": "Meena Kumari",
+          "type": "accused-of",
+          "source_document": "SYN-FIR-012",
+          "evidence": "FIR No. 556/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 20/09/2026\n\nI, Meena Kumari, aged 62 years, residing at 90, 4th Block, Koramangala, Bengaluru,",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Rajesh Sharma",
+          "target": "Vikram Patel",
+          "type": "witness-to",
+          "source_document": "SYN-FIR-012",
+          "evidence": "Rajesh Sharma saw the accused Vikram Patel fleeing the scene.",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Meena Kumari",
+          "target": "4th Block, Koramangala, Bengaluru",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-012",
+          "evidence": "FIR No. 556/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 20/09/2026\n\nI, Meena Kumari, aged 62 years, residing at 90, 4th Block, Koramangala, Bengaluru,",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Meena Kumari",
+          "target": "MG Road, Indiranagar, Bengaluru, approached me from behind and attempted to snatch my handbag containing ₹15,000 in cash and my mobile phone",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-012",
+          "evidence": "FIR No. 556/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 20/09/2026\n\nI, Meena Kumari, aged 62 years, residing at 90, 4th Block, Koramangala, Bengaluru,",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Vikram Patel",
+          "target": "4th Block, Koramangala, Bengaluru",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-012",
+          "evidence": "FIR No. 556/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 20/09/2026\n\nI, Meena Kumari, aged 62 years, residing at 90, 4th Block, Koramangala, Bengaluru,",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Vikram Patel",
+          "target": "MG Road, Indiranagar, Bengaluru, approached me from behind and attempted to snatch my handbag containing ₹15,000 in cash and my mobile phone",
+          "type": "associated-location",
+          "source_document": "SYN-FIR-012",
+          "evidence": "FIR No. 556/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 20/09/2026\n\nI, Meena Kumari, aged 62 years, residing at 90, 4th Block, Koramangala, Bengaluru,",
+          "method": "contextual-explicit",
+          "confidence": "explicit"
+        }
+      ]
+    }
+  ],
+  "all_entities": [
+    {
+      "id": "DOC-0001",
+      "text": "Section 303 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-001",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Section 309 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-001",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Rajesh Sharma",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-001",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "Vikram Patel",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-001",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "Sunita Devi",
+      "type": "PERSON",
+      "role": "WITNESS",
+      "source_document": "SYN-FIR-001",
+      "method": "pattern-witness-neighbor",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "7th Cross, Koramangala, Bengaluru",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-001",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "MG Road, Indiranagar, Bengaluru, came to my house along with one other unidentified person",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-001",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "15/08/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-001",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "14/08/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-001",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0010",
+      "text": "345/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-001",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0001",
+      "text": "Section 318 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Section 319 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Anita Kulkarni",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "Deepak Jadhav",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "Mohan Deshmukh",
+      "type": "PERSON",
+      "role": "WITNESS",
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-witness-introduced",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "FC Road, Shivajinagar, Pune",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "Sinhagad Road, Pune, contacted me through a messaging application claiming to be a representative of a registered investment company",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "22/07/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "01/06/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0010",
+      "text": "15/07/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0011",
+      "text": "10/06/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0012",
+      "text": "789/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-002",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0001",
+      "text": "Section 75 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-003",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Section 85 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-003",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Priya Mehta",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-003",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "Sanjay Gupta",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-003",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "Kavita Nair",
+      "type": "PERSON",
+      "role": "WITNESS",
+      "source_document": "SYN-FIR-003",
+      "method": "pattern-witness-introduced",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "Link Road, Andheri West, Mumbai",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-003",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "03/09/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-003",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "01/09/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-003",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "234/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-003",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0001",
+      "text": "Section 314 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Section 336 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Lakshmi Iyer",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "Ramesh Babu",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "Gopal Krishnan",
+      "type": "PERSON",
+      "role": "WITNESS",
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-witness-can-confirm",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "North Mada Street, T",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "South Usman Road, T",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "Bazaar Road, T",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-located-at",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "18/06/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0010",
+      "text": "01/01/2025",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0011",
+      "text": "15/05/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0012",
+      "text": "567/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-004",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0001",
+      "text": "Section 105 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-005",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Section 106 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-005",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Vikas Sinha",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-005",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "Amit Chauhan",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-005",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "Plot 22, Sector 18, Gurugram",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-005",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "House 8, Sector 22, Gurugram, came to my property in connection with a pending property dispute between us",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-005",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "28/08/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-005",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "27/08/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-005",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "901/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-005",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0001",
+      "text": "Section 303 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Section 379 IPC",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-ipc",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Neeraj Kumar",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "Mohit Verma",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "Rahul Tyagi",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-accused-continuation",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "Deepak Singh",
+      "type": "PERSON",
+      "role": "WITNESS",
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-witness-introduced",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "A-45, Lajpat Nagar II, New Delhi",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "Lajpat Nagar, New Delhi",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-contextual",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0010",
+      "text": "10/09/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0011",
+      "text": "09/09/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0012",
+      "text": "112/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-006",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0001",
+      "text": "Section 85 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-007",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Sushmita Banerjee",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-007",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Prakash Mondal",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-007",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "Rina Ghosh",
+      "type": "PERSON",
+      "role": "WITNESS",
+      "source_document": "SYN-FIR-007",
+      "method": "pattern-witness-introduced",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "AE Block, Salt Lake, Kolkata",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-007",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "BE Block, Salt Lake, Kolkata, who is my husband, has been subjecting me to cruelty and mental harassment since our marriage in 2018",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-007",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "05/07/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-007",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "01/07/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-007",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "445/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-007",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0001",
+      "text": "Section 318 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-008",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Karthik Rajan",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-008",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Divya Shetty",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-008",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "14th Main, HSR Layout, Bengaluru",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-008",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "19th Main, HSR Layout, Bengaluru, created a fraudulent online account impersonating me on a payment platform",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-008",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "01/08/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-008",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "15/06/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-008",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "25/07/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-008",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "678/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-008",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0001",
+      "text": "Section 111 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-009",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Section 112 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-009",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Fatima Begum",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-009",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "Suresh Reddy",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-009",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "Venkat Rao",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-009",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "Ahmed Khan",
+      "type": "PERSON",
+      "role": "WITNESS",
+      "source_document": "SYN-FIR-009",
+      "method": "pattern-witness-introduced",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "Road No",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-009",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "15/09/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-009",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "14/09/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-009",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0010",
+      "text": "321/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-009",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0001",
+      "text": "Section 105 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Section 323 IPC",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-ipc",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Section 506 IPC",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-ipc",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "Manoj Sharma",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "Ravi Kumar",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "Suresh Jain",
+      "type": "PERSON",
+      "role": "WITNESS",
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-witness-introduced",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "MI Road, Jaipur",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "Tonk Road, Jaipur, came to my shop",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "MI Road, Jaipur, when the accused Ravi Kumar, aged about 29 years, residing at 17, Tonk Road, Jaipur, came to my shop",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-located-at",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0010",
+      "text": "30/07/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0011",
+      "text": "29/07/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0012",
+      "text": "890/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-010",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0001",
+      "text": "Section 314 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-011",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Section 329 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-011",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Arun Nair",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-011",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "Deepa Menon",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-011",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "Joseph Thomas",
+      "type": "PERSON",
+      "role": "WITNESS",
+      "source_document": "SYN-FIR-011",
+      "method": "pattern-witness-introduced",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "5th Sector, HSR Layout, Bengaluru",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-011",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "7th Sector, HSR Layout, Bengaluru, was my business partner in a small trading firm operating from 200, 5th Sector, HSR Layout, Bengaluru",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-011",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "25/06/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-011",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "01/04/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-011",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0010",
+      "text": "20/06/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-011",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0011",
+      "text": "223/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-011",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0001",
+      "text": "Section 103 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-012",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0002",
+      "text": "Section 109 of the Bharatiya Nyaya Sanhita, 2023",
+      "type": "LEGAL_SECTION",
+      "role": null,
+      "source_document": "SYN-FIR-012",
+      "method": "pattern-bns",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0003",
+      "text": "Meena Kumari",
+      "type": "PERSON",
+      "role": "COMPLAINANT",
+      "source_document": "SYN-FIR-012",
+      "method": "pattern-complainant",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0004",
+      "text": "Vikram Patel",
+      "type": "PERSON",
+      "role": "ACCUSED",
+      "source_document": "SYN-FIR-012",
+      "method": "pattern-accused",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0005",
+      "text": "Rajesh Sharma",
+      "type": "PERSON",
+      "role": "WITNESS",
+      "source_document": "SYN-FIR-012",
+      "method": "pattern-witness-introduced",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0006",
+      "text": "4th Block, Koramangala, Bengaluru",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-012",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0007",
+      "text": "MG Road, Indiranagar, Bengaluru, approached me from behind and attempted to snatch my handbag containing ₹15,000 in cash and my mobile phone",
+      "type": "LOCATION",
+      "role": null,
+      "source_document": "SYN-FIR-012",
+      "method": "pattern-address",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0008",
+      "text": "20/09/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-012",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0009",
+      "text": "19/09/2026",
+      "type": "DATE",
+      "role": null,
+      "source_document": "SYN-FIR-012",
+      "method": "pattern-date",
+      "confidence": "explicit"
+    },
+    {
+      "id": "DOC-0010",
+      "text": "556/2026",
+      "type": "CASE_NUMBER",
+      "role": null,
+      "source_document": "SYN-FIR-012",
+      "method": "pattern-fir",
+      "confidence": "explicit"
+    }
+  ],
+  "all_relationships": [
+    {
+      "source": "Vikram Patel",
+      "target": "Rajesh Sharma",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-001",
+      "evidence": "FIR No. 345/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 15/08/2026\n\nI, Rajesh Sharma, son of Shri Mohan Sharma, aged 42 years, residing at 45, 7th Cro",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Sunita Devi",
+      "target": "Vikram Patel",
+      "type": "witness-to",
+      "source_document": "SYN-FIR-001",
+      "evidence": "The complainant's neighbor, Sunita Devi, aged 35 years, who resides at 47, 7th Cross, Koramangala, Bengaluru, witnessed the incident from her balcony and can confirm the events described above.",
+      "method": "role-based-witnessed-incident",
+      "confidence": "moderate"
+    },
+    {
+      "source": "Rajesh Sharma",
+      "target": "7th Cross, Koramangala, Bengaluru",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-001",
+      "evidence": "FIR No. 345/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 15/08/2026\n\nI, Rajesh Sharma, son of Shri Mohan Sharma, aged 42 years, residing at 45, 7th Cro",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Rajesh Sharma",
+      "target": "MG Road, Indiranagar, Bengaluru, came to my house along with one other unidentified person",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-001",
+      "evidence": "FIR No. 345/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 15/08/2026\n\nI, Rajesh Sharma, son of Shri Mohan Sharma, aged 42 years, residing at 45, 7th Cro",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Vikram Patel",
+      "target": "7th Cross, Koramangala, Bengaluru",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-001",
+      "evidence": "FIR No. 345/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 15/08/2026\n\nI, Rajesh Sharma, son of Shri Mohan Sharma, aged 42 years, residing at 45, 7th Cro",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Vikram Patel",
+      "target": "MG Road, Indiranagar, Bengaluru, came to my house along with one other unidentified person",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-001",
+      "evidence": "FIR No. 345/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 15/08/2026\n\nI, Rajesh Sharma, son of Shri Mohan Sharma, aged 42 years, residing at 45, 7th Cro",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Sunita Devi",
+      "target": "7th Cross, Koramangala, Bengaluru",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-001",
+      "evidence": "The complainant's neighbor, Sunita Devi, aged 35 years, who resides at 47, 7th Cross, Koramangala, Bengaluru, witnessed the incident from her balcony and can confirm the events described above.",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Deepak Jadhav",
+      "target": "Anita Kulkarni",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-002",
+      "evidence": "FIR No. 789/2026\nPolice Station: Shivajinagar, District: Pune, State: Maharashtra\nDate of Report: 22/07/2026\n\nI, Anita Kulkarni, aged 31 years, residing at 23, FC Road, Shivajinagar, Pune, do hereby r",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Mohan Deshmukh",
+      "target": "Deepak Jadhav",
+      "type": "witness-to",
+      "source_document": "SYN-FIR-002",
+      "evidence": "My colleague Mohan Deshmukh, aged 45 years, who works at my office in Shivajinagar, Pune, can confirm that the accused Deepak Jadhav had been communicating with me regarding this investment scheme.",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Anita Kulkarni",
+      "target": "FC Road, Shivajinagar, Pune",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-002",
+      "evidence": "FIR No. 789/2026\nPolice Station: Shivajinagar, District: Pune, State: Maharashtra\nDate of Report: 22/07/2026\n\nI, Anita Kulkarni, aged 31 years, residing at 23, FC Road, Shivajinagar, Pune, do hereby r",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Anita Kulkarni",
+      "target": "Sinhagad Road, Pune, contacted me through a messaging application claiming to be a representative of a registered investment company",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-002",
+      "evidence": "FIR No. 789/2026\nPolice Station: Shivajinagar, District: Pune, State: Maharashtra\nDate of Report: 22/07/2026\n\nI, Anita Kulkarni, aged 31 years, residing at 23, FC Road, Shivajinagar, Pune, do hereby r",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Deepak Jadhav",
+      "target": "FC Road, Shivajinagar, Pune",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-002",
+      "evidence": "FIR No. 789/2026\nPolice Station: Shivajinagar, District: Pune, State: Maharashtra\nDate of Report: 22/07/2026\n\nI, Anita Kulkarni, aged 31 years, residing at 23, FC Road, Shivajinagar, Pune, do hereby r",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Deepak Jadhav",
+      "target": "Sinhagad Road, Pune, contacted me through a messaging application claiming to be a representative of a registered investment company",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-002",
+      "evidence": "FIR No. 789/2026\nPolice Station: Shivajinagar, District: Pune, State: Maharashtra\nDate of Report: 22/07/2026\n\nI, Anita Kulkarni, aged 31 years, residing at 23, FC Road, Shivajinagar, Pune, do hereby r",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Sanjay Gupta",
+      "target": "Priya Mehta",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-003",
+      "evidence": "FIR No. 234/2026\nPolice Station: Andheri, District: Mumbai, State: Maharashtra\nDate of Report: 03/09/2026\n\nI, Priya Mehta, aged 26 years, residing at 56, Link Road, Andheri West, Mumbai, do hereby rep",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Kavita Nair",
+      "target": "Sanjay Gupta",
+      "type": "witness-to",
+      "source_document": "SYN-FIR-003",
+      "evidence": "Kavita Nair has witnessed some of the accused's inappropriate behaviour towards me in the office.",
+      "method": "role-based-generic",
+      "confidence": "moderate"
+    },
+    {
+      "source": "Priya Mehta",
+      "target": "Link Road, Andheri West, Mumbai",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-003",
+      "evidence": "FIR No. 234/2026\nPolice Station: Andheri, District: Mumbai, State: Maharashtra\nDate of Report: 03/09/2026\n\nI, Priya Mehta, aged 26 years, residing at 56, Link Road, Andheri West, Mumbai, do hereby rep",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Sanjay Gupta",
+      "target": "Link Road, Andheri West, Mumbai",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-003",
+      "evidence": "FIR No. 234/2026\nPolice Station: Andheri, District: Mumbai, State: Maharashtra\nDate of Report: 03/09/2026\n\nI, Priya Mehta, aged 26 years, residing at 56, Link Road, Andheri West, Mumbai, do hereby rep",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Ramesh Babu",
+      "target": "Lakshmi Iyer",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-004",
+      "evidence": "Accused Ramesh Babu identified in document involving complainant Lakshmi Iyer",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Gopal Krishnan",
+      "target": "Ramesh Babu",
+      "type": "witness-to",
+      "source_document": "SYN-FIR-004",
+      "evidence": "The accused Ramesh Babu showed this forged document to a tenant named Gopal Krishnan, aged 50 years, who resides at 56, Bazaar Road, T.",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Lakshmi Iyer",
+      "target": "North Mada Street, T",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-004",
+      "evidence": "Nagar, District: Chennai, State: Tamil Nadu\nDate of Report: 18/06/2026\n\nI, Lakshmi Iyer, aged 55 years, residing at 78, North Mada Street, T.",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Ramesh Babu",
+      "target": "South Usman Road, T",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-004",
+      "evidence": "Nagar, Chennai, do hereby report that:\n\nThe accused Ramesh Babu, aged about 40 years, residing at 23, South Usman Road, T.",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Ramesh Babu",
+      "target": "Bazaar Road, T",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-004",
+      "evidence": "The accused Ramesh Babu showed this forged document to a tenant named Gopal Krishnan, aged 50 years, who resides at 56, Bazaar Road, T.",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Gopal Krishnan",
+      "target": "Bazaar Road, T",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-004",
+      "evidence": "The accused Ramesh Babu showed this forged document to a tenant named Gopal Krishnan, aged 50 years, who resides at 56, Bazaar Road, T.",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Amit Chauhan",
+      "target": "Vikas Sinha",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-005",
+      "evidence": "FIR No. 901/2026\nPolice Station: Sector 18, District: Gurugram, State: Haryana\nDate of Report: 28/08/2026\n\nI, Vikas Sinha, aged 37 years, residing at Plot 22, Sector 18, Gurugram, do hereby report tha",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Vikas Sinha",
+      "target": "Plot 22, Sector 18, Gurugram",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-005",
+      "evidence": "FIR No. 901/2026\nPolice Station: Sector 18, District: Gurugram, State: Haryana\nDate of Report: 28/08/2026\n\nI, Vikas Sinha, aged 37 years, residing at Plot 22, Sector 18, Gurugram, do hereby report tha",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Vikas Sinha",
+      "target": "House 8, Sector 22, Gurugram, came to my property in connection with a pending property dispute between us",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-005",
+      "evidence": "FIR No. 901/2026\nPolice Station: Sector 18, District: Gurugram, State: Haryana\nDate of Report: 28/08/2026\n\nI, Vikas Sinha, aged 37 years, residing at Plot 22, Sector 18, Gurugram, do hereby report tha",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Amit Chauhan",
+      "target": "Plot 22, Sector 18, Gurugram",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-005",
+      "evidence": "FIR No. 901/2026\nPolice Station: Sector 18, District: Gurugram, State: Haryana\nDate of Report: 28/08/2026\n\nI, Vikas Sinha, aged 37 years, residing at Plot 22, Sector 18, Gurugram, do hereby report tha",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Amit Chauhan",
+      "target": "House 8, Sector 22, Gurugram, came to my property in connection with a pending property dispute between us",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-005",
+      "evidence": "FIR No. 901/2026\nPolice Station: Sector 18, District: Gurugram, State: Haryana\nDate of Report: 28/08/2026\n\nI, Vikas Sinha, aged 37 years, residing at Plot 22, Sector 18, Gurugram, do hereby report tha",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Mohit Verma",
+      "target": "Neeraj Kumar",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-006",
+      "evidence": "Accused Mohit Verma identified in document involving complainant Neeraj Kumar",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Rahul Tyagi",
+      "target": "Neeraj Kumar",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-006",
+      "evidence": "Accused Rahul Tyagi identified in document involving complainant Neeraj Kumar",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Mohit Verma",
+      "target": "Rahul Tyagi",
+      "type": "mentioned-together",
+      "source_document": "SYN-FIR-006",
+      "evidence": "The persons have been identified as Mohit Verma, aged about 25 years, residing at B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi.",
+      "method": "co-occurrence-explicit",
+      "confidence": "moderate"
+    },
+    {
+      "source": "Neeraj Kumar",
+      "target": "A-45, Lajpat Nagar II, New Delhi",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-006",
+      "evidence": "FIR No. 112/2026\nPolice Station: Lajpat Nagar, District: New Delhi, State: Delhi\nDate of Report: 10/09/2026\n\nI, Neeraj Kumar, aged 29 years, residing at A-45, Lajpat Nagar II, New Delhi, do hereby rep",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Neeraj Kumar",
+      "target": "Lajpat Nagar, New Delhi",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-006",
+      "evidence": "FIR No. 112/2026\nPolice Station: Lajpat Nagar, District: New Delhi, State: Delhi\nDate of Report: 10/09/2026\n\nI, Neeraj Kumar, aged 29 years, residing at A-45, Lajpat Nagar II, New Delhi, do hereby rep",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Mohit Verma",
+      "target": "B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-006",
+      "evidence": "The persons have been identified as Mohit Verma, aged about 25 years, residing at B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi.",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Rahul Tyagi",
+      "target": "B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-006",
+      "evidence": "The persons have been identified as Mohit Verma, aged about 25 years, residing at B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi.",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Deepak Singh",
+      "target": "Lajpat Nagar, New Delhi",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-006",
+      "evidence": "CCTV footage from a nearby shop, reviewed with the help of my friend Deepak Singh, aged 33 years, who works at a shop in Lajpat Nagar, New Delhi, shows two persons removing my motorcycle.",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Prakash Mondal",
+      "target": "Sushmita Banerjee",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-007",
+      "evidence": "FIR No. 445/2026\nPolice Station: Salt Lake, District: Kolkata, State: West Bengal\nDate of Report: 05/07/2026\n\nI, Sushmita Banerjee, aged 33 years, residing at 15, AE Block, Salt Lake, Kolkata, do here",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Rina Ghosh",
+      "target": "Prakash Mondal",
+      "type": "witness-to",
+      "source_document": "SYN-FIR-007",
+      "evidence": "My sister-in-law Rina Ghosh, aged 30 years, who resides at 12, BE Block, Salt Lake, Kolkata, has witnessed the accused Prakash Mondal verbally abusing me on several occasions and can confirm the patte",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Sushmita Banerjee",
+      "target": "AE Block, Salt Lake, Kolkata",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-007",
+      "evidence": "FIR No. 445/2026\nPolice Station: Salt Lake, District: Kolkata, State: West Bengal\nDate of Report: 05/07/2026\n\nI, Sushmita Banerjee, aged 33 years, residing at 15, AE Block, Salt Lake, Kolkata, do here",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Sushmita Banerjee",
+      "target": "BE Block, Salt Lake, Kolkata, who is my husband, has been subjecting me to cruelty and mental harassment since our marriage in 2018",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-007",
+      "evidence": "FIR No. 445/2026\nPolice Station: Salt Lake, District: Kolkata, State: West Bengal\nDate of Report: 05/07/2026\n\nI, Sushmita Banerjee, aged 33 years, residing at 15, AE Block, Salt Lake, Kolkata, do here",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Prakash Mondal",
+      "target": "AE Block, Salt Lake, Kolkata",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-007",
+      "evidence": "FIR No. 445/2026\nPolice Station: Salt Lake, District: Kolkata, State: West Bengal\nDate of Report: 05/07/2026\n\nI, Sushmita Banerjee, aged 33 years, residing at 15, AE Block, Salt Lake, Kolkata, do here",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Prakash Mondal",
+      "target": "BE Block, Salt Lake, Kolkata, who is my husband, has been subjecting me to cruelty and mental harassment since our marriage in 2018",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-007",
+      "evidence": "FIR No. 445/2026\nPolice Station: Salt Lake, District: Kolkata, State: West Bengal\nDate of Report: 05/07/2026\n\nI, Sushmita Banerjee, aged 33 years, residing at 15, AE Block, Salt Lake, Kolkata, do here",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Divya Shetty",
+      "target": "Karthik Rajan",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-008",
+      "evidence": "FIR No. 678/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 01/08/2026\n\nI, Karthik Rajan, aged 24 years, residing at 89, 14th Main, HSR Layout, Bengaluru, ",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Karthik Rajan",
+      "target": "14th Main, HSR Layout, Bengaluru",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-008",
+      "evidence": "FIR No. 678/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 01/08/2026\n\nI, Karthik Rajan, aged 24 years, residing at 89, 14th Main, HSR Layout, Bengaluru, ",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Karthik Rajan",
+      "target": "19th Main, HSR Layout, Bengaluru, created a fraudulent online account impersonating me on a payment platform",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-008",
+      "evidence": "FIR No. 678/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 01/08/2026\n\nI, Karthik Rajan, aged 24 years, residing at 89, 14th Main, HSR Layout, Bengaluru, ",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Divya Shetty",
+      "target": "14th Main, HSR Layout, Bengaluru",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-008",
+      "evidence": "FIR No. 678/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 01/08/2026\n\nI, Karthik Rajan, aged 24 years, residing at 89, 14th Main, HSR Layout, Bengaluru, ",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Divya Shetty",
+      "target": "19th Main, HSR Layout, Bengaluru, created a fraudulent online account impersonating me on a payment platform",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-008",
+      "evidence": "FIR No. 678/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 01/08/2026\n\nI, Karthik Rajan, aged 24 years, residing at 89, 14th Main, HSR Layout, Bengaluru, ",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Suresh Reddy",
+      "target": "Fatima Begum",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-009",
+      "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Venkat Rao",
+      "target": "Fatima Begum",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-009",
+      "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Ahmed Khan",
+      "target": "Suresh Reddy",
+      "type": "witness-to",
+      "source_document": "SYN-FIR-009",
+      "evidence": "My neighbor Ahmed Khan, aged 48 years, who resides at 122, Road No. 10, Banjara Hills, Hyderabad, observed the accused Venkat Rao entering my house through the back entrance while the accused Suresh R",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Ahmed Khan",
+      "target": "Venkat Rao",
+      "type": "witness-to",
+      "source_document": "SYN-FIR-009",
+      "evidence": "My neighbor Ahmed Khan, aged 48 years, who resides at 122, Road No. 10, Banjara Hills, Hyderabad, observed the accused Venkat Rao entering my house through the back entrance while the accused Suresh R",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Suresh Reddy",
+      "target": "Venkat Rao",
+      "type": "mentioned-together",
+      "source_document": "SYN-FIR-009",
+      "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+      "method": "co-occurrence-explicit",
+      "confidence": "moderate"
+    },
+    {
+      "source": "Fatima Begum",
+      "target": "Road No",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-009",
+      "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Suresh Reddy",
+      "target": "Road No",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-009",
+      "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Venkat Rao",
+      "target": "Road No",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-009",
+      "evidence": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Ahmed Khan",
+      "target": "Road No",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-009",
+      "evidence": "My neighbor Ahmed Khan, aged 48 years, who resides at 122, Road No. 10, Banjara Hills, Hyderabad, observed the accused Venkat Rao entering my house through the back entrance while the accused Suresh R",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Ravi Kumar",
+      "target": "Manoj Sharma",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-010",
+      "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Suresh Jain",
+      "target": "Ravi Kumar",
+      "type": "witness-to",
+      "source_document": "SYN-FIR-010",
+      "evidence": "My business associate Suresh Jain, aged 55 years, who was present at the shop at the time of the incident, witnessed the accused Ravi Kumar assaulting me.",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Manoj Sharma",
+      "target": "MI Road, Jaipur",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-010",
+      "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Manoj Sharma",
+      "target": "Tonk Road, Jaipur, came to my shop",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-010",
+      "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Manoj Sharma",
+      "target": "MI Road, Jaipur, when the accused Ravi Kumar, aged about 29 years, residing at 17, Tonk Road, Jaipur, came to my shop",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-010",
+      "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Ravi Kumar",
+      "target": "MI Road, Jaipur",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-010",
+      "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Ravi Kumar",
+      "target": "Tonk Road, Jaipur, came to my shop",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-010",
+      "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Ravi Kumar",
+      "target": "MI Road, Jaipur, when the accused Ravi Kumar, aged about 29 years, residing at 17, Tonk Road, Jaipur, came to my shop",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-010",
+      "evidence": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Deepa Menon",
+      "target": "Arun Nair",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-011",
+      "evidence": "FIR No. 223/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 25/06/2026\n\nI, Arun Nair, aged 38 years, residing at 200, 5th Sector, HSR Layout, Bengaluru, do",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Joseph Thomas",
+      "target": "Deepa Menon",
+      "type": "witness-to",
+      "source_document": "SYN-FIR-011",
+      "evidence": "My business associate Joseph Thomas, aged 42 years, who was present at our office at 200, 5th Sector, HSR Layout, Bengaluru, when I handed over the funds to the accused, can confirm that the money was",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Arun Nair",
+      "target": "5th Sector, HSR Layout, Bengaluru",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-011",
+      "evidence": "FIR No. 223/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 25/06/2026\n\nI, Arun Nair, aged 38 years, residing at 200, 5th Sector, HSR Layout, Bengaluru, do",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Arun Nair",
+      "target": "7th Sector, HSR Layout, Bengaluru, was my business partner in a small trading firm operating from 200, 5th Sector, HSR Layout, Bengaluru",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-011",
+      "evidence": "FIR No. 223/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 25/06/2026\n\nI, Arun Nair, aged 38 years, residing at 200, 5th Sector, HSR Layout, Bengaluru, do",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Deepa Menon",
+      "target": "5th Sector, HSR Layout, Bengaluru",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-011",
+      "evidence": "FIR No. 223/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 25/06/2026\n\nI, Arun Nair, aged 38 years, residing at 200, 5th Sector, HSR Layout, Bengaluru, do",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Deepa Menon",
+      "target": "7th Sector, HSR Layout, Bengaluru, was my business partner in a small trading firm operating from 200, 5th Sector, HSR Layout, Bengaluru",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-011",
+      "evidence": "FIR No. 223/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 25/06/2026\n\nI, Arun Nair, aged 38 years, residing at 200, 5th Sector, HSR Layout, Bengaluru, do",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Vikram Patel",
+      "target": "Meena Kumari",
+      "type": "accused-of",
+      "source_document": "SYN-FIR-012",
+      "evidence": "FIR No. 556/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 20/09/2026\n\nI, Meena Kumari, aged 62 years, residing at 90, 4th Block, Koramangala, Bengaluru,",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Rajesh Sharma",
+      "target": "Vikram Patel",
+      "type": "witness-to",
+      "source_document": "SYN-FIR-012",
+      "evidence": "Rajesh Sharma saw the accused Vikram Patel fleeing the scene.",
+      "method": "role-based",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Meena Kumari",
+      "target": "4th Block, Koramangala, Bengaluru",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-012",
+      "evidence": "FIR No. 556/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 20/09/2026\n\nI, Meena Kumari, aged 62 years, residing at 90, 4th Block, Koramangala, Bengaluru,",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Meena Kumari",
+      "target": "MG Road, Indiranagar, Bengaluru, approached me from behind and attempted to snatch my handbag containing ₹15,000 in cash and my mobile phone",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-012",
+      "evidence": "FIR No. 556/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 20/09/2026\n\nI, Meena Kumari, aged 62 years, residing at 90, 4th Block, Koramangala, Bengaluru,",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Vikram Patel",
+      "target": "4th Block, Koramangala, Bengaluru",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-012",
+      "evidence": "FIR No. 556/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 20/09/2026\n\nI, Meena Kumari, aged 62 years, residing at 90, 4th Block, Koramangala, Bengaluru,",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    },
+    {
+      "source": "Vikram Patel",
+      "target": "MG Road, Indiranagar, Bengaluru, approached me from behind and attempted to snatch my handbag containing ₹15,000 in cash and my mobile phone",
+      "type": "associated-location",
+      "source_document": "SYN-FIR-012",
+      "evidence": "FIR No. 556/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 20/09/2026\n\nI, Meena Kumari, aged 62 years, residing at 90, 4th Block, Koramangala, Bengaluru,",
+      "method": "contextual-explicit",
+      "confidence": "explicit"
+    }
+  ],
+  "entity_links": [
+    {
+      "document_entity": "Vikram Patel",
+      "documents": [
+        "SYN-FIR-001",
+        "SYN-FIR-012"
+      ],
+      "note": "Same synthetic person appears in two documents",
+      "linked_to_network": null,
+      "link_type": "document-co-reference"
+    },
+    {
+      "document_entity": "Rajesh Sharma",
+      "documents": [
+        "SYN-FIR-001",
+        "SYN-FIR-012"
+      ],
+      "note": "Same synthetic person as complainant in FIR-001 and witness in FIR-012",
+      "linked_to_network": null,
+      "link_type": "document-co-reference"
+    },
+    {
+      "document_entity": "Koramangala",
+      "documents": [
+        "SYN-FIR-001",
+        "SYN-FIR-003",
+        "SYN-FIR-012"
+      ],
+      "note": "Same location appears across multiple documents",
+      "linked_to_network": null,
+      "link_type": "document-co-reference"
+    }
+  ],
+  "evaluation": {
+    "disclaimer": "Evaluation performed on synthetic demonstration data only. Does not represent real-world FIR processing performance.",
+    "data_source": "Synthetic FIR documents with manually verified ground-truth annotations",
+    "entity_extraction": {
+      "overall": {
+        "precision": 0.776,
+        "recall": 0.7578,
+        "f1": 0.7668,
+        "true_positives": 97,
+        "false_positives": 28,
+        "false_negatives": 31,
+        "total_extracted": 125,
+        "total_ground_truth": 128
+      },
+      "per_type": {
+        "CASE_NUMBER": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "extracted": 12,
+          "ground_truth": 12
+        },
+        "DATE": {
+          "precision": 0.6207,
+          "recall": 1.0,
+          "f1": 0.766,
+          "tp": 18,
+          "fp": 11,
+          "fn": 0,
+          "extracted": 29,
+          "ground_truth": 18
+        },
+        "LEGAL_SECTION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 23,
+          "fp": 0,
+          "fn": 0,
+          "extracted": 23,
+          "ground_truth": 23
+        },
+        "LOCATION": {
+          "precision": 0.32,
+          "recall": 0.2286,
+          "f1": 0.2667,
+          "tp": 8,
+          "fp": 17,
+          "fn": 27,
+          "extracted": 25,
+          "ground_truth": 35
+        },
+        "ORGANIZATION": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "extracted": 0,
+          "ground_truth": 1
+        },
+        "PERSON": {
+          "precision": 1.0,
+          "recall": 0.9231,
+          "f1": 0.96,
+          "tp": 36,
+          "fp": 0,
+          "fn": 3,
+          "extracted": 36,
+          "ground_truth": 39
+        }
+      }
+    },
+    "relationship_extraction": {
+      "overall": {
+        "precision": 0.3158,
+        "recall": 0.75,
+        "f1": 0.4444,
+        "true_positives": 24,
+        "false_positives": 52,
+        "false_negatives": 8,
+        "total_extracted": 76,
+        "total_ground_truth": 32
+      },
+      "per_type": {
+        "accused-of": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positives": 14,
+          "extracted": 14,
+          "ground_truth": 14
+        },
+        "associated-location": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "true_positives": 0,
+          "extracted": 50,
+          "ground_truth": 6
+        },
+        "mentioned-together": {
+          "precision": 0.5,
+          "recall": 0.3333,
+          "f1": 0.4,
+          "true_positives": 1,
+          "extracted": 2,
+          "ground_truth": 3
+        },
+        "witness-to": {
+          "precision": 0.9,
+          "recall": 1.0,
+          "f1": 0.9474,
+          "true_positives": 9,
+          "extracted": 10,
+          "ground_truth": 9
+        }
+      }
+    }
+  }
+}

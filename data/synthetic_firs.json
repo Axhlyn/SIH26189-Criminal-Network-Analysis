@@ -1,0 +1,597 @@
+[
+  {
+    "id": "SYN-FIR-001",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "345/2026",
+      "date": "2026-08-15",
+      "police_station": "Koramangala",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Rajesh Sharma",
+        "role": "complainant",
+        "age": 42,
+        "address": "45, 7th Cross, Koramangala, Bengaluru"
+      },
+      "accused": [
+        {
+          "name": "Vikram Patel",
+          "role": "accused",
+          "age": 28,
+          "address": "12, MG Road, Indiranagar, Bengaluru"
+        }
+      ],
+      "witnesses": [
+        {
+          "name": "Sunita Devi",
+          "role": "witness",
+          "age": 35
+        }
+      ]
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "303",
+        "text": "Section 303 of the Bharatiya Nyaya Sanhita, 2023"
+      },
+      {
+        "code": "BNS",
+        "section": "309",
+        "text": "Section 309 of the Bharatiya Nyaya Sanhita, 2023"
+      }
+    ],
+    "incident_summary": "Robbery at a residential property involving armed accused",
+    "full_text": "FIR No. 345/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 15/08/2026\n\nI, Rajesh Sharma, son of Shri Mohan Sharma, aged 42 years, residing at 45, 7th Cross, Koramangala, Bengaluru, do hereby report to the police that:\n\nOn the night of 14/08/2026, at approximately 11:30 PM, I was at my residence when an unknown person later identified as Vikram Patel, son of Shri Arun Patel, aged about 28 years, residing at 12, MG Road, Indiranagar, Bengaluru, came to my house along with one other unidentified person.\n\nThe accused Vikram Patel was armed with a knife and threatened me, demanding that I hand over my jewelry and cash. When I resisted, the accused Vikram Patel forcibly took my gold chain worth approximately ₹2,50,000 and cash of ₹45,000 from my almirah. The accused also caused injury to my left hand during the struggle.\n\nThe complainant's neighbor, Sunita Devi, aged 35 years, who resides at 47, 7th Cross, Koramangala, Bengaluru, witnessed the incident from her balcony and can confirm the events described above.\n\nI have suffered grievous hurt on my left hand and my property has been stolen. The accused acted with common intention and pre-planning.\n\nThis offence is punishable under Section 303 of the Bharatiya Nyaya Sanhita, 2023 (theft) and Section 309 of the Bharatiya Nyaya Sanhita, 2023 (robbery).\n\nI request that an FIR be registered and appropriate investigation be conducted.\n\nComplainant: Rajesh Sharma\nSignature: _______________\nDate: 15/08/2026"
+  },
+  {
+    "id": "SYN-FIR-002",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "789/2026",
+      "date": "2026-07-22",
+      "police_station": "Shivajinagar",
+      "district": "Pune",
+      "state": "Maharashtra"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Anita Kulkarni",
+        "role": "complainant",
+        "age": 31,
+        "address": "23, FC Road, Shivajinagar, Pune"
+      },
+      "accused": [
+        {
+          "name": "Deepak Jadhav",
+          "role": "accused",
+          "age": 38,
+          "address": "89, Sinhagad Road, Pune"
+        }
+      ],
+      "witnesses": [
+        {
+          "name": "Mohan Deshmukh",
+          "role": "witness",
+          "age": 45
+        }
+      ]
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "318",
+        "text": "Section 318 of the Bharatiya Nyaya Sanhita, 2023"
+      },
+      {
+        "code": "BNS",
+        "section": "319",
+        "text": "Section 319 of the Bharatiya Nyaya Sanhita, 2023"
+      }
+    ],
+    "incident_summary": "Online investment fraud involving impersonation and financial cheating",
+    "full_text": "FIR No. 789/2026\nPolice Station: Shivajinagar, District: Pune, State: Maharashtra\nDate of Report: 22/07/2026\n\nI, Anita Kulkarni, aged 31 years, residing at 23, FC Road, Shivajinagar, Pune, do hereby report that:\n\nBetween 01/06/2026 and 15/07/2026, the accused Deepak Jadhav, aged about 38 years, residing at 89, Sinhagad Road, Pune, contacted me through a messaging application claiming to be a representative of a registered investment company.\n\nThe accused Deepak Jadhav, impersonating as a financial advisor, convinced me to invest money in a fraudulent scheme promising guaranteed returns of 25% per month. Relying on the accused's representations, I transferred a total sum of ₹8,50,000 to multiple bank accounts provided by the accused Deepak Jadhav between 10/06/2026 and 15/07/2026.\n\nWhen I contacted the accused to inquire about the returns, the accused became unreachable. I then discovered that the investment company mentioned by the accused does not exist and the bank accounts used for receiving my money belong to different persons.\n\nMy colleague Mohan Deshmukh, aged 45 years, who works at my office in Shivajinagar, Pune, can confirm that the accused Deepak Jadhav had been communicating with me regarding this investment scheme.\n\nThe accused cheated me by personation and by making false representations. My total loss is ₹8,50,000.\n\nThis offence is punishable under Section 318 of the Bharatiya Nyaya Sanhita, 2023 (cheating) and Section 319 of the Bharatiya Nyaya Sanhita, 2023 (cheating by personation).\n\nComplainant: Anita Kulkarni\nSignature: _______________\nDate: 22/07/2026"
+  },
+  {
+    "id": "SYN-FIR-003",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "234/2026",
+      "date": "2026-09-03",
+      "police_station": "Andheri",
+      "district": "Mumbai",
+      "state": "Maharashtra"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Priya Mehta",
+        "role": "complainant",
+        "age": 26,
+        "address": "56, Link Road, Andheri West, Mumbai"
+      },
+      "accused": [
+        {
+          "name": "Sanjay Gupta",
+          "role": "accused",
+          "age": 34,
+          "address": "12, SV Road, Andheri West, Mumbai"
+        }
+      ],
+      "witnesses": [
+        {
+          "name": "Kavita Nair",
+          "role": "witness",
+          "age": 29
+        }
+      ]
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "75",
+        "text": "Section 75 of the Bharatiya Nyaya Sanhita, 2023"
+      },
+      {
+        "code": "BNS",
+        "section": "85",
+        "text": "Section 85 of the Bharatiya Nyaya Sanhita, 2023"
+      }
+    ],
+    "incident_summary": "Sexual harassment at workplace by a colleague",
+    "full_text": "FIR No. 234/2026\nPolice Station: Andheri, District: Mumbai, State: Maharashtra\nDate of Report: 03/09/2026\n\nI, Priya Mehta, aged 26 years, residing at 56, Link Road, Andheri West, Mumbai, do hereby report that:\n\nThe accused Sanjay Gupta, aged about 34 years, who works at the same office as me in Andheri West, Mumbai, has been sexually harassing me at the workplace since June 2026.\n\nThe accused Sanjay Gupta repeatedly made sexually coloured remarks about my appearance and body. The accused Sanjay Gupta also made unwelcome physical contact by touching my shoulder and arm despite being told to stop. On 01/09/2026, the accused Sanjay Gupta showed me explicit content on his phone without my consent.\n\nI reported this behaviour to my colleague Kavita Nair, aged 29 years, who works in the same office in Andheri West, Mumbai. Kavita Nair has witnessed some of the accused's inappropriate behaviour towards me in the office.\n\nThe accused Sanjay Gupta's conduct constitutes sexual harassment. The behaviour has created a hostile work environment and has caused me significant distress.\n\nThis offence is punishable under Section 75 of the Bharatiya Nyaya Sanhita, 2023 (sexual harassment) and Section 85 of the Bharatiya Nyaya Sanhita, 2023.\n\nComplainant: Priya Mehta\nSignature: _______________\nDate: 03/09/2026"
+  },
+  {
+    "id": "SYN-FIR-004",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "567/2026",
+      "date": "2026-06-18",
+      "police_station": "T. Nagar",
+      "district": "Chennai",
+      "state": "Tamil Nadu"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Lakshmi Iyer",
+        "role": "complainant",
+        "age": 55,
+        "address": "78, North Mada Street, T. Nagar, Chennai"
+      },
+      "accused": [
+        {
+          "name": "Ramesh Babu",
+          "role": "accused",
+          "age": 40,
+          "address": "23, South Usman Road, T. Nagar, Chennai"
+        }
+      ],
+      "witnesses": [
+        {
+          "name": "Gopal Krishnan",
+          "role": "witness",
+          "age": 50
+        }
+      ]
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "314",
+        "text": "Section 314 of the Bharatiya Nyaya Sanhita, 2023"
+      },
+      {
+        "code": "BNS",
+        "section": "336",
+        "text": "Section 336 of the Bharatiya Nyaya Sanhita, 2023"
+      }
+    ],
+    "incident_summary": "Criminal breach of trust involving property entrusted to a known person, with document forgery",
+    "full_text": "FIR No. 567/2026\nPolice Station: T. Nagar, District: Chennai, State: Tamil Nadu\nDate of Report: 18/06/2026\n\nI, Lakshmi Iyer, aged 55 years, residing at 78, North Mada Street, T. Nagar, Chennai, do hereby report that:\n\nThe accused Ramesh Babu, aged about 40 years, residing at 23, South Usman Road, T. Nagar, Chennai, was entrusted by me with the management of my rental property located at 12, Bazaar Road, T. Nagar, Chennai on 01/01/2025 under a written agreement.\n\nThe accused Ramesh Babu was responsible for collecting rent from tenants and remitting the same to me on a monthly basis. From January 2025 to May 2026, the accused Ramesh Babu collected rent totalling ₹6,00,000 but remitted only ₹1,20,000 to me, dishonestly misappropriating the remaining ₹4,80,000.\n\nFurthermore, on 15/05/2026, I discovered that the accused Ramesh Babu had forged my signature on a rental agreement document to create a fraudulent sub-lease without my knowledge or consent. The accused Ramesh Babu showed this forged document to a tenant named Gopal Krishnan, aged 50 years, who resides at 56, Bazaar Road, T. Nagar, Chennai. Gopal Krishnan can confirm that the accused Ramesh Babu presented a document purportedly signed by me.\n\nThe accused Ramesh Babu has committed criminal breach of trust and forgery.\n\nThis offence is punishable under Section 314 of the Bharatiya Nyaya Sanhita, 2023 (criminal breach of trust) and Section 336 of the Bharatiya Nyaya Sanhita, 2023 (forgery).\n\nComplainant: Lakshmi Iyer\nSignature: _______________\nDate: 18/06/2026"
+  },
+  {
+    "id": "SYN-FIR-005",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "901/2026",
+      "date": "2026-08-28",
+      "police_station": "Sector 18",
+      "district": "Gurugram",
+      "state": "Haryana"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Vikas Sinha",
+        "role": "complainant",
+        "age": 37,
+        "address": "Plot 22, Sector 18, Gurugram"
+      },
+      "accused": [
+        {
+          "name": "Amit Chauhan",
+          "role": "accused",
+          "age": 41,
+          "address": "House 8, Sector 22, Gurugram"
+        }
+      ],
+      "witnesses": []
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "105",
+        "text": "Section 105 of the Bharatiya Nyaya Sanhita, 2023"
+      },
+      {
+        "code": "BNS",
+        "section": "106",
+        "text": "Section 106 of the Bharatiya Nyaya Sanhita, 2023"
+      }
+    ],
+    "incident_summary": "Physical assault causing grievous injuries during a property dispute",
+    "full_text": "FIR No. 901/2026\nPolice Station: Sector 18, District: Gurugram, State: Haryana\nDate of Report: 28/08/2026\n\nI, Vikas Sinha, aged 37 years, residing at Plot 22, Sector 18, Gurugram, do hereby report that:\n\nOn 27/08/2026, at approximately 2:00 PM, I was present at my residential property at Plot 22, Sector 18, Gurugram, when the accused Amit Chauhan, aged about 41 years, residing at House 8, Sector 22, Gurugram, came to my property in connection with a pending property dispute between us.\n\nThe accused Amit Chauhan, without any provocation, attacked me with a wooden stick and caused injuries to my head, right arm, and back. The accused continued the assault despite my repeated requests to stop. I sustained fractures in my right arm and a deep wound on my head requiring hospitalization.\n\nI was immediately taken to Fortis Hospital, Sector 18, Gurugram, where I was diagnosed with a fractured right radius and a laceration on the scalp requiring stitches.\n\nThe accused Amit Chauhan deliberately caused me hurt by dangerous means, resulting in grievous injuries.\n\nThis offence is punishable under Section 105 of the Bharatiya Nyaya Sanhita, 2023 (voluntarily causing hurt) and Section 106 of the Bharatiya Nyaya Sanhita, 2023 (voluntarily causing grievous hurt).\n\nComplainant: Vikas Sinha\nSignature: _______________\nDate: 28/08/2026"
+  },
+  {
+    "id": "SYN-FIR-006",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "112/2026",
+      "date": "2026-09-10",
+      "police_station": "Lajpat Nagar",
+      "district": "New Delhi",
+      "state": "Delhi"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Neeraj Kumar",
+        "role": "complainant",
+        "age": 29,
+        "address": "A-45, Lajpat Nagar II, New Delhi"
+      },
+      "accused": [
+        {
+          "name": "Mohit Verma",
+          "role": "accused",
+          "age": 25,
+          "address": "B-12, CR Park, New Delhi"
+        },
+        {
+          "name": "Rahul Tyagi",
+          "role": "accused",
+          "age": 27,
+          "address": "C-78, Sarita Vihar, New Delhi"
+        }
+      ],
+      "witnesses": [
+        {
+          "name": "Deepak Singh",
+          "role": "witness",
+          "age": 33
+        }
+      ]
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "303",
+        "text": "Section 303 of the Bharatiya Nyaya Sanhita, 2023"
+      },
+      {
+        "code": "IPC",
+        "section": "379",
+        "text": "Section 379 IPC"
+      }
+    ],
+    "incident_summary": "Motorcycle theft by two accused persons, one document references legacy IPC",
+    "full_text": "FIR No. 112/2026\nPolice Station: Lajpat Nagar, District: New Delhi, State: Delhi\nDate of Report: 10/09/2026\n\nI, Neeraj Kumar, aged 29 years, residing at A-45, Lajpat Nagar II, New Delhi, do hereby report that:\n\nOn 09/09/2026, at approximately 7:30 PM, I parked my motorcycle (Honda Activa, registration DL-8S-AB-1234) outside a shop at Lajpat Nagar, New Delhi. When I returned after approximately 15 minutes, I found that my motorcycle was missing.\n\nCCTV footage from a nearby shop, reviewed with the help of my friend Deepak Singh, aged 33 years, who works at a shop in Lajpat Nagar, New Delhi, shows two persons removing my motorcycle. The persons have been identified as Mohit Verma, aged about 25 years, residing at B-12, CR Park, New Delhi, and Rahul Tyagi, aged about 27 years, residing at C-78, Sarita Vihar, New Delhi.\n\nThe accused Mohit Verma and Rahul Tyagi acted in concert to steal my motorcycle. The total value of my motorcycle is approximately ₹95,000.\n\nThis offence is punishable under Section 303 of the Bharatiya Nyaya Sanhita, 2023 (theft). The previous legal framework would have classified this under Section 379 IPC.\n\nComplainant: Neeraj Kumar\nSignature: _______________\nDate: 10/09/2026"
+  },
+  {
+    "id": "SYN-FIR-007",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "445/2026",
+      "date": "2026-07-05",
+      "police_station": "Salt Lake",
+      "district": "Kolkata",
+      "state": "West Bengal"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Sushmita Banerjee",
+        "role": "complainant",
+        "age": 33,
+        "address": "15, AE Block, Salt Lake, Kolkata"
+      },
+      "accused": [
+        {
+          "name": "Prakash Mondal",
+          "role": "accused",
+          "age": 44,
+          "address": "32, BE Block, Salt Lake, Kolkata"
+        }
+      ],
+      "witnesses": [
+        {
+          "name": "Rina Ghosh",
+          "role": "witness",
+          "age": 30
+        }
+      ]
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "85",
+        "text": "Section 85 of the Bharatiya Nyaya Sanhita, 2023"
+      }
+    ],
+    "incident_summary": "Domestic violence and cruelty by husband",
+    "full_text": "FIR No. 445/2026\nPolice Station: Salt Lake, District: Kolkata, State: West Bengal\nDate of Report: 05/07/2026\n\nI, Sushmita Banerjee, aged 33 years, residing at 15, AE Block, Salt Lake, Kolkata, do hereby report that:\n\nThe accused Prakash Mondal, aged about 44 years, residing at 32, BE Block, Salt Lake, Kolkata, who is my husband, has been subjecting me to cruelty and mental harassment since our marriage in 2018.\n\nThe accused Prakash Mondal frequently verbally abuses me, makes demands for additional dowry, and has physically assaulted me on multiple occasions. Most recently, on 01/07/2026, the accused Prakash Mondal pushed me down the stairs causing me to sustain injuries to my left knee and wrist.\n\nMy sister-in-law Rina Ghosh, aged 30 years, who resides at 12, BE Block, Salt Lake, Kolkata, has witnessed the accused Prakash Mondal verbally abusing me on several occasions and can confirm the pattern of cruel behaviour.\n\nThe accused's conduct amounts to cruelty within the meaning of Section 85 of the Bharatiya Nyaya Sanhita, 2023.\n\nComplainant: Sushmita Banerjee\nSignature: _______________\nDate: 05/07/2026"
+  },
+  {
+    "id": "SYN-FIR-008",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "678/2026",
+      "date": "2026-08-01",
+      "police_station": "HSR Layout",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Karthik Rajan",
+        "role": "complainant",
+        "age": 24,
+        "address": "89, 14th Main, HSR Layout, Bengaluru"
+      },
+      "accused": [
+        {
+          "name": "Divya Shetty",
+          "role": "accused",
+          "age": 30,
+          "address": "45, 19th Main, HSR Layout, Bengaluru"
+        }
+      ],
+      "witnesses": []
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "318",
+        "text": "Section 318 of the Bharatiya Nyaya Sanhita, 2023"
+      }
+    ],
+    "incident_summary": "Cyber fraud involving identity theft and online financial cheating",
+    "full_text": "FIR No. 678/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 01/08/2026\n\nI, Karthik Rajan, aged 24 years, residing at 89, 14th Main, HSR Layout, Bengaluru, do hereby report that:\n\nBetween 15/06/2026 and 25/07/2026, the accused Divya Shetty, aged about 30 years, residing at 45, 19th Main, HSR Layout, Bengaluru, created a fraudulent online account impersonating me on a payment platform.\n\nThe accused Divya Shetty used my name, phone number, and email address without my knowledge or consent to create accounts on multiple online platforms. Using these accounts, the accused Divya Shetty obtained financial benefits totalling ₹1,75,000 from unsuspecting third parties.\n\nI came to know of this fraud when I received payment demands from various merchants for transactions I never made. Upon investigation, I discovered that the accused Divya Shetty had been operating these fraudulent accounts using my stolen identity.\n\nThe accused Divya Shetty has committed cheating by using my identity fraudulently and has caused me significant financial and reputational harm.\n\nThis offence is punishable under Section 318 of the Bharatiya Nyaya Sanhita, 2023 (cheating).\n\nComplainant: Karthik Rajan\nSignature: _______________\nDate: 01/08/2026"
+  },
+  {
+    "id": "SYN-FIR-009",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "321/2026",
+      "date": "2026-09-15",
+      "police_station": "Banjara Hills",
+      "district": "Hyderabad",
+      "state": "Telangana"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Fatima Begum",
+        "role": "complainant",
+        "age": 52,
+        "address": "120, Road No. 10, Banjara Hills, Hyderabad"
+      },
+      "accused": [
+        {
+          "name": "Suresh Reddy",
+          "role": "accused",
+          "age": 36,
+          "address": "78, Road No. 3, Jubilee Hills, Hyderabad"
+        },
+        {
+          "name": "Venkat Rao",
+          "role": "accused",
+          "age": 32,
+          "address": "56, Road No. 12, Banjara Hills, Hyderabad"
+        }
+      ],
+      "witnesses": [
+        {
+          "name": "Ahmed Khan",
+          "role": "witness",
+          "age": 48
+        }
+      ]
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "111",
+        "text": "Section 111 of the Bharatiya Nyaya Sanhita, 2023"
+      },
+      {
+        "code": "BNS",
+        "section": "112",
+        "text": "Section 112 of the Bharatiya Nyaya Sanhita, 2023"
+      }
+    ],
+    "incident_summary": "Organised property crime involving multiple accused persons acting as a group",
+    "full_text": "FIR No. 321/2026\nPolice Station: Banjara Hills, District: Hyderabad, State: Telangana\nDate of Report: 15/09/2026\n\nI, Fatima Begum, aged 52 years, residing at 120, Road No. 10, Banjara Hills, Hyderabad, do hereby report that:\n\nThe accused Suresh Reddy, aged about 36 years, residing at 78, Road No. 3, Jubilee Hills, Hyderabad, and Venkat Rao, aged about 32 years, residing at 56, Road No. 12, Banjara Hills, Hyderabad, are part of an organised group that has been targeting elderly residents in the Banjara Hills area.\n\nOn 14/09/2026, the accused Suresh Reddy came to my house posing as a government official conducting a survey. While the accused Suresh Reddy engaged me in conversation, the accused Venkat Rao entered through the rear door and stole gold jewelry worth ₹3,50,000 and cash of ₹75,000 from my bedroom.\n\nMy neighbor Ahmed Khan, aged 48 years, who resides at 122, Road No. 10, Banjara Hills, Hyderabad, observed the accused Venkat Rao entering my house through the back entrance while the accused Suresh Reddy was at the front door.\n\nThe accused Suresh Reddy and Venkat Rao are known to operate as part of an organised criminal group. Similar incidents have been reported by other residents in the area involving the same individuals.\n\nThis offence is punishable under Section 111 of the Bharatiya Nyaya Sanhita, 2023 (organised crime) and Section 112 of the Bharatiya Nyaya Sanhita, 2023 (petty organised crime).\n\nComplainant: Fatima Begum\nSignature: _______________\nDate: 15/09/2026"
+  },
+  {
+    "id": "SYN-FIR-010",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "890/2026",
+      "date": "2026-07-30",
+      "police_station": "MG Road",
+      "district": "Jaipur",
+      "state": "Rajasthan"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Manoj Sharma",
+        "role": "complainant",
+        "age": 48,
+        "address": "33, MI Road, Jaipur"
+      },
+      "accused": [
+        {
+          "name": "Ravi Kumar",
+          "role": "accused",
+          "age": 29,
+          "address": "17, Tonk Road, Jaipur"
+        }
+      ],
+      "witnesses": [
+        {
+          "name": "Suresh Jain",
+          "role": "witness",
+          "age": 55
+        }
+      ]
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "105",
+        "text": "Section 105 of the Bharatiya Nyaya Sanhita, 2023"
+      },
+      {
+        "code": "IPC",
+        "section": "323",
+        "text": "Section 323 IPC"
+      },
+      {
+        "code": "IPC",
+        "section": "506",
+        "text": "Section 506 IPC"
+      }
+    ],
+    "incident_summary": "Assault and criminal intimidation during a business dispute, references both BNS and legacy IPC",
+    "full_text": "FIR No. 890/2026\nPolice Station: MG Road, District: Jaipur, State: Rajasthan\nDate of Report: 30/07/2026\n\nI, Manoj Sharma, aged 48 years, residing at 33, MI Road, Jaipur, do hereby report that:\n\nOn 29/07/2026, at approximately 4:00 PM, I was at my shop located at 33, MI Road, Jaipur, when the accused Ravi Kumar, aged about 29 years, residing at 17, Tonk Road, Jaipur, came to my shop.\n\nThe accused Ravi Kumar came to my shop in connection with a pending business transaction. During the course of our discussion, the accused Ravi Kumar became aggressive and started arguing with me over payment of ₹1,50,000 for goods supplied by me.\n\nWhen I refused to waive the amount, the accused Ravi Kumar slapped me twice and pushed me against the counter, causing injury to my back. The accused also threatened to cause further harm to me and my family if I did not drop the payment demand.\n\nMy business associate Suresh Jain, aged 55 years, who was present at the shop at the time of the incident, witnessed the accused Ravi Kumar assaulting me.\n\nThe accused caused me hurt voluntarily by his actions. This offence, under the previous legal framework, would be classified under Section 323 IPC (voluntarily causing hurt) and Section 506 IPC (criminal intimidation). Under the current BNS, this is punishable under Section 105 of the Bharatiya Nyaya Sanhita, 2023.\n\nComplainant: Manoj Sharma\nSignature: _______________\nDate: 30/07/2026"
+  },
+  {
+    "id": "SYN-FIR-011",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "223/2026",
+      "date": "2026-06-25",
+      "police_station": "HSR Layout",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Arun Nair",
+        "role": "complainant",
+        "age": 38,
+        "address": "200, 5th Sector, HSR Layout, Bengaluru"
+      },
+      "accused": [
+        {
+          "name": "Deepa Menon",
+          "role": "accused",
+          "age": 35,
+          "address": "150, 7th Sector, HSR Layout, Bengaluru"
+        }
+      ],
+      "witnesses": [
+        {
+          "name": "Joseph Thomas",
+          "role": "witness",
+          "age": 42
+        }
+      ]
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "314",
+        "text": "Section 314 of the Bharatiya Nyaya Sanhita, 2023"
+      },
+      {
+        "code": "BNS",
+        "section": "329",
+        "text": "Section 329 of the Bharatiya Nyaya Sanhita, 2023"
+      }
+    ],
+    "incident_summary": "Criminal misappropriation of entrusted funds by a business partner",
+    "full_text": "FIR No. 223/2026\nPolice Station: HSR Layout, District: Bengaluru Urban, State: Karnataka\nDate of Report: 25/06/2026\n\nI, Arun Nair, aged 38 years, residing at 200, 5th Sector, HSR Layout, Bengaluru, do hereby report that:\n\nThe accused Deepa Menon, aged about 35 years, residing at 150, 7th Sector, HSR Layout, Bengaluru, was my business partner in a small trading firm operating from 200, 5th Sector, HSR Layout, Bengaluru.\n\nOn 01/04/2026, I entrusted the accused Deepa Menon with ₹4,00,000 for purchasing inventory for our business. The accused was to use these funds exclusively for purchasing goods from suppliers in Chickpet, Bengaluru.\n\nInstead, the accused Deepa Menon dishonestly misappropriated the funds for personal use. When I enquired about the inventory on 20/06/2026, the accused Deepa Menon was unable to produce any purchased goods or account for the money.\n\nMy business associate Joseph Thomas, aged 42 years, who was present at our office at 200, 5th Sector, HSR Layout, Bengaluru, when I handed over the funds to the accused, can confirm that the money was entrusted to the accused Deepa Menon for business purposes.\n\nThe accused Deepa Menon has committed criminal misappropriation and criminal breach of trust.\n\nThis offence is punishable under Section 314 of the Bharatiya Nyaya Sanhita, 2023 (criminal breach of trust) and Section 329 of the Bharatiya Nyaya Sanhita, 2023 (criminal misappropriation).\n\nComplainant: Arun Nair\nSignature: _______________\nDate: 25/06/2026"
+  },
+  {
+    "id": "SYN-FIR-012",
+    "type": "FIR",
+    "synthetic": true,
+    "disclaimer": "Synthetic demonstration document — not a real FIR. All names, case numbers, and addresses are fictional.",
+    "metadata": {
+      "fir_number": "556/2026",
+      "date": "2026-09-20",
+      "police_station": "Koramangala",
+      "district": "Bengaluru Urban",
+      "state": "Karnataka"
+    },
+    "persons": {
+      "complainant": {
+        "name": "Meena Kumari",
+        "role": "complainant",
+        "age": 62,
+        "address": "90, 4th Block, Koramangala, Bengaluru"
+      },
+      "accused": [
+        {
+          "name": "Vikram Patel",
+          "role": "accused",
+          "age": 28,
+          "address": "12, MG Road, Indiranagar, Bengaluru"
+        }
+      ],
+      "witnesses": [
+        {
+          "name": "Rajesh Sharma",
+          "role": "witness",
+          "age": 42
+        }
+      ]
+    },
+    "sections_referenced": [
+      {
+        "code": "BNS",
+        "section": "103",
+        "text": "Section 103 of the Bharatiya Nyaya Sanhita, 2023"
+      },
+      {
+        "code": "BNS",
+        "section": "109",
+        "text": "Section 109 of the Bharatiya Nyaya Sanhita, 2023"
+      }
+    ],
+    "incident_summary": "Attempt to murder involving the same accused as FIR-001, linking to existing network context",
+    "full_text": "FIR No. 556/2026\nPolice Station: Koramangala, District: Bengaluru Urban, State: Karnataka\nDate of Report: 20/09/2026\n\nI, Meena Kumari, aged 62 years, residing at 90, 4th Block, Koramangala, Bengaluru, do hereby report that:\n\nOn 19/09/2026, at approximately 9:00 PM, I was walking home from the market at Koramangala when the accused Vikram Patel, son of Shri Arun Patel, aged about 28 years, residing at 12, MG Road, Indiranagar, Bengaluru, approached me from behind and attempted to snatch my handbag containing ₹15,000 in cash and my mobile phone.\n\nWhen I resisted and cried for help, the accused Vikram Patel pushed me to the ground and attempted to hit me with a heavy object. I fell and sustained injuries to my head and left hip. The accused then fled the scene with my handbag.\n\nMy neighbor Rajesh Sharma, aged 42 years, who resides at 45, 7th Cross, Koramangala, Bengaluru, heard my cries and came to my assistance. Rajesh Sharma saw the accused Vikram Patel fleeing the scene.\n\nThe accused Vikram Patel has been involved in similar criminal activities in the area. The accused acted with the intention of causing death or such bodily injury as is likely to cause death, given my advanced age and the force used.\n\nThis offence is punishable under Section 103 of the Bharatiya Nyaya Sanhita, 2023 (murder — where applicable based on investigation) and Section 109 of the Bharatiya Nyaya Sanhita, 2023 (voluntarily causing hurt by dangerous weapons or means).\n\nComplainant: Meena Kumari\nSignature: _______________\nDate: 20/09/2026"
+  }
+]

@@ -1,0 +1,1620 @@
+{
+  "_meta": {
+    "description": "Manually verified ground-truth annotations for synthetic FIR documents",
+    "annotator": "System (pre-defined with synthetic data)",
+    "note": "These annotations define the expected extraction output for evaluation purposes",
+    "total_documents": 12
+  },
+  "documents": [
+    {
+      "doc_id": "SYN-FIR-001",
+      "entities": [
+        {
+          "text": "Rajesh Sharma",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            58
+          ]
+        },
+        {
+          "text": "Mohan Sharma",
+          "type": "PERSON",
+          "role": null,
+          "span_char": [
+            72,
+            84
+          ]
+        },
+        {
+          "text": "Vikram Patel",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            181,
+            193
+          ]
+        },
+        {
+          "text": "Arun Patel",
+          "type": "PERSON",
+          "role": null,
+          "span_char": [
+            207,
+            217
+          ]
+        },
+        {
+          "text": "Sunita Devi",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "span_char": [
+            378,
+            389
+          ]
+        },
+        {
+          "text": "Koramangala",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            28,
+            39
+          ]
+        },
+        {
+          "text": "Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            59,
+            68
+          ]
+        },
+        {
+          "text": "MG Road, Indiranagar, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            218,
+            248
+          ]
+        },
+        {
+          "text": "Koramangala, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            390,
+            412
+          ]
+        },
+        {
+          "text": "14/08/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            112,
+            122
+          ]
+        },
+        {
+          "text": "15/08/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            0,
+            10
+          ]
+        },
+        {
+          "text": "345/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 303 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "303",
+          "span_char": [
+            543,
+            591
+          ]
+        },
+        {
+          "text": "Section 309 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "309",
+          "span_char": [
+            596,
+            644
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Vikram Patel",
+          "target": "Rajesh Sharma",
+          "type": "accused-of",
+          "evidence": "the accused Vikram Patel came to my house...threatening me, demanding that I hand over my jewelry",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Sunita Devi",
+          "target": "Vikram Patel",
+          "type": "witness-to",
+          "evidence": "Sunita Devi...witnessed the incident from her balcony",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Vikram Patel",
+          "target": "Koramangala",
+          "type": "associated-location",
+          "evidence": "Vikram Patel...came to my house...Koramangala",
+          "method": "co-occurrence-sentence",
+          "confidence": "moderate"
+        },
+        {
+          "source": "Rajesh Sharma",
+          "target": "Koramangala",
+          "type": "associated-location",
+          "evidence": "I, Rajesh Sharma...residing at 45, 7th Cross, Koramangala",
+          "method": "role-based",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-002",
+      "entities": [
+        {
+          "text": "Anita Kulkarni",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            60
+          ]
+        },
+        {
+          "text": "Deepak Jadhav",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            143,
+            156
+          ]
+        },
+        {
+          "text": "Mohan Deshmukh",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "span_char": [
+            348,
+            362
+          ]
+        },
+        {
+          "text": "FC Road, Shivajinagar, Pune",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            61,
+            88
+          ]
+        },
+        {
+          "text": "Sinhagad Road, Pune",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            157,
+            176
+          ]
+        },
+        {
+          "text": "Shivajinagar, Pune",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            363,
+            381
+          ]
+        },
+        {
+          "text": "01/06/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            108,
+            118
+          ]
+        },
+        {
+          "text": "15/07/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            122,
+            132
+          ]
+        },
+        {
+          "text": "10/06/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            258,
+            268
+          ]
+        },
+        {
+          "text": "789/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 318 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "318",
+          "span_char": [
+            437,
+            485
+          ]
+        },
+        {
+          "text": "Section 319 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "319",
+          "span_char": [
+            490,
+            538
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Deepak Jadhav",
+          "target": "Anita Kulkarni",
+          "type": "accused-of",
+          "evidence": "the accused Deepak Jadhav...convinced me to invest money in a fraudulent scheme",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Mohan Deshmukh",
+          "target": "Deepak Jadhav",
+          "type": "witness-to",
+          "evidence": "Mohan Deshmukh...can confirm that the accused Deepak Jadhav had been communicating with me",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Deepak Jadhav",
+          "target": "Sinhagad Road, Pune",
+          "type": "associated-location",
+          "evidence": "Deepak Jadhav...residing at 89, Sinhagad Road, Pune",
+          "method": "role-based",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-003",
+      "entities": [
+        {
+          "text": "Priya Mehta",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            57
+          ]
+        },
+        {
+          "text": "Sanjay Gupta",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            139,
+            151
+          ]
+        },
+        {
+          "text": "Kavita Nair",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "span_char": [
+            280,
+            291
+          ]
+        },
+        {
+          "text": "Link Road, Andheri West, Mumbai",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            58,
+            88
+          ]
+        },
+        {
+          "text": "SV Road, Andheri West, Mumbai",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            152,
+            181
+          ]
+        },
+        {
+          "text": "Andheri West, Mumbai",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            192,
+            212
+          ]
+        },
+        {
+          "text": "Andheri West, Mumbai",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            292,
+            312
+          ]
+        },
+        {
+          "text": "01/09/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            238,
+            248
+          ]
+        },
+        {
+          "text": "234/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 75 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "75",
+          "span_char": [
+            355,
+            402
+          ]
+        },
+        {
+          "text": "Section 85 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "85",
+          "span_char": [
+            407,
+            454
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Sanjay Gupta",
+          "target": "Priya Mehta",
+          "type": "accused-of",
+          "evidence": "the accused Sanjay Gupta repeatedly made sexually coloured remarks",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Kavita Nair",
+          "target": "Sanjay Gupta",
+          "type": "witness-to",
+          "evidence": "Kavita Nair has witnessed some of the accused's inappropriate behaviour",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Sanjay Gupta",
+          "target": "Priya Mehta",
+          "type": "mentioned-together",
+          "evidence": "Sanjay Gupta...sexually harassing me at the workplace",
+          "method": "co-occurrence-sentence",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-004",
+      "entities": [
+        {
+          "text": "Lakshmi Iyer",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            58
+          ]
+        },
+        {
+          "text": "Ramesh Babu",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            130,
+            141
+          ]
+        },
+        {
+          "text": "Gopal Krishnan",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "span_char": [
+            364,
+            378
+          ]
+        },
+        {
+          "text": "North Mada Street, T. Nagar, Chennai",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            59,
+            96
+          ]
+        },
+        {
+          "text": "South Usman Road, T. Nagar, Chennai",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            142,
+            178
+          ]
+        },
+        {
+          "text": "Bazaar Road, T. Nagar, Chennai",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            229,
+            259
+          ]
+        },
+        {
+          "text": "Bazaar Road, T. Nagar, Chennai",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            379,
+            409
+          ]
+        },
+        {
+          "text": "01/01/2025",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            206,
+            216
+          ]
+        },
+        {
+          "text": "15/05/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            313,
+            323
+          ]
+        },
+        {
+          "text": "567/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 314 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "314",
+          "span_char": [
+            440,
+            488
+          ]
+        },
+        {
+          "text": "Section 336 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "336",
+          "span_char": [
+            493,
+            541
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Ramesh Babu",
+          "target": "Lakshmi Iyer",
+          "type": "accused-of",
+          "evidence": "the accused Ramesh Babu...was entrusted by me with the management of my rental property",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Gopal Krishnan",
+          "target": "Ramesh Babu",
+          "type": "witness-to",
+          "evidence": "Gopal Krishnan can confirm that the accused Ramesh Babu presented a document",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Ramesh Babu",
+          "target": "T. Nagar, Chennai",
+          "type": "associated-location",
+          "evidence": "Ramesh Babu...residing at 23, South Usman Road, T. Nagar, Chennai",
+          "method": "role-based",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-005",
+      "entities": [
+        {
+          "text": "Vikas Sinha",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            57
+          ]
+        },
+        {
+          "text": "Amit Chauhan",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            141,
+            153
+          ]
+        },
+        {
+          "text": "Sector 18, Gurugram",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            58,
+            77
+          ]
+        },
+        {
+          "text": "Sector 22, Gurugram",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            154,
+            173
+          ]
+        },
+        {
+          "text": "27/08/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            100,
+            110
+          ]
+        },
+        {
+          "text": "Fortis Hospital, Sector 18, Gurugram",
+          "type": "ORGANIZATION",
+          "role": null,
+          "span_char": [
+            285,
+            321
+          ]
+        },
+        {
+          "text": "901/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 105 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "105",
+          "span_char": [
+            353,
+            401
+          ]
+        },
+        {
+          "text": "Section 106 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "106",
+          "span_char": [
+            406,
+            454
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Amit Chauhan",
+          "target": "Vikas Sinha",
+          "type": "accused-of",
+          "evidence": "the accused Amit Chauhan...attacked me with a wooden stick",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Amit Chauhan",
+          "target": "Sector 18, Gurugram",
+          "type": "associated-location",
+          "evidence": "Amit Chauhan...came to my property in Sector 18, Gurugram",
+          "method": "co-occurrence-sentence",
+          "confidence": "moderate"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-006",
+      "entities": [
+        {
+          "text": "Neeraj Kumar",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            58
+          ]
+        },
+        {
+          "text": "Mohit Verma",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            272,
+            283
+          ]
+        },
+        {
+          "text": "Rahul Tyagi",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            288,
+            299
+          ]
+        },
+        {
+          "text": "Deepak Singh",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "span_char": [
+            228,
+            240
+          ]
+        },
+        {
+          "text": "Lajpat Nagar II, New Delhi",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            59,
+            85
+          ]
+        },
+        {
+          "text": "CR Park, New Delhi",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            284,
+            302
+          ]
+        },
+        {
+          "text": "Sarita Vihar, New Delhi",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            307,
+            330
+          ]
+        },
+        {
+          "text": "Lajpat Nagar, New Delhi",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            166,
+            189
+          ]
+        },
+        {
+          "text": "Lajpat Nagar, New Delhi",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            241,
+            264
+          ]
+        },
+        {
+          "text": "09/09/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            112,
+            122
+          ]
+        },
+        {
+          "text": "112/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 303 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "303",
+          "span_char": [
+            359,
+            407
+          ]
+        },
+        {
+          "text": "Section 379 IPC",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "IPC",
+          "section_num": "379",
+          "span_char": [
+            422,
+            436
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Mohit Verma",
+          "target": "Neeraj Kumar",
+          "type": "accused-of",
+          "evidence": "Mohit Verma and Rahul Tyagi acted in concert to steal my motorcycle",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Rahul Tyagi",
+          "target": "Neeraj Kumar",
+          "type": "accused-of",
+          "evidence": "Mohit Verma and Rahul Tyagi acted in concert to steal my motorcycle",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Deepak Singh",
+          "target": "Neeraj Kumar",
+          "type": "mentioned-together",
+          "evidence": "my friend Deepak Singh...can confirm the events",
+          "method": "co-occurrence-sentence",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-007",
+      "entities": [
+        {
+          "text": "Sushmita Banerjee",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            63
+          ]
+        },
+        {
+          "text": "Prakash Mondal",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            128,
+            142
+          ]
+        },
+        {
+          "text": "Rina Ghosh",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "span_char": [
+            291,
+            301
+          ]
+        },
+        {
+          "text": "AE Block, Salt Lake, Kolkata",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            64,
+            92
+          ]
+        },
+        {
+          "text": "BE Block, Salt Lake, Kolkata",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            143,
+            172
+          ]
+        },
+        {
+          "text": "BE Block, Salt Lake, Kolkata",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            302,
+            331
+          ]
+        },
+        {
+          "text": "01/07/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            230,
+            240
+          ]
+        },
+        {
+          "text": "445/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 85 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "85",
+          "span_char": [
+            345,
+            392
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Prakash Mondal",
+          "target": "Sushmita Banerjee",
+          "type": "accused-of",
+          "evidence": "the accused Prakash Mondal...has been subjecting me to cruelty",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Rina Ghosh",
+          "target": "Prakash Mondal",
+          "type": "witness-to",
+          "evidence": "Rina Ghosh...has witnessed the accused Prakash Mondal verbally abusing me",
+          "method": "role-based",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-008",
+      "entities": [
+        {
+          "text": "Karthik Rajan",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            59
+          ]
+        },
+        {
+          "text": "Divya Shetty",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            140,
+            152
+          ]
+        },
+        {
+          "text": "14th Main, HSR Layout, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            60,
+            91
+          ]
+        },
+        {
+          "text": "19th Main, HSR Layout, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            153,
+            184
+          ]
+        },
+        {
+          "text": "15/06/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            108,
+            118
+          ]
+        },
+        {
+          "text": "25/07/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            122,
+            132
+          ]
+        },
+        {
+          "text": "678/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 318 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "318",
+          "span_char": [
+            318,
+            366
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Divya Shetty",
+          "target": "Karthik Rajan",
+          "type": "accused-of",
+          "evidence": "the accused Divya Shetty...created a fraudulent online account impersonating me",
+          "method": "role-based",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-009",
+      "entities": [
+        {
+          "text": "Fatima Begum",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            58
+          ]
+        },
+        {
+          "text": "Suresh Reddy",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            141,
+            153
+          ]
+        },
+        {
+          "text": "Venkat Rao",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            158,
+            168
+          ]
+        },
+        {
+          "text": "Ahmed Khan",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "span_char": [
+            349,
+            359
+          ]
+        },
+        {
+          "text": "Road No. 10, Banjara Hills, Hyderabad",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            59,
+            97
+          ]
+        },
+        {
+          "text": "Road No. 3, Jubilee Hills, Hyderabad",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            169,
+            206
+          ]
+        },
+        {
+          "text": "Road No. 12, Banjara Hills, Hyderabad",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            212,
+            250
+          ]
+        },
+        {
+          "text": "Road No. 10, Banjara Hills, Hyderabad",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            360,
+            398
+          ]
+        },
+        {
+          "text": "14/09/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            116,
+            126
+          ]
+        },
+        {
+          "text": "321/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 111 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "111",
+          "span_char": [
+            414,
+            462
+          ]
+        },
+        {
+          "text": "Section 112 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "112",
+          "span_char": [
+            467,
+            515
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Suresh Reddy",
+          "target": "Fatima Begum",
+          "type": "accused-of",
+          "evidence": "the accused Suresh Reddy came to my house posing as a government official",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Venkat Rao",
+          "target": "Fatima Begum",
+          "type": "accused-of",
+          "evidence": "the accused Venkat Rao entered through the rear door and stole gold jewelry",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Ahmed Khan",
+          "target": "Venkat Rao",
+          "type": "witness-to",
+          "evidence": "Ahmed Khan observed the accused Venkat Rao entering my house through the back entrance while the accused Suresh Reddy was at the front door.",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Suresh Reddy",
+          "target": "Venkat Rao",
+          "type": "mentioned-together",
+          "evidence": "Suresh Reddy and Venkat Rao are known to operate as part of an organised criminal group",
+          "method": "co-occurrence-sentence",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-010",
+      "entities": [
+        {
+          "text": "Manoj Sharma",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            58
+          ]
+        },
+        {
+          "text": "Ravi Kumar",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            134,
+            144
+          ]
+        },
+        {
+          "text": "Suresh Jain",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "span_char": [
+            288,
+            299
+          ]
+        },
+        {
+          "text": "MI Road, Jaipur",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            59,
+            75
+          ]
+        },
+        {
+          "text": "Tonk Road, Jaipur",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            145,
+            163
+          ]
+        },
+        {
+          "text": "MI Road, Jaipur",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            174,
+            190
+          ]
+        },
+        {
+          "text": "29/07/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            100,
+            110
+          ]
+        },
+        {
+          "text": "890/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 105 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "105",
+          "span_char": [
+            364,
+            412
+          ]
+        },
+        {
+          "text": "Section 323 IPC",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "IPC",
+          "section_num": "323",
+          "span_char": [
+            300,
+            314
+          ]
+        },
+        {
+          "text": "Section 506 IPC",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "IPC",
+          "section_num": "506",
+          "span_char": [
+            319,
+            333
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Ravi Kumar",
+          "target": "Manoj Sharma",
+          "type": "accused-of",
+          "evidence": "the accused Ravi Kumar slapped me twice and pushed me against the counter",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Suresh Jain",
+          "target": "Ravi Kumar",
+          "type": "witness-to",
+          "evidence": "Suresh Jain...witnessed the accused Ravi Kumar assaulting me",
+          "method": "role-based",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-011",
+      "entities": [
+        {
+          "text": "Arun Nair",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            55
+          ]
+        },
+        {
+          "text": "Deepa Menon",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            122,
+            133
+          ]
+        },
+        {
+          "text": "Joseph Thomas",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "span_char": [
+            336,
+            349
+          ]
+        },
+        {
+          "text": "5th Sector, HSR Layout, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            56,
+            88
+          ]
+        },
+        {
+          "text": "7th Sector, HSR Layout, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            134,
+            166
+          ]
+        },
+        {
+          "text": "5th Sector, HSR Layout, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            197,
+            229
+          ]
+        },
+        {
+          "text": "5th Sector, HSR Layout, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            350,
+            382
+          ]
+        },
+        {
+          "text": "Chickpet, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            279,
+            298
+          ]
+        },
+        {
+          "text": "01/04/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            110,
+            120
+          ]
+        },
+        {
+          "text": "20/06/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            264,
+            274
+          ]
+        },
+        {
+          "text": "223/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 314 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "314",
+          "span_char": [
+            410,
+            458
+          ]
+        },
+        {
+          "text": "Section 329 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "329",
+          "span_char": [
+            463,
+            511
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Deepa Menon",
+          "target": "Arun Nair",
+          "type": "accused-of",
+          "evidence": "the accused Deepa Menon dishonestly misappropriated the funds",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Joseph Thomas",
+          "target": "Deepa Menon",
+          "type": "witness-to",
+          "evidence": "Joseph Thomas...can confirm that the money was entrusted to the accused Deepa Menon",
+          "method": "role-based",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    {
+      "doc_id": "SYN-FIR-012",
+      "entities": [
+        {
+          "text": "Meena Kumari",
+          "type": "PERSON",
+          "role": "COMPLAINANT",
+          "span_char": [
+            46,
+            58
+          ]
+        },
+        {
+          "text": "Vikram Patel",
+          "type": "PERSON",
+          "role": "ACCUSED",
+          "span_char": [
+            140,
+            152
+          ]
+        },
+        {
+          "text": "Arun Patel",
+          "type": "PERSON",
+          "role": null,
+          "span_char": [
+            166,
+            176
+          ]
+        },
+        {
+          "text": "Rajesh Sharma",
+          "type": "PERSON",
+          "role": "WITNESS",
+          "span_char": [
+            291,
+            304
+          ]
+        },
+        {
+          "text": "4th Block, Koramangala, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            59,
+            91
+          ]
+        },
+        {
+          "text": "MG Road, Indiranagar, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            177,
+            207
+          ]
+        },
+        {
+          "text": "Koramangala, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            305,
+            327
+          ]
+        },
+        {
+          "text": "7th Cross, Koramangala, Bengaluru",
+          "type": "LOCATION",
+          "role": null,
+          "span_char": [
+            338,
+            370
+          ]
+        },
+        {
+          "text": "19/09/2026",
+          "type": "DATE",
+          "role": null,
+          "span_char": [
+            112,
+            122
+          ]
+        },
+        {
+          "text": "556/2026",
+          "type": "CASE_NUMBER",
+          "role": null,
+          "span_char": [
+            7,
+            15
+          ]
+        },
+        {
+          "text": "Section 103 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "103",
+          "span_char": [
+            392,
+            440
+          ]
+        },
+        {
+          "text": "Section 109 of the Bharatiya Nyaya Sanhita, 2023",
+          "type": "LEGAL_SECTION",
+          "role": null,
+          "code": "BNS",
+          "section_num": "109",
+          "span_char": [
+            445,
+            493
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "source": "Vikram Patel",
+          "target": "Meena Kumari",
+          "type": "accused-of",
+          "evidence": "the accused Vikram Patel...attempted to snatch my handbag",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Rajesh Sharma",
+          "target": "Vikram Patel",
+          "type": "witness-to",
+          "evidence": "Rajesh Sharma saw the accused Vikram Patel fleeing the scene",
+          "method": "role-based",
+          "confidence": "explicit"
+        },
+        {
+          "source": "Vikram Patel",
+          "target": "Koramangala",
+          "type": "associated-location",
+          "evidence": "Vikram Patel...residing at...MG Road, Indiranagar, Bengaluru",
+          "method": "role-based",
+          "confidence": "explicit"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,450 @@
+{
+  "_source": {
+    "primary": "The Bharatiya Nyaya Sanhita, 2023 (Act No. 45 of 2023)",
+    "official_text": "Ministry of Home Affairs, Government of India",
+    "effective_date": "2024-07-01",
+    "total_sections": 358,
+    "references": [
+      "Ministry of Home Affairs official text: https://www.mha.gov.in/sites/default/files/250883_english_01042024.pdf",
+      "PRS India legislative reference: https://prsindia.org/files/bills_acts/bills_parliament/2023/Bharatiya_Nyaya_Sanhita,_2023.pdf",
+      "India Code: https://www.indiacode.nic.in/"
+    ],
+    "note": "Sections based on publicly available official BNS text. BNS-to-IPC mappings included only where verified from official comparative tables published by UP Police and MHA. Where no official mapping exists, ipc_equivalent is null.",
+    "last_verified": "2025-08-29"
+  },
+  "sections": [
+    {
+      "section": "2",
+      "title": "Punishment of offences committed within India",
+      "chapter": 1,
+      "category": "Preliminary",
+      "punishment": null,
+      "description": "Every person shall be liable to punishment under this Sanhita and not otherwise for every act or omission contrary to the provisions thereof, of which he shall be held guilty within India.",
+      "ipc_equivalent": null
+    },
+    {
+      "section": "3",
+      "title": "Punishment of offences committed beyond India",
+      "chapter": 1,
+      "category": "Preliminary",
+      "punishment": null,
+      "description": "Any person liable by any Indian law to be tried for an offence committed beyond India shall be dealt with according to this Sanhita for any act committed beyond India in the same manner as if such act had been committed within India.",
+      "ipc_equivalent": null
+    },
+    {
+      "section": "63",
+      "title": "Rape",
+      "chapter": 5,
+      "category": "Sexual offences against women",
+      "punishment": "Minimum 10 years to life imprisonment",
+      "description": "A man is said to commit rape if he has sexual intercourse with a woman under circumstances described in this section.",
+      "ipc_equivalent": "376"
+    },
+    {
+      "section": "64",
+      "title": "Punishment for rape",
+      "chapter": 5,
+      "category": "Sexual offences against women",
+      "punishment": "Rigorous imprisonment for minimum 10 years up to life, or death",
+      "ipc_equivalent": "376"
+    },
+    {
+      "section": "69",
+      "title": "Sexual intercourse by deceitful means",
+      "chapter": 5,
+      "category": "Sexual offences against women",
+      "punishment": "Rigorous imprisonment up to 10 years plus fine",
+      "description": "Sexual intercourse by a man with a woman by deceitful means or false promise.",
+      "ipc_equivalent": null
+    },
+    {
+      "section": "70",
+      "title": "Gang rape",
+      "chapter": 5,
+      "category": "Sexual offences against women",
+      "punishment": "Rigorous imprisonment for minimum 20 years up to life, or death",
+      "ipc_equivalent": "376D"
+    },
+    {
+      "section": "75",
+      "title": "Sexual harassment",
+      "chapter": 5,
+      "category": "Sexual offences against women",
+      "punishment": "Rigorous imprisonment up to 3 years plus fine",
+      "description": "Sexual harassment includes physical contact, demanding sexual favours, showing pornography, making sexual remarks.",
+      "ipc_equivalent": "354A"
+    },
+    {
+      "section": "85",
+      "title": "Cruelty by husband or relatives of husband",
+      "chapter": 5,
+      "category": "Offences against women",
+      "punishment": "Imprisonment up to 3 years plus fine",
+      "description": "Willful conduct driving a woman to commit suicide or grave injury.",
+      "ipc_equivalent": "498A"
+    },
+    {
+      "section": "86",
+      "title": "Death caused by act done with intent to cause hurt",
+      "chapter": 5,
+      "category": "Offences against women",
+      "punishment": "Imprisonment up to 7 years plus fine",
+      "description": "Act done with intent to cause hurt to a woman resulting in death.",
+      "ipc_equivalent": "304B"
+    },
+    {
+      "section": "100",
+      "title": "Culpable homicide not amounting to murder",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Imprisonment up to 10 years plus fine",
+      "description": "Whoever causes death by doing an act with the intention of causing death, or with the intention of causing such bodily injury as is likely to cause death.",
+      "ipc_equivalent": "304"
+    },
+    {
+      "section": "101",
+      "title": "Causing death by negligence",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Imprisonment up to 5 years plus fine",
+      "description": "Whoever causes the death of any person by doing any rash or negligent act.",
+      "ipc_equivalent": "304A"
+    },
+    {
+      "section": "103",
+      "title": "Murder",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Death, or imprisonment for life, and fine",
+      "description": "Whoever causes death by doing an act with the intention of causing death, or with the intention of causing such bodily injury as the offender knows to be likely to cause death.",
+      "ipc_equivalent": "302"
+    },
+    {
+      "section": "105",
+      "title": "Voluntarily causing hurt",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Imprisonment up to 1 year plus fine up to ₹1,000",
+      "description": "Whoever causes bodily pain, disease or infirmity to any person.",
+      "ipc_equivalent": "323"
+    },
+    {
+      "section": "106",
+      "title": "Voluntarily causing grievous hurt",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Imprisonment up to 7 years plus fine",
+      "description": "Whoever causes grievous hurt to any person.",
+      "ipc_equivalent": "325"
+    },
+    {
+      "section": "109",
+      "title": "Voluntarily causing hurt by dangerous weapons or means",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Imprisonment up to 3 years plus fine",
+      "description": "Whoever, except in the case provided for by sub-section (2) of section 100, causes hurt by means of any instrument for shooting, stabbing or cutting.",
+      "ipc_equivalent": "324"
+    },
+    {
+      "section": "110",
+      "title": "Voluntarily causing grievous hurt by dangerous weapons or means",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Imprisonment up to 10 years plus fine",
+      "description": "Whoever causes grievous hurt by means of any instrument for shooting, stabbing or cutting.",
+      "ipc_equivalent": "326"
+    },
+    {
+      "section": "115",
+      "title": "Act endangering life or personal safety of others",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Imprisonment up to 3 months, or fine up to ₹1,000, or both",
+      "description": "Whoever does any act so rashly or negligently as to endanger human life or the personal safety of others.",
+      "ipc_equivalent": "336"
+    },
+    {
+      "section": "117",
+      "title": "Causing hurt by act endangering life or personal safety of others",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Imprisonment up to 3 years, or fine, or both",
+      "description": "Whoever causes hurt to any person by doing any act so rashly or negligently as to endanger human life.",
+      "ipc_equivalent": "337"
+    },
+    {
+      "section": "118",
+      "title": "Causing grievous hurt by act endangering life or personal safety of others",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Imprisonment up to 7 years plus fine",
+      "description": "Whoever causes grievous hurt to any person by doing any act so rashly or negligently as to endanger human life.",
+      "ipc_equivalent": "338"
+    },
+    {
+      "section": "137",
+      "title": "Kidnapping from India",
+      "chapter": 7,
+      "category": "Kidnapping and trafficking",
+      "punishment": "Imprisonment up to 7 years plus fine",
+      "description": "Whoever kidnaps any person from India.",
+      "ipc_equivalent": "359"
+    },
+    {
+      "section": "138",
+      "title": "Kidnapping from lawfully guardianship",
+      "chapter": 7,
+      "category": "Kidnapping and trafficking",
+      "punishment": "Imprisonment up to 7 years plus fine",
+      "description": "Whoever kidnaps any minor under sixteen years of age from his or her lawful guardian.",
+      "ipc_equivalent": "361"
+    },
+    {
+      "section": "140",
+      "title": "Trafficking of person",
+      "chapter": 7,
+      "category": "Kidnapping and trafficking",
+      "punishment": "Rigorous imprisonment for minimum 7 years up to life, and fine",
+      "description": "Whoever traffics any person by recruiting, transporting, harbouring or receiving such person.",
+      "ipc_equivalent": "370"
+    },
+    {
+      "section": "141",
+      "title": "Exploitation of a trafficked person",
+      "chapter": 7,
+      "category": "Kidnapping and trafficking",
+      "punishment": "Rigorous imprisonment for minimum 5 years up to life, and fine",
+      "description": "Whoever commits exploitation of a trafficked person.",
+      "ipc_equivalent": "370A"
+    },
+    {
+      "section": "303",
+      "title": "Theft",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Imprisonment up to 3 years, or fine, or both",
+      "description": "Whoever intends to take dishonestly any moveable property out of the possession of any person without that person's consent.",
+      "ipc_equivalent": "378"
+    },
+    {
+      "section": "304",
+      "title": "Theft in dwelling house",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Rigorous imprisonment up to 7 years plus fine",
+      "description": "Whoever commits theft in any building, tent or vessel.",
+      "ipc_equivalent": "380"
+    },
+    {
+      "section": "305",
+      "title": "Snatching",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Rigorous imprisonment up to 3 years plus fine",
+      "description": "Whoever, by committing theft, suddenly secures quick possession of property.",
+      "ipc_equivalent": "379"
+    },
+    {
+      "section": "309",
+      "title": "Robbery",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Rigorous imprisonment up to 10 years plus fine",
+      "description": "Whoever commits robbery shall be punished with rigorous imprisonment.",
+      "ipc_equivalent": "392"
+    },
+    {
+      "section": "310",
+      "title": "Dacoity",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Rigorous imprisonment for minimum 10 years up to life, and fine",
+      "description": "When five or more persons conjointly commit or attempt to commit robbery.",
+      "ipc_equivalent": "395"
+    },
+    {
+      "section": "314",
+      "title": "Criminal breach of trust",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Imprisonment up to 3 years plus fine",
+      "description": "Whoever, being in any manner entrusted with property or with any dominion over property, dishonestly misappropriates or converts.",
+      "ipc_equivalent": "406"
+    },
+    {
+      "section": "318",
+      "title": "Cheating",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Imprisonment up to 3 years plus fine",
+      "description": "Whoever, by deceiving any person, fraudulently or dishonestly induces the person so deceived to deliver any property.",
+      "ipc_equivalent": "420"
+    },
+    {
+      "section": "319",
+      "title": "Cheating by personation",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Imprisonment up to 5 years plus fine",
+      "description": "Whoever cheats by personating.",
+      "ipc_equivalent": "416"
+    },
+    {
+      "section": "329",
+      "title": "Criminal misappropriation of property",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Imprisonment up to 2 years, or fine, or both",
+      "description": "Whoever dishonestly misappropriates or converts to his own use any property.",
+      "ipc_equivalent": "403"
+    },
+    {
+      "section": "336",
+      "title": "Forgery",
+      "chapter": 18,
+      "category": "Offences relating to documents",
+      "punishment": "Imprisonment up to 2 years plus fine",
+      "description": "Whoever makes a false document or electronic record with intent to cause damage or to support any claim.",
+      "ipc_equivalent": "463"
+    },
+    {
+      "section": "338",
+      "title": "Forgery of record of court or public register",
+      "chapter": 18,
+      "category": "Offences relating to documents",
+      "punishment": "Imprisonment up to 7 years plus fine",
+      "description": "Whoever forges any document purporting to be a record or proceeding of or in a Court of Justice.",
+      "ipc_equivalent": "466"
+    },
+    {
+      "section": "340",
+      "title": "Using forged document as genuine",
+      "chapter": 18,
+      "category": "Offences relating to documents",
+      "punishment": "Imprisonment up to 7 years plus fine",
+      "description": "Whoever dishonestly uses or attempts to use as genuine any forged document.",
+      "ipc_equivalent": "471"
+    },
+    {
+      "section": "111",
+      "title": "Organised crime",
+      "chapter": 6,
+      "category": "Organised crime (new in BNS)",
+      "punishment": "Death, or imprisonment for life, or rigorous imprisonment up to 10 years, and fine",
+      "description": "Whoever commits or conspires to commit, or advocates, abets or knowingly facilitates an organised crime.",
+      "ipc_equivalent": null,
+      "new_in_bns": true
+    },
+    {
+      "section": "112",
+      "title": "Petty organised crime",
+      "chapter": 6,
+      "category": "Organised crime (new in BNS)",
+      "punishment": "Imprisonment for minimum 1 year up to 7 years, and fine",
+      "description": "Whoever being a member of a gang or syndicate or racket commits theft, snatching, cheating.",
+      "ipc_equivalent": null,
+      "new_in_bns": true
+    },
+    {
+      "section": "113",
+      "title": "Terrorist act",
+      "chapter": 6,
+      "category": "Terrorism (new in BNS)",
+      "punishment": "Death, or imprisonment for life, and fine",
+      "description": "Whoever does any act with intent to threaten or likely to threaten the unity, integrity, security or sovereignty of India.",
+      "ipc_equivalent": null,
+      "new_in_bns": true
+    },
+    {
+      "section": "126",
+      "title": "Wrongful restraint",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Imprisonment up to 1 month, or fine up to ₹1,000, or both",
+      "description": "Whoever voluntarily obstructs any person so as to prevent that person from proceeding in any direction.",
+      "ipc_equivalent": "339"
+    },
+    {
+      "section": "127",
+      "title": "Wrongful confinement",
+      "chapter": 6,
+      "category": "Offences against human body",
+      "punishment": "Imprisonment up to 1 year, or fine up to ₹1,000, or both",
+      "description": "Whoever wrongfully restrains the person of another in such manner as to prevent that person from proceeding beyond certain circumscribing limits.",
+      "ipc_equivalent": "340"
+    },
+    {
+      "section": "143",
+      "title": "Unlawful assembly",
+      "chapter": 7,
+      "category": "Offences against public tranquillity",
+      "punishment": "Imprisonment up to 6 months, or fine up to ₹1,000, or both",
+      "description": "Whoever is a member of an unlawful assembly.",
+      "ipc_equivalent": "143"
+    },
+    {
+      "section": "147",
+      "title": "Rioting",
+      "chapter": 7,
+      "category": "Offences against public tranquillity",
+      "punishment": "Imprisonment up to 2 years, or fine, or both",
+      "description": "Whoever is a member of an unlawful assembly and uses force or violence.",
+      "ipc_equivalent": "147"
+    },
+    {
+      "section": "148",
+      "title": "Rioting armed with deadly weapon",
+      "chapter": 7,
+      "category": "Offences against public tranquillity",
+      "punishment": "Imprisonment up to 3 years plus fine",
+      "description": "Whoever is a member of an unlawful assembly and is armed with any deadly weapon.",
+      "ipc_equivalent": "148"
+    },
+    {
+      "section": "189",
+      "title": "Criminal intimidation",
+      "chapter": 11,
+      "category": "Criminal intimidation and defamation",
+      "punishment": "Imprisonment up to 2 years, or fine, or both",
+      "description": "Whoever threatens another with any injury to his person, reputation or property.",
+      "ipc_equivalent": "503"
+    },
+    {
+      "section": "191",
+      "title": "Defamation",
+      "chapter": 11,
+      "category": "Criminal intimidation and defamation",
+      "punishment": "Simple imprisonment up to 2 years, or fine, or both",
+      "description": "Whoever, by words either spoken or intended to be read, or by signs or visible representations, makes or publishes any imputation concerning any person.",
+      "ipc_equivalent": "499"
+    },
+    {
+      "section": "223",
+      "title": "Danger or nuisance in street",
+      "chapter": 12,
+      "category": "Offences relating to public servants",
+      "punishment": "Fine up to ₹500",
+      "description": "Exposure and abandonment of child under twelve years.",
+      "ipc_equivalent": null
+    },
+    {
+      "section": "230",
+      "title": "Public servant neglecting to investigate or report",
+      "chapter": 12,
+      "category": "Offences by public servants",
+      "punishment": "Imprisonment up to 1 year, or fine, or both",
+      "description": "Public servant intentionally neglects to investigate a case.",
+      "ipc_equivalent": "166"
+    },
+    {
+      "section": "316",
+      "title": "Criminal breach of trust by public servant",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Rigorous imprisonment for minimum 3 years up to 10 years, and fine",
+      "description": "Whoever, being in any manner entrusted with property as a public servant, dishonestly misappropriates.",
+      "ipc_equivalent": "409"
+    }
+  ]
+}

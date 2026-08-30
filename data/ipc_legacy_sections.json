@@ -1,0 +1,366 @@
+{
+  "_source": {
+    "primary": "Indian Penal Code, 1860 (Act No. 45 of 1860)",
+    "status": "Repealed for offences committed on or after 1 July 2024 by Bharatiya Nyaya Sanhita, 2023",
+    "note": "Legacy IPC sections included for reference in documents and judgments predating 1 July 2024. Mappings to BNS included only where verified from official comparative tables published by UP Police and Ministry of Home Affairs.",
+    "references": [
+      "India Code (Ministry of Law and Justice): https://www.indiacode.nic.in/",
+      "UP Police BNS-IPC Comparative Table: https://uppolice.gov.in/site/writereaddata/siteContent/Three%20New%20Major%20Acts/202406281710564823BNS_IPC_Comparative.pdf",
+      "PRS India legislative reference: https://prsindia.org/"
+    ],
+    "last_verified": "2025-08-29"
+  },
+  "sections": [
+    {
+      "section": "141",
+      "title": "Unlawful assembly",
+      "chapter": 8,
+      "category": "Offences against public tranquillity",
+      "punishment": null,
+      "description": "An assembly of five or more persons is designated as an unlawful assembly.",
+      "bns_equivalent": "143"
+    },
+    {
+      "section": "143",
+      "title": "Punishment for unlawful assembly",
+      "chapter": 8,
+      "category": "Offences against public tranquillity",
+      "punishment": "Imprisonment up to 6 months, or fine up to ₹1,000, or both",
+      "description": "Whoever is a member of an unlawful assembly.",
+      "bns_equivalent": "143"
+    },
+    {
+      "section": "144",
+      "title": "Joining unlawful assembly armed with deadly weapon",
+      "chapter": 8,
+      "category": "Offences against public tranquillity",
+      "punishment": "Imprisonment up to 2 years, or fine, or both",
+      "description": "Whoever, being armed with any deadly weapon or with anything which, used as a weapon of offence, is likely to cause death, is a member of an unlawful assembly.",
+      "bns_equivalent": "145"
+    },
+    {
+      "section": "147",
+      "title": "Rioting",
+      "chapter": 8,
+      "category": "Offences against public tranquillity",
+      "punishment": "Imprisonment up to 2 years, or fine, or both",
+      "description": "Whoever is a member of an unlawful assembly and uses force or violence.",
+      "bns_equivalent": "147"
+    },
+    {
+      "section": "148",
+      "title": "Rioting armed with deadly weapon",
+      "chapter": 8,
+      "category": "Offences against public tranquillity",
+      "punishment": "Imprisonment up to 3 years plus fine",
+      "description": "Whoever is a member of an unlawful assembly and is armed with any deadly weapon.",
+      "bns_equivalent": "148"
+    },
+    {
+      "section": "149",
+      "title": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+      "chapter": 8,
+      "category": "Offences against public tranquillity",
+      "punishment": "Same as for the offence committed",
+      "description": "If an offence is committed by any member of an unlawful assembly in prosecution of the common object.",
+      "bns_equivalent": "149"
+    },
+    {
+      "section": "302",
+      "title": "Murder",
+      "chapter": 16,
+      "category": "Offences affecting life",
+      "punishment": "Death, or imprisonment for life, and fine",
+      "description": "Whoever commits murder shall be punished with death, or imprisonment for life, and shall also be liable to fine.",
+      "bns_equivalent": "103"
+    },
+    {
+      "section": "304",
+      "title": "Culpable homicide not amounting to murder",
+      "chapter": 16,
+      "category": "Offences affecting life",
+      "punishment": "Imprisonment up to 10 years plus fine",
+      "description": "Whoever commits culpable homicide not amounting to murder.",
+      "bns_equivalent": "100"
+    },
+    {
+      "section": "304A",
+      "title": "Causing death by negligence",
+      "chapter": 16,
+      "category": "Offences affecting life",
+      "punishment": "Imprisonment up to 5 years plus fine",
+      "description": "Whoever causes the death of any person by doing any rash or negligent act.",
+      "bns_equivalent": "101"
+    },
+    {
+      "section": "306",
+      "title": "Abetment of suicide",
+      "chapter": 16,
+      "category": "Offences affecting life",
+      "punishment": "Imprisonment up to 10 years plus fine",
+      "description": "If any person commits suicide, whoever abets the commission of such suicide.",
+      "bns_equivalent": null
+    },
+    {
+      "section": "307",
+      "title": "Attempt to murder",
+      "chapter": 16,
+      "category": "Offences affecting life",
+      "punishment": "Imprisonment up to 10 years plus fine",
+      "description": "Whoever does any act with such intention or knowledge, and under such circumstances that, if he by that act caused death, he would be guilty of murder.",
+      "bns_equivalent": "109"
+    },
+    {
+      "section": "308",
+      "title": "Attempt to commit culpable homicide",
+      "chapter": 16,
+      "category": "Offences affecting life",
+      "punishment": "Imprisonment up to 3 years, or fine, or both",
+      "description": "Whoever does any act with such intention or knowledge and under such circumstances that, if he by that act caused death, he would be guilty of culpable homicide.",
+      "bns_equivalent": null
+    },
+    {
+      "section": "323",
+      "title": "Voluntarily causing hurt",
+      "chapter": 16,
+      "category": "Offences affecting body",
+      "punishment": "Imprisonment up to 1 year plus fine up to ₹1,000",
+      "description": "Whoever, except in the case provided for by section 334, voluntarily causes hurt.",
+      "bns_equivalent": "105"
+    },
+    {
+      "section": "324",
+      "title": "Voluntarily causing hurt by dangerous weapons or means",
+      "chapter": 16,
+      "category": "Offences affecting body",
+      "punishment": "Imprisonment up to 3 years, or fine, or both",
+      "description": "Whoever, except in the case provided for by section 334, voluntarily causes hurt by means of any instrument for shooting.",
+      "bns_equivalent": "109"
+    },
+    {
+      "section": "325",
+      "title": "Voluntarily causing grievous hurt",
+      "chapter": 16,
+      "category": "Offences affecting body",
+      "punishment": "Imprisonment up to 7 years plus fine",
+      "description": "Whoever, except in the case provided for by section 335, voluntarily causes grievous hurt.",
+      "bns_equivalent": "106"
+    },
+    {
+      "section": "326",
+      "title": "Voluntarily causing grievous hurt by dangerous weapons or means",
+      "chapter": 16,
+      "category": "Offences affecting body",
+      "punishment": "Imprisonment for life, or imprisonment up to 10 years plus fine",
+      "description": "Whoever, except in the case provided for by section 335, voluntarily causes grievous hurt by means of any instrument for shooting.",
+      "bns_equivalent": "110"
+    },
+    {
+      "section": "354A",
+      "title": "Sexual harassment",
+      "chapter": 16,
+      "category": "Offences against women",
+      "punishment": "Rigorous imprisonment up to 3 years, or fine, or both",
+      "description": "A man commits sexual harassment if he: (i) physical contact and advances involving unwelcome and explicit sexual overtures; (ii) demands or requests for sexual favours; (iii) showing pornography against the will of a woman; (iv) making sexually coloured remarks.",
+      "bns_equivalent": "75"
+    },
+    {
+      "section": "354B",
+      "title": "Assault or use of criminal force to woman with intent to disrobe",
+      "chapter": 16,
+      "category": "Offences against women",
+      "punishment": "Imprisonment for 3 to 7 years",
+      "description": "Whoever assaults or uses criminal force to any woman, intending to outrage or knowing it to be likely that he will thereby outrage her modesty.",
+      "bns_equivalent": null
+    },
+    {
+      "section": "354C",
+      "title": "Voyeurism",
+      "chapter": 16,
+      "category": "Offences against women",
+      "punishment": "Imprisonment for 1 to 3 years for first offence",
+      "description": "Whoever watches, or captures the image of a woman engaging in a private act.",
+      "bns_equivalent": null
+    },
+    {
+      "section": "354D",
+      "title": "Stalking",
+      "chapter": 16,
+      "category": "Offences against women",
+      "punishment": "Imprisonment up to 3 years for first offence",
+      "description": "Whoever follows a woman and contacts, or attempts to contact such woman repeatedly.",
+      "bns_equivalent": null
+    },
+    {
+      "section": "376",
+      "title": "Punishment for rape",
+      "chapter": 16,
+      "category": "Sexual offences",
+      "punishment": "Rigorous imprisonment for minimum 7 years to life, and fine",
+      "description": "Whoever commits rape shall be punished with rigorous imprisonment for a term which shall not be less than seven years.",
+      "bns_equivalent": "64"
+    },
+    {
+      "section": "376A",
+      "title": "Punishment for causing death or resulting in persistent vegetative state of victim",
+      "chapter": 16,
+      "category": "Sexual offences",
+      "punishment": "Rigorous imprisonment for minimum 20 years up to life, or death",
+      "description": "Whoever commits rape and causes death or results in persistent vegetative state of the victim.",
+      "bns_equivalent": null
+    },
+    {
+      "section": "376D",
+      "title": "Gang rape",
+      "chapter": 16,
+      "category": "Sexual offences",
+      "punishment": "Rigorous imprisonment for minimum 20 years up to life, and fine",
+      "description": "Where a woman is raped by one or more persons constituting a group.",
+      "bns_equivalent": "70"
+    },
+    {
+      "section": "378",
+      "title": "Theft",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": null,
+      "description": "Whoever intends to take dishonestly any moveable property out of the possession of any person without that person's consent.",
+      "bns_equivalent": "303"
+    },
+    {
+      "section": "379",
+      "title": "Punishment for theft",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Imprisonment up to 3 years, or fine, or both",
+      "description": "Whoever commits theft shall be punished with imprisonment of either description for a term which may extend to three years, or with fine, or with both.",
+      "bns_equivalent": "303"
+    },
+    {
+      "section": "380",
+      "title": "Theft in dwelling house",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Imprisonment up to 7 years plus fine",
+      "description": "Whoever commits theft in any building, tent or vessel.",
+      "bns_equivalent": "304"
+    },
+    {
+      "section": "392",
+      "title": "Punishment for robbery",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Rigorous imprisonment up to 10 years plus fine",
+      "description": "Whoever commits robbery shall be punished with rigorous imprisonment.",
+      "bns_equivalent": "309"
+    },
+    {
+      "section": "395",
+      "title": "Punishment for dacoity",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Rigorous imprisonment for minimum 10 years up to life, and fine",
+      "description": "Whoever commits dacoity shall be punished with rigorous imprisonment for a term which shall not be less than ten years.",
+      "bns_equivalent": "310"
+    },
+    {
+      "section": "403",
+      "title": "Dishonest misappropriation of property",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Imprisonment up to 2 years, or fine, or both",
+      "description": "Whoever dishonestly misappropriates or converts to his own use any property.",
+      "bns_equivalent": "329"
+    },
+    {
+      "section": "406",
+      "title": "Punishment for criminal breach of trust",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Imprisonment up to 3 years, or with fine, or with both",
+      "description": "Whoever commits criminal breach of trust shall be punished.",
+      "bns_equivalent": "314"
+    },
+    {
+      "section": "409",
+      "title": "Criminal breach of trust by public servant",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Imprisonment for life, or imprisonment up to 10 years, and fine",
+      "description": "Whoever, being in any manner entrusted with property as a public servant, commits criminal breach of trust.",
+      "bns_equivalent": "316"
+    },
+    {
+      "section": "415",
+      "title": "Cheating",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": null,
+      "description": "Whoever, by deceiving any person, fraudulently or dishonestly induces the person so deceived to deliver any property.",
+      "bns_equivalent": "318"
+    },
+    {
+      "section": "420",
+      "title": "Punishment for cheating",
+      "chapter": 17,
+      "category": "Offences against property",
+      "punishment": "Imprisonment up to 7 years plus fine",
+      "description": "Whoever cheats and thereby dishonestly induces the person deceived to deliver any property.",
+      "bns_equivalent": "318"
+    },
+    {
+      "section": "463",
+      "title": "Forgery",
+      "chapter": 18,
+      "category": "Offences relating to documents",
+      "punishment": null,
+      "description": "Whoever makes any false document or part of a document with intent to cause damage.",
+      "bns_equivalent": "336"
+    },
+    {
+      "section": "468",
+      "title": "Forgery for purpose of cheating",
+      "chapter": 18,
+      "category": "Offences relating to documents",
+      "punishment": "Imprisonment up to 7 years plus fine",
+      "description": "Whoever commits forgery, intending that the document forged shall be used for the purpose of cheating.",
+      "bns_equivalent": null
+    },
+    {
+      "section": "471",
+      "title": "Using as genuine a forged document",
+      "chapter": 18,
+      "category": "Offences relating to documents",
+      "punishment": "Same as for forgery",
+      "description": "Whoever fraudulently or dishonestly uses or attempts to use as genuine any forged document.",
+      "bns_equivalent": "340"
+    },
+    {
+      "section": "498A",
+      "title": "Cruelty by husband or relatives of husband",
+      "chapter": 18,
+      "category": "Offences against women",
+      "punishment": "Imprisonment up to 3 years plus fine",
+      "description": "Whoever, being the husband or the relative of the husband of a woman, subjects such woman to cruelty shall be punished.",
+      "bns_equivalent": "85"
+    },
+    {
+      "section": "503",
+      "title": "Criminal intimidation",
+      "chapter": 18,
+      "category": "Criminal intimidation",
+      "punishment": null,
+      "description": "Whoever threatens another with any injury to his person, reputation or property.",
+      "bns_equivalent": "189"
+    },
+    {
+      "section": "506",
+      "title": "Punishment for criminal intimidation",
+      "chapter": 18,
+      "category": "Criminal intimidation",
+      "punishment": "Imprisonment up to 2 years, or fine, or both",
+      "description": "Whoever commits the offence of criminal intimidation.",
+      "bns_equivalent": "189"
+    }
+  ]
+}
